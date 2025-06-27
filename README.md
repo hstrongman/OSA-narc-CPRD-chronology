@@ -13,5 +13,3 @@ There is a separate repository for the validation study as this was completed us
 
 The "codelists" folder includes do files, scripts and metadata related to codelist generation.
 Codelists are also saved on LSHTM data compass with completed checklists describing how they were created: (https://datacompass.lshtm.ac.uk/id/eprint/4626/) 
-
-## Versions
