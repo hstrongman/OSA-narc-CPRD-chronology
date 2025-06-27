@@ -1,0 +1,1712 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\logfiles\codelist_ethnicity_log.txt
+  log type:  text
+ opened on:  29 Jun 2023, 10:26:18
+
+. 
+. /*Notes and instructions for modifying these files: 
+> - The copy command copies the current .txt file from $dodir to $metadir. 
+> - dyndoc creates the HTML file and saves it in $metadir. 
+> - *** ALWAYS MODIFY .txt FILES IN $dodir. ***
+> - The arguments following the dyndoc command are:
+>         database name: `1'
+>         dictionary filepath `2'
+>         CPRD code variable `3'
+>         Original code variable `4'
+> - These arguments can be displayed in the HTML document using
+>         <<dd_display: `x'>> and used as a local within stata commands
+> */
+. 
+. cd "$metadir" 
+J:\EHR-Working\HelenS\22_001887_sleep-chronology\codelists\metadata
+
+. 
+. 
+. copy "$dodir\codelist_ethnicity_description.txt" ., replace
+
+. 
+. dyndoc "$dodir\codelist_ethnicity_description.txt", ///
+> saving("codelist_ethnicity_description.html") replace
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+
+Description of codelist_ethnicity code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to use the 
+ethnicity code lists to define ethnicity
+and to cite the authors. 
+Researchers, refer to codelist_ethnicity.do for instructions
+about modifying this file.
+~~~~
+
+## COVER SHEET
+~~~~
+
+Codelist name: Ethnicity 
+
+Data source(s):
+    - Clinical Practice Research Datalink GOLD (up to March 2023)
+    - Clinical Practice Research Datalink Aurum (up to March 2023)
+	- Note CPRD provide categorised ethnicity data for HES
+
+Terminology(s)
+    - Read Version 2 (GOLD)
+    - SNOMED-CT (and EMIS codes) (Aurum)
+  
+Clinical concept:
+	Ethnicity. The search identifies all codes indicating an individual's
+	ethnicity as conceptualised and defined by the Office of National Statistics.
+	
+	Codes with the following concepts in the read term are included:
+	- codes that specify they refer to ethnicity/ethnic groups or categories
+	-mixed and non-mixed ethnicity codes
+	- codes including terms such as white, black, caucasian, aisian
+	- codes in ethnicity Read chapters that are synonomous with, or represent
+	countries with a largely homogonous ethnic population (e.g. Japanese, Indian)
+	
+	Codes that describe other countries or regions, nationalities or religions 
+	are not included (e.g. England, Europe, British, Christian).
+	
+	The conceptualisation of ethnicity evolves over time and this will need to
+	be reevaluated periodically.
+	
+Files created:
+	- codelist_ethnicity_gold.dta
+	- codelist_ethnicity_aurum.dta
+	- codelist_ethnicity_gold.txt
+	- codelist_ethnicity_aurum.txt
+	
+Author:
+	- Rohini Mathur (created original codes list and strategy)
+	- modified date: 2023-06-09
+version: 1 (first published version on EHR Github page)
+
+
+~~~~
+
+## Version control (more detail)
+
+~~~~
+Date created: 2012
+Author:	Rohini Mathur (Epidemiologist, LSHTM)
+Clinical advisors:
+Liam Smeeth, CPRD team
+
+Data updated: multiple updates including adaptation to Aurum and new
+categorisations of the 2011 and 2021 census
+Author:	Rohini Mathur (Epidemiologist, LSHTM)
+
+
+Date updated: 05/06/2023
+Updated by: Helen Strongman (Epidemiologist, LSHTM)
+(Clinical) advisors: Rohini Mathur
+Changes: created do files to update the original code list with cover sheet
+
+~~~~
+
+~~~~
+## DEFINITION
+Ethnicity codes are grouped as follows using the eth5 and eth16 variables:
+
+
+eth5:
+0 0. White
+1 1. South Asian
+2 2. Black
+3 3. Other
+4 4. Mixed
+5 5. Not Stated
+
+		   
+eth16:
+
+1 1. British
+2 2. Irish
+3 3. Other White
+4 4. White and Black Caribbean
+5 5. White and Black African
+6 6. White and Asian
+7 7. Other Mixed
+8 8. Indian
+9 9. Pakistani
+10 10. Bangladeshi
+11 11. Other Asian
+12 12. Caribbean
+13 13. African
+14 14. Other Black
+15 15. Chinese
+16 16. Other ethnic group
+17 17. Not Stated
+88 88. Unknown
+
+Recommendations to generate ethnicity ?????
+OR refer to another do file.
+
+~~~~
+## STUDIES AND PROTOCOLS
+~~~~
+https://pubmed.ncbi.nlm.nih.gov/24323951/ - ORIGINAL STUDY
+https://researchonline.lshtm.ac.uk/id/eprint/2478832/ - ROHINI'S STUDY CHAPTER 5,
+FLOW DIAGRAM P74 = HOW TO GENERATE ETHNICITY VARIABLE FROM DATA
+
+Note CPRD have validated an ethnicity code list and algorithm.
+The code lists are available in the supplementary appendix but they are not 
+matched to categories.
+Shiekh, S.I., Harley, M., Ghosh, R.E. et al. Completeness, agreement, and 
+representativeness of ethnicity recording in the United Kingdom's Clinical
+Practice Research Datalink (CPRD) and linked Hospital Episode Statistics (HES). 
+Popul Health Metrics 21, 3 (2023). https://doi.org/10.1186/s12963-023-00302-0
+
+~~~~
+successfully converted "J:/EHR-Working/HelenS/22_001887_sleep-chronology/codelists/metadata/codelist_ethnicity_description.html"
+
+. 
+. copy "$dodir\codelist_ethnicity_derivation.txt" ., replace
+
+. 
+. dyndoc "$dodir\codelist_ethnicity_derivation.txt" ///
+> aurum "$dict_aurummed" medcodeid snomedctconceptid, ///
+> saving("codelist_ethnicity_derivation_aurum.html") replace
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+
+Description of how the ethnicity code lists were created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_ethnicity.do.
+~~~~
+
+
+~~~~
+## SEARCH TO IDENTIFY NEW CODES
+~~~~
+
+
+The following search Read chapters and term strings are applied to all codes in the
+current dictionary. Each chapter or term string is searched for individually
+and flagged (strings may appear in any position in the text. 
+The terms should cover all synonyms for ethnicity (see strategy in code list
+description). Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read.
+
+Inclusion terms: ethn british english welsh scottish irish asian indian pakistani  bangladeshi african caribbean
+
+Inclusion chapters: 9S 9i 9t 9T
+
+Exclusion terms: adverse eye flower urine blood blackout adenoma adore cell  country head adverse syndrome veno sigvaris fruit trypanosomiasis poison kit altiven sick religion algi juzo jobst haddenham
+>  gloria read language ovcc exam vari porphyria assoc carer speak test encep trust contracept interpret health operation body church obscure joint patient refer activity episco type child  member feve
+> r skin virus father mother gfr myocard sis risk society orthodox tick buddhis benign born lewis traga citizen cattle africanum diet counties stew hindu jewish muslim sikh
+
+
+
+
+~~~~
+## COMPARE WITH PREVIOUS VERSION
+~~~~
+
+
+
+Codes from previous code list that are included (and not excluded) in current search that
+
+  252
+
+
+~~~~ 
+## UPDATE EXCLUSION TERMS
+~~~~
+
+
+The following exclusion terms were checked and added to the main search in this
+version of the code list. 
+
+Additional exclusion terms: 
+
+
+~~~~
+## CHECK CODES FROM PREVIOUS CODELIST THAT ARE FLAGGED IN THE EXCLUSION SEARCH
+~~~~
+
+
+The following codes have been identified in the exclusion search
+but were included in the previous code list.
+
+     +---------------------------------------------------------------------------------------------------------------+
+     |                                                         term   observ~s   _readm~r   _termm~r            eth5 |
+     |---------------------------------------------------------------------------------------------------------------|
+ 21. |                         Jewish - ethnic category 2001 census      30000          1          1        3. Other |
+ 25. |                         Muslim - ethnic category 2001 census      20000          1          1        3. Other |
+ 74. |                       Buddhist - ethnic category 2001 census        500          1          1        3. Other |
+ 75. |                           Sikh - ethnic category 2001 census       5000          1          1        3. Other |
+ 98. |                          Hindu - ethnic category 2001 census       6000          1          1        3. Other |
+     |---------------------------------------------------------------------------------------------------------------|
+243. |                                Black - other African country       4000          1          1        2. Black |
+324. | Refusal by patient to provide information about ethnic group     200000          1          1   5. Not Stated |
+     +---------------------------------------------------------------------------------------------------------------+
+Religion codes from census categories were removed in this version
+Refusal to provide information about ethnic group removed in this version
+
+
+
+
+Check codes that are not in Read Chapters identifying ONS ethnicity groups and
+ HAVE been excluded.
+
+
+     +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+     |                                                                                                                                                            term            _match |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  3. |                                                                                                                                              Ethnicity of carer   New search only |
+  4. |                                                                                                                                      Indian childhood cirrhosis   New search only |
+  8. |                                                                                                        Preferred method of communication: British Sign Language   New search only |
+  9. |                                                                                                                          Uses British sign language interpreter   New search only |
+ 10. |                                                           Framingham coronary heart disease 10 year risk score adjusted to Joint British Societies 2 guidelines   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 11. |                                                                                                                             British type amyloid polyneuropathy   New search only |
+ 12. |                                                                                                                                          African histoplasmosis   New search only |
+ 14. |                                                                                                    British Association for Adoption and Fostering report status   New search only |
+ 77. |                                                                                                                                           Scottish Health Board   New search only |
+ 78. |                                                                                                                                          Scottish Health Agency   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 79. |                                                                                                                                            Scottish Health Unit   New search only |
+ 80. |                                                                                                                                         Scottish Hospital Trust   New search only |
+ 81. |   GFR (glomerular filtration rate) calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation adjusted for African American origin   New search only |
+105. |                                                                                                                      Carer from Black and minority ethnic group   New search only |
+106. |                                                                                                                       Read code Scottish administration chapter   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+107. |                                                                  ASSIGN (Assessing cardiovascular risk using Scottish Intercollegiate Guidelines Network) score   New search only |
+108. |                                                                                                                     Participant in Scottish Family Health Study   New search only |
+109. |                                                                                                                         British Israelite, follower of religion   New search only |
+110. |                                                                                                                     Scottish Episcopalian, follower of religion   New search only |
+111. |                                                                                                                           Indian Orthodox, follower of religion   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+112. |                                                         NHS Sickle Cell and Thalassaemia Screening Programme family origin African or African-Caribbean (black)   New search only |
+113. |                                                                            NHS Sickle Cell and Thalassaemia Screening Programme Caribbean Islands family origin   New search only |
+114. |                                                                                      NHS Sickle Cell and Thalassaemia Screening Programme African family origin   New search only |
+115. |                                                                           NHS Sickle Cell and Thalassaemia Screening Programme family origin South Asia (Asian)   New search only |
+116. |                                                                      NHS Sickle Cell and Thalassaemia Screening Programme India or African-Indian family origin   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+117. | NHS Sickle Cell and Thalassaemia Screening Programme family origin other non-European excluding African or African-Caribbean, South or South East Asian (other)   New search only |
+118. |                                                                                                      Preferred communication Language: British Signing Language   New search only |
+119. |                                                                                                                       Preferred communication Language: English   New search only |
+120. |                                                                                                                         Preferred communication Language: Welsh   New search only |
+123. |                                                                                                  Referral to British Lung Foundation breathe easy support group   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+124. |                                                                                                                                              Mother's ethnicity   New search only |
+125. |                                                                                                                                              Father's ethnicity   New search only |
+126. |                          Framingham Coronary Heart Disease or Cardiovascular Disease 10 year risk adjusted to JBS2 (Joint British Societies 2) guidelines score   New search only |
+127. |                                                                                                                             Preferred written language: English   New search only |
+128. |                                                                                                                               Preferred written language: Welsh   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+129. |                                                                                                             Preferred written language: bilingual Welsh/English   New search only |
+130. |                                                                                                                                        English speaking ability   New search only |
+131. |                                                                                                                               Preferred written language: Irish   New search only |
+132. |                                                                                                                                   Referral to British Red Cross   New search only |
+133. |                                                                                 SPARRA (Scottish patients at risk of readmission and admission) algorithm score   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+134. |                                                                                                               Following British Thoracic Society/SIGN guideline   New search only |
+135. |                                                                                                                British childhood immunisation schedule declined   New search only |
+136. |                                                                                                                 British child development examinations declined   New search only |
+137. |                                                                                  Application for naturalisation as British citizen - referee declaration signed   New search only |
+138. |                                                                                                                        English not main spoken language at home   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+139. |                                                                                British Association for Adoption and Fostering adult health report form received   New search only |
+140. |                                                                                                PHN first visit-referrd to Scottish national support needs systm   New search only |
+141. |                                                                                                Child 6-8 wk exam.-referd to Scottish national spprt needs systm   New search only |
+142. |                                     Dissent from secondary use of general practitioner patient identifiable data for Scottish Primary Care Information Resource   New search only |
+143. |                            Dissent withdrawn for secondary use of general practitioner patient identifiable data for Scottish Primary Care Information Resource   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+144. |                                                                                                                                                 British Citizen   New search only |
+145. |                                                                                                                                       Benign ethnic neutropenia   New search only |
+198. |                                                                                                       Joint British Societies cardiovascular disease risk score   New search only |
+199. |                                                                                                                Participant in Scottish health research register   New search only |
+200. |                                                                                                                                      Main spoken language Welsh   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+201. |                                                                                                                                                   Reads English   New search only |
+202. |                                                                                                                                     Using British sign language   New search only |
+203. |                                                                                                                           Trypanosomal (African) antibody level   New search only |
+204. |                                                                                                     Dependant of current serving member of British Armed Forces   New search only |
+205. |                                                                                                      Dependant of former serving member of British Armed Forces   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+206. |                                                                                                                                                     Reads Welsh   New search only |
+207. |                                                                                                                      Joint British Societies cardiac risk score   New search only |
+208. |                                                                                                      Scot-PASQ - Scottish Physical Activity Screening Questions   New search only |
+209. |                                                                                                                                      First language not English   New search only |
+210. |                                                                                                                                  Born in British Virgin Islands   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+211. |                                                                                                                          Born in British Indian Ocean Territory   New search only |
+212. |                                                                                                           No longer dependant of member of British Armed Forces   New search only |
+213. |                                                                                                                       Sign Supported English interpreter needed   New search only |
+229. |                                                                                                                                    English as a second language   New search only |
+230. |                                                                                                                                             Speaks English well   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+231. |                                                                                                                                           Speaks English poorly   New search only |
+235. |                                                                                                       British United Provident Association claim administration   New search only |
+236. |                                                                                                                                          Does not speak English   New search only |
+237. |                                                                                                                                           Does not read English   New search only |
+282. |                                                                                                                                          North Asian tick fever   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+283. |                                                                                                                            Asian desert cutaneous leishmaniasis   New search only |
+284. |                                                                                                                                         African trypanosomiasis   New search only |
+285. |                                                                                                                         [X]African trypanosomiasis, unspecified   New search only |
+287. |                                                                                                                                       Patient ethnicity unknown   New search only |
+288. |                                                                                                                               Irish Gaelic as a second language   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+289. |                                                                                                                                      Welsh as a second language   New search only |
+290. |                                                                                                                                      Interpreter needed - Welsh   New search only |
+291. |                                                                                                                      Interpreter needed - British Sign Language   New search only |
+292. |                                                                                                                            Scottish Gaelic as a second language   New search only |
+293. |                                                                                                                                         Mycobacterium africanum   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+294. |                                                                                                                           Interpreter for British sign language   New search only |
+295. |                                                                                                                                  Obscure African cardiomyopathy   New search only |
+320. |                                                                                                                                            British White cattle   New search only |
+335. |                                                                                                                                        Country of birth (Asian)   New search only |
+336. |                                                                                                                                      Country of birth (African)   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+337. |                                                                                                                                 Country of birth (Australasian)   New search only |
+338. |                                                                                                                                          Born in British Guyana   New search only |
+339. |                                                                                                                                Born in Central African Republic   New search only |
+340. |                                                                                                                                    Main spoken language English   New search only |
+343. |                                                                                            British Agency for Adoption and Fostering adult updating examination   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+344. |                                                                                           British Association for Adoption and Fostering C/D-adopt:child report   New search only |
+345. |                                                                                                                                              African tick virus   New search only |
+353. |                                                                                                                                         North Asian tick typhus   New search only |
+354. |                                                                                                                                                 African country   New search only |
+355. |                                                                                                                                           North African country   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+356. |                                                                                                                                      North east African country   New search only |
+357. |                                                                                                                                         Central African country   New search only |
+358. |                                                                                                                                            East African country   New search only |
+359. |                                                                                                                                      South east African country   New search only |
+360. |                                                                                                                                      South west African country   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+361. |                                                                                                                                           South African country   New search only |
+362. |                                                                                                                                            West African country   New search only |
+363. |                                                                                                                                                   Asian country   New search only |
+364. |                                                                                                                                 North and central Asian country   New search only |
+365. |                                                                                                                                        South east Asian country   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+366. |                                                                                                                                     Indian subcontinent country   New search only |
+367. |                                                                                                                                            Australasian country   New search only |
+368. |                                                                                                                                               Caribbean country   New search only |
+369. |                                                                                                                                           Part of Asian country   New search only |
+370. |                                                                                                                                                English counties   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+371. |                                                                                                                        Interpreter for Signs supporting English   New search only |
+372. |                                                                                                                                                      Asian diet   New search only |
+373. |                                                                                                                                                      Irish stew   New search only |
+374. |                                                                                             British Agency for Adoption and Fostering adult initial examination   New search only |
+382. |                                                                    British Association for Adoption and Fostering (BAAF) Adult 1/2 - adoption: applicant report   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+383. |                                                                           British Association for Adoption and Fostering Adult 1/2 - adoption: applicant report   New search only |
+384. |                                                                            British Association for Adoption and Fostering (BAAF) B1/2 - adoption: birth history   New search only |
+385. |                                                                                   British Association for Adoption and Fostering B1/2 - adoption: birth history   New search only |
+386. |                                                                                                                                 English picture vocabulary test   New search only |
+387. |                                                                           British Association for Adoption and Fostering Adult 1/2 - Adult adoption examination   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+389. |                                                                                                                      Central and South American Indian language   New search only |
+390. |                                                                                                                                                  Welsh language   New search only |
+391. |                                                                                                                                           Irish Gaelic language   New search only |
+392. |                                                                                                                                        Scottish Gaelic language   New search only |
+393. |                                                                                                                                                English language   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+394. |                                                                                                                                      Pakistani punjabi language   New search only |
+395. |                                                                                                                                         Pidgin English language   New search only |
+396. |                                                                                                     British Agency for Adoption and Fostering adult examination   New search only |
+397. |                                                                                             British Association for Adoption and Fostering D-child 2+yrs report   New search only |
+402. |                                                                                                                              Born in British overseas territory   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+403. |                                                                                                                                    English as a second language   New search only |
+407. |                                                                                                                                             Indian head massage   New search only |
+408. |                                                                                                                                      Main spoken language Irish   New search only |
+410. |                                                                                                                                      Uses British sign language   New search only |
+411. |                                                                                                                          African religion, follower of religion   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+413. |                                                                                                                                           Scottish Episcopalian   New search only |
+414. |                                                                                                                                                 Indian Orthodox   New search only |
+415. |                                                                                                                                           British sign language   New search only |
+417. |                                                                                                                                    Southeast Asian ovalocytosis   New search only |
+418. |                                                                                           British Association for Adoption and Fostering adult 1 fee to patient   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+419. |                                                                                   British Association for Adoption and Fostering adult 1 fee to referral agency   New search only |
+420. |                                                                                                 British Association for Adoption and Fostering adult 1 fee paid   New search only |
+421. |                                                                                               British Association for Adoption and Fostering adult 1 fee unpaid   New search only |
+422. |                                                                                           British Association for Adoption and Fostering adult 2 fee to patient   New search only |
+423. |                                                                                   British Association for Adoption and Fostering adult 2 fee to referral agency   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+424. |                                                                                                 British Association for Adoption and Fostering adult 2 fee paid   New search only |
+425. |                                                                                               British Association for Adoption and Fostering adult 2 fee unpaid   New search only |
+426. |                                                                                   British Association for Adoption and Fostering B1 fee sent to social services   New search only |
+427. |                                                                                 BAAF (British Association for Adoption and Fostering) B1 fee to adoption agency   New search only |
+428. |                                                                                                      British Association for Adoption and Fostering B1 fee paid   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+429. |                                                                                                    British Association for Adoption and Fostering B1 fee unpaid   New search only |
+430. |                                                                                          British Association for Adoption and Fostering B2 neonatal report sent   New search only |
+431. |                                                                                   British Association for Adoption and Fostering B2 fee sent to social services   New search only |
+432. |                                                                                                      British Association for Adoption and Fostering B2 fee paid   New search only |
+433. |                                                                             British Association for Adoption and Fostering form C/D fee sent to social services   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+434. |                                                                                  British Association for Adoption and Fostering form C/D fee to adoption agency   New search only |
+435. |                                                                           BAAF (British Association for Adoption and Fostering) form C/D fee to adoption agency   New search only |
+436. |                                                                                                British Association for Adoption and Fostering form C/D fee paid   New search only |
+437. |                                                                                              British Association for Adoption and Fostering form C/D fee unpaid   New search only |
+438. |                                                                                British Association for Adoption and Fostering adult 1 examination payment claim   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+439. |                                                                           British Association for Adoption and Fostering adult examination payment claim status   New search only |
+440. |                                                                                             BAAF (British Association for Adoption and Fostering) report status   New search only |
+441. |                                                                                                             Joint British Societies cardiovascular disease risk   New search only |
+442. |                                                                                                                               Welsh language interpreter needed   New search only |
+443. |                                                                                                                        British Sign Language interpreter needed   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+444. |         Glomerular filtration rate calculated by abbreviated Modification of Diet in Renal Disease Study Group calculation adjusted for African American origin   New search only |
+445. |                                                                                                                             English language interpreter needed   New search only |
+446. |                                                                                                                         British Israelite, follower of religion   New search only |
+447. |                                                                                                                     Scottish Episcopalian, follower of religion   New search only |
+448. |                                                                                                                           Indian Orthodox, follower of religion   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+449. |                                                                                          British Association for Adoption and Fostering B2 birth history report   New search only |
+451. |                                                                         BAAF (British Association for Adoption and Fostering) adult health report form received   New search only |
+452. |                                                                                                                                          Scottish health boards   New search only |
+453. |                                                                                                                            Main spoken language Scottish Gaelic   New search only |
+467. |                                                                   Joint British Societies cardiovascular disease risk less than ten percent over next ten years   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+468. |                                                           Joint British Societies cardiovascular disease risk ten percent to twenty percent over next ten years   New search only |
+469. |                                        Joint British Societies cardiovascular disease risk greater than twenty percent up to thirty percent over next ten years   New search only |
+470. |                                                             Joint British Societies cardiovascular disease risk greater than thirty percent over next ten years   New search only |
+471. |                                                                                                 Joint British Societies cardiovascular disease 10 yr risk score   New search only |
+472. |                                                                                                  Joint British Societies cardiovascular disease 5 yr risk score   New search only |
+     |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+473. |                                                                                                                                 Central Asian buddhist religion   New search only |
+474. |                                                                                                                                    Scottish protestant religion   New search only |
+475. |                                                                                                                                        Welsh independent church   New search only |
+476. |                                                                                                                 Sign interpreter needed - British sign language   New search only |
+     +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+(195 observations deleted)
+
+
+
+~~~~
+## CATEGORISE NEW CODES
+~~~~
+
+
+The following new ethnicity codes were categorised in this version:
+
+
+     +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+     |                                                                                                                                           term             eth5                    eth16 |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  3. |                                                                                                                                       Romanian         0. White           3. Other White |
+  4. |                                                                                                                                      Bulgarian         0. White           3. Other White |
+  5. |                                                                                                                                          Czech         0. White           3. Other White |
+  6. |                                                                                                                                     Portuguese         0. White           3. Other White |
+ 66. |                                                                                                                                         Slovak         0. White           3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 77. |                                                                                                                                         Nepali   1. South Asian          11. Other Asian |
+100. |                    Mixed multiple ethnic groups: any other Mixed or multiple ethnic background - England and Wales ethnic category 2011 census         4. Mixed           7. Other Mixed |
+108. | Black or African or Caribbean or Black British: other Black or African or Caribbean background - England and Wales ethnic category 2011 census         2. Black          14. Other Black |
+123. |  Black or African or Caribbean or Black British: other Black or African or Caribbean background - Northern Ireland ethnic category 2011 census         2. Black          14. Other Black |
+137. |                                              Caribbean or Black: Black, Black Scottish or Black British - Scotland ethnic category 2011 census         2. Black          14. Other Black |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+191. |                                                                                                                           New Zealand European         0. White           3. Other White |
+192. |                                                                                                                                         Pakeha         0. White           3. Other White |
+193. |                                                                                                                  Other European in New Zealand         0. White           3. Other White |
+194. |                                                                                                                              New Zealand Maori         3. Other   16. Other ethnic group |
+195. |                                                                                                                              Cook Island Maori         3. Other   16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+196. |                                                                                                                                         Niuean         3. Other   16. Other ethnic group |
+197. |                                                                                                                                      Tokelauan         3. Other   16. Other ethnic group |
+250. |                                                                                                                                         Fijian         3. Other   16. Other ethnic group |
+251. |                                                                                                                                         Tongan         3. Other   16. Other ethnic group |
+252. |                                                                                                                                         Samoan         3. Other   16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+255. |                                                                                                                                         Yemeni         3. Other   16. Other ethnic group |
+256. |                                                                                                                                        Chinese         3. Other              15. Chinese |
+258. |                                                                                                                                   Ethnic group    5. Not Stated           17. Not Stated |
+261. |                                                                                                 Ethnicity / related nationality data - finding    5. Not Stated           17. Not Stated |
+264. |                                                                                                                              Ethnic background    5. Not Stated           17. Not Stated |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+268. |                                                                                                                                      Ethnicity    5. Not Stated           17. Not Stated |
+269. |                                                                                                                           Ethnicity not stated    5. Not Stated           17. Not Stated |
+     +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+
+~~~~
+## EXCLUDE ADDITIONAL CODES THAT DON'T MATCH THE CODELIST CONCEPT
+~~~~
+
+The following codes are excluded. Check that they do not match the code list
+concept. Do not add them to the full exclusion terms list unless you want ALL
+terms with the string to be excluded.
+
+
+     +--------------------+
+     |    term   readcode |
+     |--------------------|
+270. | Gypsies    9T2..00 |
+     +--------------------+
+
+
+
+~~~~
+## CATEGORY CHANGES FROM PREVIOUS CODELIST
+~~~~
+
+The following codes were recategorised as Black African as they were
+categorised as Black Other in the previous code list.
+
+
+(2 real changes made)
+
+
+     +----------------------------------------------------------------------------+
+     |                                   term       eth5         eth16   observ~s |
+     |----------------------------------------------------------------------------|
+ 43. |   Somali - ethnic category 2001 census   2. Black   13. African      80000 |
+ 44. | Nigerian - ethnic category 2001 census   2. Black   13. African      40000 |
+     +----------------------------------------------------------------------------+
+
+
+~~~~
+## LIST ALL INCLUDED TERMS
+~~~~
+
+
+
+     +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+     |                                                                                                                                           term             eth5                          eth16 |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  1. |                                                                                                                                      Caucasian         0. White                     1. British |
+  2. |                                                                                                                                        British         0. White                     1. British |
+  3. |                                                                                                                                 Caucasian race         0. White                     1. British |
+  4. |                                                                                                                                          White         0. White                     1. British |
+  5. |                                                                                                                                  White British         0. White                     1. British |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  6. |                                                                                                                                 White Scottish         0. White                     1. British |
+  7. |                                                                                                               Other white British ethnic group         0. White                     1. British |
+  8. |                                                                                         British or mixed British - ethnic category 2001 census         0. White                     1. British |
+  9. |                                                                                                    White British - ethnic category 2001 census         0. White                     1. British |
+ 10. |                                                                                                          English - ethnic category 2001 census         0. White                     1. British |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 11. |                                                                                                         Scottish - ethnic category 2001 census         0. White                     1. British |
+ 12. |                                                                                                            Welsh - ethnic category 2001 census         0. White                     1. British |
+ 13. |                                                                                                          Cornish - ethnic category 2001 census         0. White                     1. British |
+ 14. |                                                                                                   Northern Irish - ethnic category 2001 census         0. White                     1. British |
+ 15. |                                                                                                     Ulster Scots - ethnic category 2001 census         0. White                     1. British |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 16. |                               White: English or Welsh or Scottish or Northern Irish or British - England and Wales ethnic category 2011 census         0. White                     1. British |
+ 17. |                                                                                           White - Northern Ireland ethnic category 2011 census         0. White                     1. British |
+ 18. |                                                                                         White: Scottish - Scotland ethnic category 2011 census         0. White                     1. British |
+ 19. |                                                                                    White: other British - Scotland ethnic category 2011 census         0. White                     1. British |
+ 20. |                                                                                                                                          Irish         0. White                       2. Irish |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 21. |                                                                                                                                    White Irish         0. White                       2. Irish |
+ 22. |                                                                                                                                    Irish (NMO)         0. White                       2. Irish |
+ 23. |                                                                                                            Irish - ethnic category 2001 census         0. White                       2. Irish |
+ 24. |                                                                                                      White Irish - ethnic category 2001 census         0. White                       2. Irish |
+ 25. |                                                                                   White: Irish - England and Wales ethnic category 2011 census         0. White                       2. Irish |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 26. |                                                                                            White: Irish - Scotland ethnic category 2011 census         0. White                       2. Irish |
+ 27. |                                                                                                                              Roma ethnic group         0. White                 3. Other White |
+ 28. |                                                                                                                              British Israelite         0. White                 3. Other White |
+ 29. |                                                                                                                           White - ethnic group         0. White                 3. Other White |
+ 30. |                                                                                                                      Greek/Greek Cypriot (NMO)         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 31. |                                                                                                                                    Greek (NMO)         0. White                 3. Other White |
+ 32. |                                                                                                                            Greek Cypriot (NMO)         0. White                 3. Other White |
+ 33. |                                                                                                                  Turkish/Turkish Cypriot (NMO)         0. White                 3. Other White |
+ 34. |                                                                                                                                  Turkish (NMO)         0. White                 3. Other White |
+ 35. |                                                                                                                          Turkish Cypriot (NMO)         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 36. |                                                                                                                           Other European (NMO)         0. White                 3. Other White |
+ 37. |                                                                                                                                Irish traveller         0. White                 3. Other White |
+ 38. |                                                                                                                           New Zealand European         0. White                 3. Other White |
+ 39. |                                                                                                                                         Pakeha         0. White                 3. Other White |
+ 40. |                                                                                                                  Other European in New Zealand         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 41. |                                                                                                                                       Romanian         0. White                 3. Other White |
+ 42. |                                                                                                                                      Bulgarian         0. White                 3. Other White |
+ 43. |                                                                                                                                          Czech         0. White                 3. Other White |
+ 44. |                                                                                                                                         Slovak         0. White                 3. Other White |
+ 45. |                                                                                                                                     Portuguese         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 46. |                                                                                           Other White background - ethnic category 2001 census         0. White                 3. Other White |
+ 47. |                                                                                        Cypriot (part not stated) - ethnic category 2001 census         0. White                 3. Other White |
+ 48. |                                                                                                            Greek - ethnic category 2001 census         0. White                 3. Other White |
+ 49. |                                                                                                    Greek Cypriot - ethnic category 2001 census         0. White                 3. Other White |
+ 50. |                                                                                                          Turkish - ethnic category 2001 census         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 51. |                                                                                                  Turkish Cypriot - ethnic category 2001 census         0. White                 3. Other White |
+ 52. |                                                                                                          Italian - ethnic category 2001 census         0. White                 3. Other White |
+ 53. |                                                                                                  Irish Traveller - ethnic category 2001 census         0. White                 3. Other White |
+ 54. |                                                                                                        Traveller - ethnic category 2001 census         0. White                 3. Other White |
+ 55. |                                                                                                     Gypsy/Romany - ethnic category 2001 census         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 56. |                                                                                                           Polish - ethnic category 2001 census         0. White                 3. Other White |
+ 57. |                                                                Baltic States (Estonian or Latvian or Lithuanian) - ethnic category 2001 census         0. White                 3. Other White |
+ 58. |                                                                     Commonwealth of (Russian) Independent States - ethnic category 2001 census         0. White                 3. Other White |
+ 59. |                                                                                                          Kosovan - ethnic category 2001 census         0. White                 3. Other White |
+ 60. |                                                                                                         Albanian - ethnic category 2001 census         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 61. |                                                                                                          Bosnian - ethnic category 2001 census         0. White                 3. Other White |
+ 62. |                                                                                                         Croatian - ethnic category 2001 census         0. White                 3. Other White |
+ 63. |                                                                                                          Serbian - ethnic category 2001 census         0. White                 3. Other White |
+ 64. |                                                              Other republics which made up the former Yugoslavia - ethnic category 2001 census         0. White                 3. Other White |
+ 65. |                                                                                      Mixed Irish and other White - ethnic category 2001 census         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 66. |                                                   Other White European or European unspecified or Mixed European - ethnic category 2001 census         0. White                 3. Other White |
+ 67. |                                                                                                Other mixed White - ethnic category 2001 census         0. White                 3. Other White |
+ 68. |                                                                                 Other White or White unspecified - ethnic category 2001 census         0. White                 3. Other White |
+ 69. |                                                                White: Gypsy or Irish Traveller - England and Wales ethnic category 2011 census         0. White                 3. Other White |
+ 70. |                                                              White: any other White background - England and Wales ethnic category 2011 census         0. White                 3. Other White |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 71. |                                                                                 Irish Traveller - Northern Ireland ethnic category 2011 census         0. White                 3. Other White |
+ 72. |                                                                         White: Gypsy or Irish Traveller - Scotland ethnic category 2011 census         0. White                 3. Other White |
+ 73. |                                                                                           White: Polish - Scotland ethnic category 2011 census         0. White                 3. Other White |
+ 74. |                                                                     White: any other White ethnic group - Scotland ethnic category 2011 census         0. White                 3. Other White |
+ 75. |                                                                                                                                         Indian   1. South Asian                      8. Indian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 76. |                                                                                                                                  Indian origin   1. South Asian                      8. Indian |
+ 77. |                                                                                                                                         Indian   1. South Asian                      8. Indian |
+ 78. |                                                                                                                                         Indian   1. South Asian                      8. Indian |
+ 79. |                                                                                         Indian or British Indian - ethnic category 2001 census   1. South Asian                      8. Indian |
+ 80. |                                                                 Asian or Asian British: Indian - England and Wales ethnic category 2011 census   1. South Asian                      8. Indian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 81. |                                                                  Asian or Asian British: Indian - Northern Ireland ethnic category 2011 census   1. South Asian                      8. Indian |
+ 82. |                     Asian or Asian Scottish or Asian British: Indian, Indian Scottish or Indian British - Scotland ethnic category 2011 census   1. South Asian                      8. Indian |
+ 83. |                                                                                                                                      Pakistani   1. South Asian                   9. Pakistani |
+ 84. |                                                                                                                                RACE: Pakistani   1. South Asian                   9. Pakistani |
+ 85. |                                                                                                                                      Pakistani   1. South Asian                   9. Pakistani |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 86. |                                                                                   Pakistani or British Pakistani - ethnic category 2001 census   1. South Asian                   9. Pakistani |
+ 87. |                                                              Asian or Asian British: Pakistani - England and Wales ethnic category 2011 census   1. South Asian                   9. Pakistani |
+ 88. |                                                               Asian or Asian British: Pakistani - Northern Ireland ethnic category 2011 census   1. South Asian                   9. Pakistani |
+ 89. |            Asian or Asian Scottish or Asian British: Pakistani, Pakistani Scottish or Pakistani British - Scotland ethnic category 2011 census   1. South Asian                   9. Pakistani |
+ 90. |                                                                                                                                    Bangladeshi   1. South Asian                10. Bangladeshi |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 91. |                                                                                                                              RACE: Bangladeshi   1. South Asian                10. Bangladeshi |
+ 92. |                                                                                                                                    Bangladeshi   1. South Asian                10. Bangladeshi |
+ 93. |                                                                               Bangladeshi or British Bangladeshi - ethnic category 2001 census   1. South Asian                10. Bangladeshi |
+ 94. |                                                            Asian or Asian British: Bangladeshi - England and Wales ethnic category 2011 census   1. South Asian                10. Bangladeshi |
+ 95. |                                                             Asian or Asian British: Bangladeshi - Northern Ireland ethnic category 2011 census   1. South Asian                10. Bangladeshi |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ 96. |      Asian or Asian Scottish or Asian British: Bangladeshi, Bangladeshi Scottish or Bangladeshi British - Scotland ethnic category 2011 census   1. South Asian                10. Bangladeshi |
+ 97. |                                                                                                                                   Asian origin   1. South Asian                11. Other Asian |
+ 98. |                                                                                                                             West Indian origin   1. South Asian                11. Other Asian |
+ 99. |                                                                                                                              Race: West indian   1. South Asian                11. Other Asian |
+100. |                                                                                                                             O/E - Asian origin   1. South Asian                11. Other Asian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+101. |                                                                                                                 E Afric Asian/Indo-Carib (NMO)   1. South Asian                11. Other Asian |
+102. |                                                                                                                       East African Asian (NMO)   1. South Asian                11. Other Asian |
+103. |                                                                                                                           Indo-Caribbean (NMO)   1. South Asian                11. Other Asian |
+104. |                                                                                                                     Indian sub-continent (NMO)   1. South Asian                11. Other Asian |
+105. |                                                                                                                              Other Asian (NMO)   1. South Asian                11. Other Asian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+106. |                                                                                                                       Other Asian ethnic group   1. South Asian                11. Other Asian |
+107. |                                                                                                                           Asian - ethnic group   1. South Asian                11. Other Asian |
+108. |                                                                                                                                         Nepali   1. South Asian                11. Other Asian |
+109. |                                                                                           Other Asian background - ethnic category 2001 census   1. South Asian                11. Other Asian |
+110. |                                                                                                          Punjabi - ethnic category 2001 census   1. South Asian                11. Other Asian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+111. |                                                                                                         Kashmiri - ethnic category 2001 census   1. South Asian                11. Other Asian |
+112. |                                                                                               East African Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+113. |                                                                                                       Sri Lankan - ethnic category 2001 census   1. South Asian                11. Other Asian |
+114. |                                                                                                            Tamil - ethnic category 2001 census   1. South Asian                11. Other Asian |
+115. |                                                                                                        Sinhalese - ethnic category 2001 census   1. South Asian                11. Other Asian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+116. |                                                                                                  Caribbean Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+117. |                                                                                                    British Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+118. |                                                                                                      Mixed Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+119. |                                                                                 Other Asian or Asian unspecified - ethnic category 2001 census   1. South Asian                11. Other Asian |
+120. |                                             Asian or Asian British: any other Asian background - England and Wales ethnic category 2011 census   1. South Asian                11. Other Asian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+121. |                                              Asian or Asian British: any other Asian background - Northern Ireland ethnic category 2011 census   1. South Asian                11. Other Asian |
+122. |                                         Asian or Asian Scottish or Asian British: any other Asian group - Scotland ethnic category 2011 census   1. South Asian                11. Other Asian |
+123. |                                                                                                                                Black Caribbean         2. Black                  12. Caribbean |
+124. |                                                                                                        Caribbean - ethnic category 2001 census         2. Black                  12. Caribbean |
+125. |                                      Black or African or Caribbean or Black British: Caribbean - England and Wales ethnic category 2011 census         2. Black                  12. Caribbean |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+126. |                                       Black or African or Caribbean or Black British: Caribbean - Northern Ireland ethnic category 2011 census         2. Black                  12. Caribbean |
+127. |                                  Caribbean or Black: Caribbean, Caribbean Scottish or Caribbean British - Scotland ethnic category 2011 census         2. Black                  12. Caribbean |
+128. |                                                                                                                                Central African         2. Black                    13. African |
+129. |                                                                                                                                  South African         2. Black                    13. African |
+130. |                                                                                                                                 African origin         2. Black                    13. African |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+131. |                                                                                                                                  Black African         2. Black                    13. African |
+132. |                                                                                                                  Black - other African country         2. Black                    13. African |
+133. |                                                                                                                  Other African countries (NMO)         2. Black                    13. African |
+134. |                                                                                                          African - ethnic category 2001 census         2. Black                    13. African |
+135. |                                                                                                           Somali - ethnic category 2001 census         2. Black                    13. African |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+136. |                                                                                                         Nigerian - ethnic category 2001 census         2. Black                    13. African |
+137. |                                        Black or African or Caribbean or Black British: African - England and Wales ethnic category 2011 census         2. Black                    13. African |
+138. |                                         Black or African or Caribbean or Black British: African - Northern Ireland ethnic category 2011 census         2. Black                    13. African |
+139. |                                                   African: African, African Scottish or African British - Scotland ethnic category 2011 census         2. Black                    13. African |
+140. |                                                                              African: any other African - Scotland ethnic category 2011 census         2. Black                    13. African |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+141. |                                                                                                                           Black - ethnic group         2. Black                14. Other Black |
+142. |                                                                                                                                 Afro-Caribbean         2. Black                14. Other Black |
+143. |                                                                                                                 Black, other, non-mixed origin         2. Black                14. Other Black |
+144. |                                                                                                                                  Black British         2. Black                14. Other Black |
+145. |                                                                                                                    Black Caribbean/W.I./Guyana         2. Black                14. Other Black |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+146. |                                                                                                                                Black Caribbean         2. Black                14. Other Black |
+147. |                                                                                                                              Black West Indian         2. Black                14. Other Black |
+148. |                                                                                                                                   Black Guyana         2. Black                14. Other Black |
+149. |                                                                                                                   Black N African/Arab/Iranian         2. Black                14. Other Black |
+150. |                                                                                                                            Black North African         2. Black                14. Other Black |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+151. |                                                                                                                                     Black Arab         2. Black                14. Other Black |
+152. |                                                                                                                                  Black Iranian         2. Black                14. Other Black |
+153. |                                                                                                        Black East African Asian/Indo-Caribbean         2. Black                14. Other Black |
+154. |                                                                                                                       Black East African Asian         2. Black                14. Other Black |
+155. |                                                                                                                           Black Indo-Caribbean         2. Black                14. Other Black |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+156. |                                                                                                                     Black Indian sub-continent         2. Black                14. Other Black |
+157. |                                                                                                                            Black - other Asian         2. Black                14. Other Black |
+158. |                                                                                                                            Black Black - other         2. Black                14. Other Black |
+159. |                                                                                                                           Black - other, mixed         2. Black                14. Other Black |
+160. |                                                                                                                 Caribbean I./W.I./Guyana (NMO)         2. Black                14. Other Black |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+161. |                                                                                                                         Caribbean Island (NMO)         2. Black                14. Other Black |
+162. |                                                                                                                              West Indian (NMO)         2. Black                14. Other Black |
+163. |                                                                                                                                   Guyana (NMO)         2. Black                14. Other Black |
+164. |                                                                                                                       Other black ethnic group         2. Black                14. Other Black |
+165. |                                                                                           Other Black background - ethnic category 2001 census         2. Black                14. Other Black |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+166. |                                                                                                    Black British - ethnic category 2001 census         2. Black                14. Other Black |
+167. |                                                                                                      Mixed Black - ethnic category 2001 census         2. Black                14. Other Black |
+168. |                                                                                 Other Black or Black unspecified - ethnic category 2001 census         2. Black                14. Other Black |
+169. | Black or African or Caribbean or Black British: other Black or African or Caribbean background - England and Wales ethnic category 2011 census         2. Black                14. Other Black |
+170. |  Black or African or Caribbean or Black British: other Black or African or Caribbean background - Northern Ireland ethnic category 2011 census         2. Black                14. Other Black |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+171. |                                              Caribbean or Black: Black, Black Scottish or Black British - Scotland ethnic category 2011 census         2. Black                14. Other Black |
+172. |                                                  Caribbean or Black: any other Black or Caribbean group - Scotland ethnic category 2011 census         2. Black                14. Other Black |
+173. |                                                                                                                                        Chinese         3. Other                    15. Chinese |
+174. |                                                                                                                                        Chinese         3. Other                    15. Chinese |
+175. |                                                                                                          Chinese - ethnic category 2001 census         3. Other                    15. Chinese |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+176. |                                                                Asian or Asian British: Chinese - England and Wales ethnic category 2011 census         3. Other                    15. Chinese |
+177. |                                                                 Asian or Asian British: Chinese - Northern Ireland ethnic category 2011 census         3. Other                    15. Chinese |
+178. |                                                       Asian or Asian Scottish or Asian British: Chinese - Scotland ethnic category 2011 census         3. Other                    15. Chinese |
+179. |                                                                                                      British ethnic minority unspecified (NMO)         3. Other         16. Other ethnic group |
+180. |                                                                                                        British ethnic minority specified (NMO)         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+181. |                                                                                                                   Other ethnic non-mixed (NMO)         3. Other         16. Other ethnic group |
+182. |                                                                                                                 Brit. ethnic minor. spec.(NMO)         3. Other         16. Other ethnic group |
+183. |                                                                                                                 Brit. ethnic minor. unsp (NMO)         3. Other         16. Other ethnic group |
+184. |                                                                                                                   N African Arab/Iranian (NMO)         3. Other         16. Other ethnic group |
+185. |                                                                                                                       North African Arab (NMO)         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+186. |                                                                                                                                  Iranian (NMO)         3. Other         16. Other ethnic group |
+187. |                                                                                                                         Other ethnic NEC (NMO)         3. Other         16. Other ethnic group |
+188. |                                                                                                                                     Vietnamese         3. Other         16. Other ethnic group |
+189. |                                                                                                                                   Ethnic group         3. Other         16. Other ethnic group |
+190. |                                                                                                                              New Zealand Maori         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+191. |                                                                                                                                         Samoan         3. Other         16. Other ethnic group |
+192. |                                                                                                                              Cook Island Maori         3. Other         16. Other ethnic group |
+193. |                                                                                                                                         Tongan         3. Other         16. Other ethnic group |
+194. |                                                                                                                                         Niuean         3. Other         16. Other ethnic group |
+195. |                                                                                                                                      Tokelauan         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+196. |                                                                                                                                         Fijian         3. Other         16. Other ethnic group |
+197. |                                                                                                                     Other Pacific ethnic group         3. Other         16. Other ethnic group |
+198. |                                                                                                                               South East Asian         3. Other         16. Other ethnic group |
+199. |                                                                                                                 Other New Zealand ethnic group         3. Other         16. Other ethnic group |
+200. |                                                                                                                   New Zealand ethnic group NOS         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+201. |                                                                                                                                         Yemeni         3. Other         16. Other ethnic group |
+202. |                                                                                                            Other - ethnic category 2001 census         3. Other         16. Other ethnic group |
+203. |                                                                                                       Vietnamese - ethnic category 2001 census         3. Other         16. Other ethnic group |
+204. |                                                                                                         Japanese - ethnic category 2001 census         3. Other         16. Other ethnic group |
+205. |                                                                                                         Filipino - ethnic category 2001 census         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+206. |                                                                                                        Malaysian - ethnic category 2001 census         3. Other         16. Other ethnic group |
+207. |                                                                                                             Arab - ethnic category 2001 census         3. Other         16. Other ethnic group |
+208. |                                                                                                    North African - ethnic category 2001 census         3. Other         16. Other ethnic group |
+209. |                                                             Middle Eastern (excluding Israeli, Iranian and Arab) - ethnic category 2001 census         3. Other         16. Other ethnic group |
+210. |                                                                                                          Israeli - ethnic category 2001 census         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+211. |                                                                                                          Iranian - ethnic category 2001 census         3. Other         16. Other ethnic group |
+212. |                                                                                                          Kurdish - ethnic category 2001 census         3. Other         16. Other ethnic group |
+213. |                                                                                                         Moroccan - ethnic category 2001 census         3. Other         16. Other ethnic group |
+214. |                                                                                                   Latin American - ethnic category 2001 census         3. Other         16. Other ethnic group |
+215. |                                                                                       South and Central American - ethnic category 2001 census         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+216. |                                         Multi-ethnic islands: Mauritian or Seychellois or Maldivian or St Helena - ethnic category 2001 census         3. Other         16. Other ethnic group |
+217. |                                                                                                  Any other group - ethnic category 2001 census         3. Other         16. Other ethnic group |
+218. |                                                                       Other ethnic group: Arab - England and Wales ethnic category 2011 census         3. Other         16. Other ethnic group |
+219. |                                                     Other ethnic group: any other ethnic group - England and Wales ethnic category 2011 census         3. Other         16. Other ethnic group |
+220. |                                                                        Other ethnic group: Arab - Northern Ireland ethnic category 2011 census         3. Other         16. Other ethnic group |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+221. |                                                      Other ethnic group: any other ethnic group - Northern Ireland ethnic category 2011 census         3. Other         16. Other ethnic group |
+222. |                                                 Other ethnic group: Arab, Arab Scottish or Arab British - Scotland ethnic category 2011 census         3. Other         16. Other ethnic group |
+223. |                                                              Other ethnic group: any other ethnic group - Scotland ethnic category 2011 census         3. Other         16. Other ethnic group |
+224. |                                                                                                                      Black Caribbean and White         4. Mixed   4. White and Black Caribbean |
+225. |                                                                                        White and Black Caribbean - ethnic category 2001 census         4. Mixed   4. White and Black Caribbean |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+226. |                                        Mixed multiple ethnic groups: White and Black Caribbean - England and Wales ethnic category 2011 census         4. Mixed   4. White and Black Caribbean |
+227. |                                         Mixed multiple ethnic groups: White and Black Caribbean - Northern Ireland ethnic category 2011 census         4. Mixed   4. White and Black Caribbean |
+228. |                                                                                                                                 Afro-Caucasian         4. Mixed     5. White and Black African |
+229. |                                                                                                                        Black African and White         4. Mixed     5. White and Black African |
+230. |                                                                                          White and Black African - ethnic category 2001 census         4. Mixed     5. White and Black African |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+231. |                                          Mixed multiple ethnic groups: White and Black African - England and Wales ethnic category 2011 census         4. Mixed     5. White and Black African |
+232. |                                           Mixed multiple ethnic groups: White and Black African - Northern Ireland ethnic category 2011 census         4. Mixed     5. White and Black African |
+233. |                                                                                                                 Other ethnic, Asian/White orig         4. Mixed             6. White and Asian |
+234. |                                                                                                  White and Asian - ethnic category 2001 census         4. Mixed             6. White and Asian |
+235. |                                                  Mixed multiple ethnic groups: White and Asian - England and Wales ethnic category 2011 census         4. Mixed             6. White and Asian |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+236. |                                                   Mixed multiple ethnic groups: White and Asian - Northern Ireland ethnic category 2011 census         4. Mixed             6. White and Asian |
+237. |                                                                                                                      Mixed ethnic census group         4. Mixed                 7. Other Mixed |
+238. |                                                                                                               Other ethnic, Black/White origin         4. Mixed                 7. Other Mixed |
+239. |                                                                                                               Other ethnic, mixed white origin         4. Mixed                 7. Other Mixed |
+240. |                                                                                                               Other ethnic, other mixed origin         4. Mixed                 7. Other Mixed |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+241. |                                                                                                               Other ethnic, Asian/White origin         4. Mixed                 7. Other Mixed |
+242. |                                                                                                                 Other Black - Black/White orig         4. Mixed                 7. Other Mixed |
+243. |                                                                                                                 Other Black - Black/Asian orig         4. Mixed                 7. Other Mixed |
+244. |                                                                                                                     Other ethnic, mixed origin         4. Mixed                 7. Other Mixed |
+245. |                                                                                                                 Other ethnic, Black/White orig         4. Mixed                 7. Other Mixed |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+246. |                                                                                                                 Other ethnic, mixed white orig         4. Mixed                 7. Other Mixed |
+247. |                                                                                                                 Other ethnic, other mixed orig         4. Mixed                 7. Other Mixed |
+248. |                                                                                           Other Mixed background - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+249. |                                                                                                  Black and Asian - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+250. |                                                                                                Black and Chinese - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+251. |                                                                                                  Black and White - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+252. |                                                                                                Chinese and White - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+253. |                                                                                                Asian and Chinese - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+254. |                                                                                 Other Mixed or Mixed unspecified - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+255. |                    Mixed multiple ethnic groups: any other Mixed or multiple ethnic background - England and Wales ethnic category 2011 census         4. Mixed                 7. Other Mixed |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+256. |                     Mixed multiple ethnic groups: any other Mixed or multiple ethnic background - Northern Ireland ethnic category 2011 census         4. Mixed                 7. Other Mixed |
+257. |                                     Mixed or multiple ethnic groups: any Mixed or multiple ethnic group - Scotland ethnic category 2011 census         4. Mixed                 7. Other Mixed |
+258. |                                                                                                                           Ethnicity not stated    5. Not Stated                 17. Not Stated |
+259. |                                                                                                           Ethnicity / related nationality data    5. Not Stated                 17. Not Stated |
+260. |                                                                                                                                   Ethnic group    5. Not Stated                 17. Not Stated |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+261. |                                                                                                                                      Ethnicity    5. Not Stated                 17. Not Stated |
+262. |                                                                                                   Ethnic groups (1991 census) (United Kingdom)    5. Not Stated                 17. Not Stated |
+263. |                                                                                                 Ethnicity / related nationality data - finding    5. Not Stated                 17. Not Stated |
+264. |                                                                                                               Ethnic groups (1991 census) (UK)    5. Not Stated                 17. Not Stated |
+265. |                                                                                                                              Ethnic background    5. Not Stated                 17. Not Stated |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+266. |                                                                                                                                      Ethnicity    5. Not Stated                 17. Not Stated |
+267. |                                                                                                                             O/E - ethnic group    5. Not Stated                 17. Not Stated |
+268. |                                                                                                                            O/E - ethnic origin    5. Not Stated                 17. Not Stated |
+269. |                                                                                                                         O/E - ethnic group NOS    5. Not Stated                 17. Not Stated |
+270. |                                                                                                                           Ethnic group finding    5. Not Stated                 17. Not Stated |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+271. |                                                                                                                      Ethnic group not recorded    5. Not Stated                 17. Not Stated |
+272. |                                                                                                                     Ethnic groups (census) NOS    5. Not Stated                 17. Not Stated |
+273. |                                                                                                   Ethnicity and other related nationality data    5. Not Stated                 17. Not Stated |
+274. |                                                                                                                      New Zealand ethnic groups    5. Not Stated                 17. Not Stated |
+275. |                                                                                                                  Ethnic category - 2001 census    5. Not Stated                 17. Not Stated |
+     |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+276. |                                                                                                       Ethnic category not stated - 2001 census    5. Not Stated                 17. Not Stated |
+277. |                                                                                                                  Ethnic category - 2011 census    5. Not Stated                 17. Not Stated |
+278. |                                                                                                Ethnic category - 2011 census England and Wales    5. Not Stated                 17. Not Stated |
+279. |                                                                                                 Ethnic category - 2011 census Northern Ireland    5. Not Stated                 17. Not Stated |
+280. |                                                                                                         Ethnic category - 2011 census Scotland    5. Not Stated                 17. Not Stated |
+     +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+~~~~
+## SAVE CODE LISTS
+~~~~
+
+
+
+Contains data from J:\EHR Share\3 Database guidelines and info\CPRD Aurum\Code browsers\2023_03\CPRDAurumMedical.dta
+ Observations:           280                  
+    Variables:            11                  6 May 2023 15:31
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+medcodeid       str18   %18s                  MedCodeId
+observations    long    %10.0g                Observations
+originalreadc~e str19   %19s                  OriginalReadCode
+readcode        str7    %9s                   CleansedReadCode
+term            str233  %233s                 Term
+snomedctconce~d str18   %18s                  SnomedCTConceptId
+snomedctdescr~d str18   %18s                  SnomedCTDescriptionId
+release         str1    %9s                   Release
+emiscodecateg~d byte    %10.0g                EmisCodeCategoryId
+eth16           byte    %28.0g     eth16      
+eth5            byte    %14.0g     eth5       RECODE of eth16
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: eth5  eth16  readcode
+     Note: Dataset has changed since last saved.
+
+
+     RECODE of |
+         eth16 |      Freq.     Percent        Cum.
+---------------+-----------------------------------
+      0. White |         74       26.43       26.43
+1. South Asian |         48       17.14       43.57
+      2. Black |         50       17.86       61.43
+      3. Other |         51       18.21       79.64
+      4. Mixed |         34       12.14       91.79
+ 5. Not Stated |         23        8.21      100.00
+---------------+-----------------------------------
+         Total |        280      100.00
+
+
+                       eth16 |      Freq.     Percent        Cum.
+-----------------------------+-----------------------------------
+                  1. British |         19        6.79        6.79
+                    2. Irish |          7        2.50        9.29
+              3. Other White |         48       17.14       26.43
+4. White and Black Caribbean |          4        1.43       27.86
+  5. White and Black African |          5        1.79       29.64
+          6. White and Asian |          4        1.43       31.07
+              7. Other Mixed |         21        7.50       38.57
+                   8. Indian |          8        2.86       41.43
+                9. Pakistani |          7        2.50       43.93
+             10. Bangladeshi |          7        2.50       46.43
+             11. Other Asian |         26        9.29       55.71
+               12. Caribbean |          5        1.79       57.50
+                 13. African |         13        4.64       62.14
+             14. Other Black |         32       11.43       73.57
+                 15. Chinese |          6        2.14       75.71
+      16. Other ethnic group |         45       16.07       91.79
+              17. Not Stated |         23        8.21      100.00
+-----------------------------+-----------------------------------
+                       Total |        280      100.00
+
+
+
+
+Contains data from J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\stata\codelist_ethnicity_aurum.dta
+ Observations:           280                  
+    Variables:             6                  29 Jun 2023 10:26
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+medcodeid       str18   %18s                  MedCodeId
+observations    long    %10.0g                Observations
+term            str233  %233s                 Term
+snomedctconce~d str18   %18s                  SnomedCTConceptId
+eth16           byte    %28.0g     eth16      
+eth5            byte    %14.0g     eth5       RECODE of eth16
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: eth5  eth16
+
+successfully converted "J:/EHR-Working/HelenS/22_001887_sleep-chronology/codelists/metadata/codelist_ethnicity_derivation_aurum.html"
+
+. 
+. dyndoc "$dodir\codelist_ethnicity_derivation.txt" ///
+> gold "$dict_goldmed" medcode readcode, ///
+> saving("codelist_ethnicity_derivation_gold.html") replace
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+
+Description of how the ethnicity code lists were created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_ethnicity.do.
+~~~~
+
+
+~~~~
+## SEARCH TO IDENTIFY NEW CODES
+~~~~
+
+
+The following search Read chapters and term strings are applied to all codes in the
+current dictionary. Each chapter or term string is searched for individually
+and flagged (strings may appear in any position in the text. 
+The terms should cover all synonyms for ethnicity (see strategy in code list
+description). Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read.
+
+Inclusion terms: ethn british english welsh scottish irish asian indian pakistani  bangladeshi african caribbean
+
+Inclusion chapters: 9S 9i 9t 9T
+
+Exclusion terms: adverse eye flower urine blood blackout adenoma adore cell  country head adverse syndrome veno sigvaris fruit trypanosomiasis poison kit altiven sick religion algi juzo jobst haddenham
+>  gloria read language ovcc exam vari porphyria assoc carer speak test encep trust contracept interpret health operation body church obscure joint patient refer activity episco type child  member feve
+> r skin virus father mother gfr myocard sis risk society orthodox tick buddhis benign born lewis traga citizen cattle africanum diet counties stew hindu jewish muslim sikh
+
+
+
+
+~~~~
+## COMPARE WITH PREVIOUS VERSION
+~~~~
+
+
+
+Codes from previous code list that are included (and not excluded) in current search that
+
+  233
+
+
+~~~~ 
+## UPDATE EXCLUSION TERMS
+~~~~
+
+
+The following exclusion terms were checked and added to the main search in this
+version of the code list. 
+
+Additional exclusion terms: 
+
+
+~~~~
+## CHECK CODES FROM PREVIOUS CODELIST THAT ARE FLAGGED IN THE EXCLUSION SEARCH
+~~~~
+
+
+The following codes have been identified in the exclusion search
+but were included in the previous code list.
+
+     +-------------------------------------------------------------------------------------------+
+     |                                     term   observ~s   _readm~r   _termm~r            eth5 |
+     |-------------------------------------------------------------------------------------------|
+ 15. | Ethnic group not given - patient refused      71048          1          1   5. Not Stated |
+133. |            Black - other African country       1149          1          1        2. Black |
+160. |     Jewish - ethnic category 2001 census        754          1          1        3. Other |
+173. |     Muslim - ethnic category 2001 census       1941          1          1        3. Other |
+184. |       Sikh - ethnic category 2001 census        642          1          1        3. Other |
+     |-------------------------------------------------------------------------------------------|
+191. |      Hindu - ethnic category 2001 census       1155          1          1        3. Other |
+204. |   Buddhist - ethnic category 2001 census         91          1          1        3. Other |
+     +-------------------------------------------------------------------------------------------+
+Religion codes from census categories were removed in this version
+Refusal to provide information about ethnic group removed in this version
+
+
+
+
+Check codes that are not in Read Chapters identifying ONS ethnicity groups and
+ HAVE been excluded.
+
+
+     +--------------------------------------------------------------------------------+
+     |                                                         term            _match |
+     |--------------------------------------------------------------------------------|
+  1. |                                        Speaks English poorly   New search only |
+  3. |                                     Country of birth (Asian)   New search only |
+ 57. |                                           African tick virus   New search only |
+ 59. |                                 English as a second language   New search only |
+ 61. |                                          Speaks English well   New search only |
+     |--------------------------------------------------------------------------------|
+ 75. |                                 Main spoken language English   New search only |
+ 83. |                                  Using British sign language   New search only |
+106. | GFR calculated abbreviated MDRD adj for African Americ orign   New search only |
+111. |                                   Country of birth (African)   New search only |
+117. |                                       Born in British Guyana   New search only |
+     |--------------------------------------------------------------------------------|
+142. |                              Country of birth (Australasian)   New search only |
+147. |                   Joint British Societies cardiac risk score   New search only |
+163. |                         Asian desert cutaneous leishmaniasis   New search only |
+175. |                                                Reads English   New search only |
+192. |                                   Main spoken language Welsh   New search only |
+     |--------------------------------------------------------------------------------|
+201. |                                   Indian childhood cirrhosis   New search only |
+205. |                                 English as a second language   New search only |
+210. |                               Obscure African cardiomyopathy   New search only |
+211. |                       EPVT - English picture vocabulary test   New search only |
+215. |                   Interpreter needed - British Sign Language   New search only |
+     |--------------------------------------------------------------------------------|
+216. |                       BPVT - British picture vocabulary test   New search only |
+218. |                         British ability scales spelling test   New search only |
+220. |                                    Patient ethnicity unknown   New search only |
+222. |                                   Welsh as a second language   New search only |
+223. |                                   Main spoken language Irish   New search only |
+     |--------------------------------------------------------------------------------|
+224. |                           Born in British overseas territory   New search only |
+226. |                                          Indian head massage   New search only |
+228. |                                           Ethnicity of carer   New search only |
+229. |                         Scottish Gaelic as a second language   New search only |
+231. |                             Born in Central African Republic   New search only |
+     |--------------------------------------------------------------------------------|
+236. |     Preferred method of communication: British Sign Language   New search only |
+237. |                                        Scottish Episcopalian   New search only |
+238. |                       Uses British Sign Language interpreter   New search only |
+239. |                       African religion, follower of religion   New search only |
+240. |                            Irish Gaelic as a second language   New search only |
+     |--------------------------------------------------------------------------------|
+244. | NHS Sick Cell Thalassaemia Screen Prog African family origin   New search only |
+245. |                    BAS - British ability scales reading test   New search only |
+246. |                  Participant in Scottish Family Health Study   New search only |
+247. |        Sick Cell Thalas Scr Prog fam orig South Asia (Asian)   New search only |
+248. | NHS Sick Cell Thal Scr Prog fam orig South East Asia (Asian)   New search only |
+     |--------------------------------------------------------------------------------|
+250. |                                   Interpreter needed - Welsh   New search only |
+251. |                        Trypanosomal (African) antibody level   New search only |
+252. |    Joint British Societies cardiovascular disease risk score   New search only |
+253. |  Sick Cell Thalas Scr Prog fam orig African or African-Carib   New search only |
+254. | Referr to British Lung Foundation breathe easy support group   New search only |
+     |--------------------------------------------------------------------------------|
+255. |   Dependant of former serving member of British Armed Forces   New search only |
+256. |             Participant in Scottish health research register   New search only |
+257. | SPARRA (Scottish pt at risk readmission admission) algorithm   New search only |
+258. |  Dependant of current serving member of British Armed Forces   New search only |
+259. |                          British ability scales reading test   New search only |
+     |--------------------------------------------------------------------------------|
+260. |   Scot-PASQ - Scottish Physical Activity Screening Questions   New search only |
+262. |                                   First language not English   New search only |
+263. |                   Carer from Black and minority ethnic group   New search only |
+264. |  NHS Sick Cell Thal Scr Prog Caribbean Islands family origin   New search only |
+265. |                               Born in British Virgin Islands   New search only |
+     |--------------------------------------------------------------------------------|
+310. |                                                  Reads Welsh   New search only |
+311. |                    Sign Supported English interpreter needed   New search only |
+315. |                              English picture vocabulary test   New search only |
+325. |                                      Scottish Hospital Trust   New search only |
+327. |                       Born in British Indian Ocean Territory   New search only |
+     +--------------------------------------------------------------------------------+
+
+(66 observations deleted)
+
+
+
+~~~~
+## CATEGORISE NEW CODES
+~~~~
+
+
+The following new ethnicity codes were categorised in this version:
+
+
+     +-----------------------------------------------------------------------------------------------------+
+     |                                                      term             eth5                    eth16 |
+     |-----------------------------------------------------------------------------------------------------|
+ 41. |                                                   Chinese         3. Other              15. Chinese |
+ 67. |                                                 Tokelauan         3. Other   16. Other ethnic group |
+117. |                                         New Zealand Maori         3. Other   16. Other ethnic group |
+172. |                                                    Niuean         3. Other   16. Other ethnic group |
+175. |                                      New Zealand European         0. White           3. Other White |
+     |-----------------------------------------------------------------------------------------------------|
+182. |                                                    Tongan         3. Other   16. Other ethnic group |
+184. |                                                    Fijian         3. Other   16. Other ethnic group |
+185. |                                                    Samoan         3. Other   16. Other ethnic group |
+188. |                             Other European in New Zealand         0. White           3. Other White |
+189. |                                                    Pakeha         0. White           3. Other White |
+     |-----------------------------------------------------------------------------------------------------|
+190. |                                         Cook Island Maori         3. Other   16. Other ethnic group |
+192. |                                                    Yemeni         3. Other   16. Other ethnic group |
+197. |                                                 Bulgarian         0. White           3. Other White |
+198. |                                                  Romanian         0. White           3. Other White |
+199. |                                                     Czech         0. White           3. Other White |
+     |-----------------------------------------------------------------------------------------------------|
+200. |                                                    Nepali   1. South Asian          11. Other Asian |
+201. |                                                Portuguese         0. White           3. Other White |
+202. |                                                    Slovak         0. White           3. Other White |
+261. | Irish Traveller - Northern Ireland ethnic cat 2011 census         0. White           3. Other White |
+     +-----------------------------------------------------------------------------------------------------+
+
+
+
+~~~~
+## EXCLUDE ADDITIONAL CODES THAT DON'T MATCH THE CODELIST CONCEPT
+~~~~
+
+The following codes are excluded. Check that they do not match the code list
+concept. Do not add them to the full exclusion terms list unless you want ALL
+terms with the string to be excluded.
+
+
+     +---------------------------------------------------------------+
+     |                                               term   readcode |
+     |---------------------------------------------------------------|
+ 77. |                   British picture vocabulary scale    ZR2m.00 |
+ 79. |            BPVS - British picture vocabulary scale    ZR2m.11 |
+119. |                                  Traveller - gypsy    9T2..00 |
+134. |                             British ability scales    ZR2k.00 |
+155. | BILAG - British isles lupus assessment group score    ZR2l.11 |
+     |---------------------------------------------------------------|
+186. |                   British ability scales - revised    ZR2k300 |
+203. |                             Scottish admin chapter    9Z0..00 |
+204. |                       BAS - British ability scales    ZR2k.11 |
+     +---------------------------------------------------------------+
+
+
+
+~~~~
+## CATEGORY CHANGES FROM PREVIOUS CODELIST
+~~~~
+
+The following codes were recategorised as Black African as they were
+categorised as Black Other in the previous code list.
+
+
+(2 real changes made)
+
+
+     +----------------------------------------------------------------------------+
+     |                                   term       eth5         eth16   observ~s |
+     |----------------------------------------------------------------------------|
+ 19. |   Somali - ethnic category 2001 census   2. Black   13. African       8852 |
+117. | Nigerian - ethnic category 2001 census   2. Black   13. African       7996 |
+     +----------------------------------------------------------------------------+
+
+
+~~~~
+## LIST ALL INCLUDED TERMS
+~~~~
+
+
+
+     +--------------------------------------------------------------------------------------------------------------+
+     |                                                         term             eth5                          eth16 |
+     |--------------------------------------------------------------------------------------------------------------|
+  1. |                                              RACE: Caucasian         0. White                     1. British |
+  2. |                                                        White         0. White                     1. British |
+  3. |                                                White British         0. White                     1. British |
+  4. |                                               White Scottish         0. White                     1. British |
+  5. |                             Other white British ethnic group         0. White                     1. British |
+     |--------------------------------------------------------------------------------------------------------------|
+  6. |       British or mixed British - ethnic category 2001 census         0. White                     1. British |
+  7. |                  White British - ethnic category 2001 census         0. White                     1. British |
+  8. |                        English - ethnic category 2001 census         0. White                     1. British |
+  9. |                       Scottish - ethnic category 2001 census         0. White                     1. British |
+ 10. |                          Welsh - ethnic category 2001 census         0. White                     1. British |
+     |--------------------------------------------------------------------------------------------------------------|
+ 11. |                        Cornish - ethnic category 2001 census         0. White                     1. British |
+ 12. |                 Northern Irish - ethnic category 2001 census         0. White                     1. British |
+ 13. |                   Ulster Scots - ethnic category 2001 census         0. White                     1. British |
+ 14. | White:Eng/Welsh/Scot/NI/Brit - England and Wales 2011 census         0. White                     1. British |
+ 15. |         White - Northern Ireland ethnic category 2011 census         0. White                     1. British |
+     |--------------------------------------------------------------------------------------------------------------|
+ 16. |       White: Scottish - Scotland ethnic category 2011 census         0. White                     1. British |
+ 17. |  White: other British - Scotland ethnic category 2011 census         0. White                     1. British |
+ 18. |                                                  White Irish         0. White                       2. Irish |
+ 19. |                                                  Irish (NMO)         0. White                       2. Irish |
+ 20. |                          Irish - ethnic category 2001 census         0. White                       2. Irish |
+     |--------------------------------------------------------------------------------------------------------------|
+ 21. |                    White Irish - ethnic category 2001 census         0. White                       2. Irish |
+ 22. | White: Irish - England and Wales ethnic category 2011 census         0. White                       2. Irish |
+ 23. |          White: Irish - Scotland ethnic category 2011 census         0. White                       2. Irish |
+ 24. |                                     Other white ethnic group         0. White                 3. Other White |
+ 25. |                                    Greek/Greek Cypriot (NMO)         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 26. |                                                  Greek (NMO)         0. White                 3. Other White |
+ 27. |                                          Greek Cypriot (NMO)         0. White                 3. Other White |
+ 28. |                                Turkish/Turkish Cypriot (NMO)         0. White                 3. Other White |
+ 29. |                                                Turkish (NMO)         0. White                 3. Other White |
+ 30. |                                        Turkish Cypriot (NMO)         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 31. |                                         Other European (NMO)         0. White                 3. Other White |
+ 32. |                                              Irish traveller         0. White                 3. Other White |
+ 33. |                                         New Zealand European         0. White                 3. Other White |
+ 34. |                                                       Pakeha         0. White                 3. Other White |
+ 35. |                                Other European in New Zealand         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 36. |                                                     Romanian         0. White                 3. Other White |
+ 37. |                                                    Bulgarian         0. White                 3. Other White |
+ 38. |                                                        Czech         0. White                 3. Other White |
+ 39. |                                                       Slovak         0. White                 3. Other White |
+ 40. |                                                   Portuguese         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 41. |         Other White background - ethnic category 2001 census         0. White                 3. Other White |
+ 42. |      Cypriot (part not stated) - ethnic category 2001 census         0. White                 3. Other White |
+ 43. |                          Greek - ethnic category 2001 census         0. White                 3. Other White |
+ 44. |                  Greek Cypriot - ethnic category 2001 census         0. White                 3. Other White |
+ 45. |                        Turkish - ethnic category 2001 census         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 46. |                Turkish Cypriot - ethnic category 2001 census         0. White                 3. Other White |
+ 47. |                        Italian - ethnic category 2001 census         0. White                 3. Other White |
+ 48. |                Irish Traveller - ethnic category 2001 census         0. White                 3. Other White |
+ 49. |                      Traveller - ethnic category 2001 census         0. White                 3. Other White |
+ 50. |                   Gypsy/Romany - ethnic category 2001 census         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 51. |                         Polish - ethnic category 2001 census         0. White                 3. Other White |
+ 52. |  Baltic Estonian/Latvian/Lithuanian - ethn categ 2001 census         0. White                 3. Other White |
+ 53. | Commonwealth (Russian) Indep States - ethn categ 2001 census         0. White                 3. Other White |
+ 54. |                        Kosovan - ethnic category 2001 census         0. White                 3. Other White |
+ 55. |                       Albanian - ethnic category 2001 census         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 56. |                        Bosnian - ethnic category 2001 census         0. White                 3. Other White |
+ 57. |                       Croatian - ethnic category 2001 census         0. White                 3. Other White |
+ 58. |                        Serbian - ethnic category 2001 census         0. White                 3. Other White |
+ 59. | Other republics former Yugoslavia - ethnic categ 2001 census         0. White                 3. Other White |
+ 60. |    Mixed Irish and other White - ethnic category 2001 census         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 61. |  Oth White European/European unsp/Mixed European 2001 census         0. White                 3. Other White |
+ 62. |              Other mixed White - ethnic category 2001 census         0. White                 3. Other White |
+ 63. | Other White or White unspecified ethnic category 2001 census         0. White                 3. Other White |
+ 64. | White: Gypsy/Irish Traveller - Eng+Wales eth cat 2011 census         0. White                 3. Other White |
+ 65. | White: other White backgrd- Eng+Wales ethnic cat 2011 census         0. White                 3. Other White |
+     |--------------------------------------------------------------------------------------------------------------|
+ 66. |    Irish Traveller - Northern Ireland ethnic cat 2011 census         0. White                 3. Other White |
+ 67. | White: Gypsy/Irish Traveller - Scotland ethnic cat 2011 cens         0. White                 3. Other White |
+ 68. |         White: Polish - Scotland ethnic category 2011 census         0. White                 3. Other White |
+ 69. | White: other White ethnic grp- Scotland ethnic cat 2011 cens         0. White                 3. Other White |
+ 70. |                                                Indian origin   1. South Asian                      8. Indian |
+     |--------------------------------------------------------------------------------------------------------------|
+ 71. |                                                       Indian   1. South Asian                      8. Indian |
+ 72. |                                                       Indian   1. South Asian                      8. Indian |
+ 73. |       Indian or British Indian - ethnic category 2001 census   1. South Asian                      8. Indian |
+ 74. |  Asian/Asian Brit: Indian - Eng+Wales ethnic cat 2011 census   1. South Asian                      8. Indian |
+ 75. |   Asian or Asian British: Indian - NI ethnic cat 2011 census   1. South Asian                      8. Indian |
+     |--------------------------------------------------------------------------------------------------------------|
+ 76. | Asian: Indian, Indian Scot/Indian Brit- Scotland 2011 census   1. South Asian                      8. Indian |
+ 77. |                                              RACE: Pakistani   1. South Asian                   9. Pakistani |
+ 78. |                                                    Pakistani   1. South Asian                   9. Pakistani |
+ 79. | Pakistani or British Pakistani - ethnic category 2001 census   1. South Asian                   9. Pakistani |
+ 80. | Asian/Asian British:Pakistani- Eng+Wales eth cat 2011 census   1. South Asian                   9. Pakistani |
+     |--------------------------------------------------------------------------------------------------------------|
+ 81. |   Asian/Asian British: Pakistani - NI ethnic cat 2011 census   1. South Asian                   9. Pakistani |
+ 82. |    Asian: Pakistani/Pakistani Scot/Pakistani Brit- Scot 2011   1. South Asian                   9. Pakistani |
+ 83. |                                            RACE: Bangladeshi   1. South Asian                10. Bangladeshi |
+ 84. |                                                  Bangladeshi   1. South Asian                10. Bangladeshi |
+ 85. |  Bangladeshi or British Bangladeshi - ethn categ 2001 census   1. South Asian                10. Bangladeshi |
+     |--------------------------------------------------------------------------------------------------------------|
+ 86. | Asian/Asian Brit: Bangladeshi- Eng+Wales eth cat 2011 census   1. South Asian                10. Bangladeshi |
+ 87. | Asian/Asian British: Bangladeshi - NI ethnic cat 2011 census   1. South Asian                10. Bangladeshi |
+ 88. | Bangladeshi, Bangladeshi Scot or Bangladeshi Brit- Scot 2011   1. South Asian                10. Bangladeshi |
+ 89. |                                                 Asian origin   1. South Asian                11. Other Asian |
+ 90. |                                           West Indian origin   1. South Asian                11. Other Asian |
+     |--------------------------------------------------------------------------------------------------------------|
+ 91. |                                            RACE: West indian   1. South Asian                11. Other Asian |
+ 92. |                                           O/E - Asian origin   1. South Asian                11. Other Asian |
+ 93. |                               E Afric Asian/Indo-Carib (NMO)   1. South Asian                11. Other Asian |
+ 94. |                                     East African Asian (NMO)   1. South Asian                11. Other Asian |
+ 95. |                                         Indo-Caribbean (NMO)   1. South Asian                11. Other Asian |
+     |--------------------------------------------------------------------------------------------------------------|
+ 96. |                                   Indian sub-continent (NMO)   1. South Asian                11. Other Asian |
+ 97. |                                            Other Asian (NMO)   1. South Asian                11. Other Asian |
+ 98. |                                     Other Asian ethnic group   1. South Asian                11. Other Asian |
+ 99. |                                                  Other Asian   1. South Asian                11. Other Asian |
+100. |                                                       Nepali   1. South Asian                11. Other Asian |
+     |--------------------------------------------------------------------------------------------------------------|
+101. |         Other Asian background - ethnic category 2001 census   1. South Asian                11. Other Asian |
+102. |                        Punjabi - ethnic category 2001 census   1. South Asian                11. Other Asian |
+103. |                       Kashmiri - ethnic category 2001 census   1. South Asian                11. Other Asian |
+104. |             East African Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+105. |                     Sri Lankan - ethnic category 2001 census   1. South Asian                11. Other Asian |
+     |--------------------------------------------------------------------------------------------------------------|
+106. |                          Tamil - ethnic category 2001 census   1. South Asian                11. Other Asian |
+107. |                      Sinhalese - ethnic category 2001 census   1. South Asian                11. Other Asian |
+108. |                Caribbean Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+109. |                  British Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+110. |                    Mixed Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |
+     |--------------------------------------------------------------------------------------------------------------|
+111. | Other Asian or Asian unspecified ethnic category 2001 census   1. South Asian                11. Other Asian |
+112. | Asian/Asian Brit: other Asian- Eng+Wales eth cat 2011 census   1. South Asian                11. Other Asian |
+113. | Asian/Asian British: other Asian - NI ethnic cat 2011 census   1. South Asian                11. Other Asian |
+114. |   Asian: other Asian group - Scotland ethnic cat 2011 census   1. South Asian                11. Other Asian |
+115. |                                              Black Caribbean         2. Black                  12. Caribbean |
+     |--------------------------------------------------------------------------------------------------------------|
+116. |                      Caribbean - ethnic category 2001 census         2. Black                  12. Caribbean |
+117. | Black/African/Caribbn/Black Brit: Caribbean - Eng+Wales 2011         2. Black                  12. Caribbean |
+118. | Black/Afri/Carib/Black Brit: Caribbean- NI eth cat 2011 cens         2. Black                  12. Caribbean |
+119. |  Carib/Black: Caribbean/Carib Scot/Carib Brit- Scotland 2011         2. Black                  12. Caribbean |
+120. |                                               African origin         2. Black                    13. African |
+     |--------------------------------------------------------------------------------------------------------------|
+121. |                                                Black African         2. Black                    13. African |
+122. |                                Black - other African country         2. Black                    13. African |
+123. |                                Other African countries (NMO)         2. Black                    13. African |
+124. |                        African - ethnic category 2001 census         2. Black                    13. African |
+125. |                         Somali - ethnic category 2001 census         2. Black                    13. African |
+     |--------------------------------------------------------------------------------------------------------------|
+126. |                       Nigerian - ethnic category 2001 census         2. Black                    13. African |
+127. | Black/African/Carib/Black Brit: African- Eng+Wales 2011 cens         2. Black                    13. African |
+128. | Black/Afri/Carib/Black Brit: African- NI eth cat 2011 census         2. Black                    13. African |
+129. |   African: African/African Scot/African Brit - Scotland 2011         2. Black                    13. African |
+130. | African: any other African - Scotland ethnic cat 2011 census         2. Black                    13. African |
+     |--------------------------------------------------------------------------------------------------------------|
+131. |                                         RACE: Afro-caribbean         2. Black                14. Other Black |
+132. |                               Black, other, non-mixed origin         2. Black                14. Other Black |
+133. |                                                Black British         2. Black                14. Other Black |
+134. |                                  Black Caribbean/W.I./Guyana         2. Black                14. Other Black |
+135. |                                              Black Caribbean         2. Black                14. Other Black |
+     |--------------------------------------------------------------------------------------------------------------|
+136. |                                            Black West Indian         2. Black                14. Other Black |
+137. |                                                 Black Guyana         2. Black                14. Other Black |
+138. |                                 Black N African/Arab/Iranian         2. Black                14. Other Black |
+139. |                                          Black North African         2. Black                14. Other Black |
+140. |                                                   Black Arab         2. Black                14. Other Black |
+     |--------------------------------------------------------------------------------------------------------------|
+141. |                                                Black Iranian         2. Black                14. Other Black |
+142. |                               Black E Afric Asia/Indo-Caribb         2. Black                14. Other Black |
+143. |                                     Black East African Asian         2. Black                14. Other Black |
+144. |                                         Black Indo-Caribbean         2. Black                14. Other Black |
+145. |                                   Black Indian sub-continent         2. Black                14. Other Black |
+     |--------------------------------------------------------------------------------------------------------------|
+146. |                                          Black - other Asian         2. Black                14. Other Black |
+147. |                                          Black Black - other         2. Black                14. Other Black |
+148. |                                         Black - other, mixed         2. Black                14. Other Black |
+149. |                               Caribbean I./W.I./Guyana (NMO)         2. Black                14. Other Black |
+150. |                                       Caribbean Island (NMO)         2. Black                14. Other Black |
+     |--------------------------------------------------------------------------------------------------------------|
+151. |                                            West Indian (NMO)         2. Black                14. Other Black |
+152. |                                                 Guyana (NMO)         2. Black                14. Other Black |
+153. |                                     Other black ethnic group         2. Black                14. Other Black |
+154. |         Other Black background - ethnic category 2001 census         2. Black                14. Other Black |
+155. |                  Black British - ethnic category 2001 census         2. Black                14. Other Black |
+     |--------------------------------------------------------------------------------------------------------------|
+156. |                    Mixed Black - ethnic category 2001 census         2. Black                14. Other Black |
+157. | Other Black or Black unspecified ethnic category 2001 census         2. Black                14. Other Black |
+158. | Black/Afr/Carib/Black Brit: other Black- Eng+Wales 2011 cens         2. Black                14. Other Black |
+159. |  Black/Afri/Carib/Black Brit: other - NI eth cat 2011 census         2. Black                14. Other Black |
+160. | Carib/Black: Black/Black Scot/Black Brit- Scotland 2011 cens         2. Black                14. Other Black |
+     |--------------------------------------------------------------------------------------------------------------|
+161. |   Carib/Black: any other Black/Caribbean grp - Scotland 2011         2. Black                14. Other Black |
+162. |                                                      Chinese         3. Other                    15. Chinese |
+163. |                                                      Chinese         3. Other                    15. Chinese |
+164. |                        Chinese - ethnic category 2001 census         3. Other                    15. Chinese |
+165. | Asian/Asian Brit: Chinese - Eng+Wales ethnic cat 2011 census         3. Other                    15. Chinese |
+     |--------------------------------------------------------------------------------------------------------------|
+166. |     Asian/Asian British: Chinese - NI ethnic cat 2011 census         3. Other                    15. Chinese |
+167. |        Asian: Chinese - Scotland ethnic category 2011 census         3. Other                    15. Chinese |
+168. |                                 Other ethnic non-mixed (NMO)         3. Other         16. Other ethnic group |
+169. |                               Brit. ethnic minor. spec.(NMO)         3. Other         16. Other ethnic group |
+170. |                               Brit. ethnic minor. unsp (NMO)         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+171. |                                 N African Arab/Iranian (NMO)         3. Other         16. Other ethnic group |
+172. |                                     North African Arab (NMO)         3. Other         16. Other ethnic group |
+173. |                                                Iranian (NMO)         3. Other         16. Other ethnic group |
+174. |                                       Other ethnic NEC (NMO)         3. Other         16. Other ethnic group |
+175. |                                                   Vietnamese         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+176. |                                           Other ethnic group         3. Other         16. Other ethnic group |
+177. |                                            New Zealand Maori         3. Other         16. Other ethnic group |
+178. |                                                       Samoan         3. Other         16. Other ethnic group |
+179. |                                            Cook Island Maori         3. Other         16. Other ethnic group |
+180. |                                                       Tongan         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+181. |                                                       Niuean         3. Other         16. Other ethnic group |
+182. |                                                    Tokelauan         3. Other         16. Other ethnic group |
+183. |                                                       Fijian         3. Other         16. Other ethnic group |
+184. |                                   Other Pacific ethnic group         3. Other         16. Other ethnic group |
+185. |                                             South East Asian         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+186. |                               Other New Zealand ethnic group         3. Other         16. Other ethnic group |
+187. |                                 New Zealand ethnic group NOS         3. Other         16. Other ethnic group |
+188. |                                                       Yemeni         3. Other         16. Other ethnic group |
+189. |                          Other - ethnic category 2001 census         3. Other         16. Other ethnic group |
+190. |                     Vietnamese - ethnic category 2001 census         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+191. |                       Japanese - ethnic category 2001 census         3. Other         16. Other ethnic group |
+192. |                       Filipino - ethnic category 2001 census         3. Other         16. Other ethnic group |
+193. |                      Malaysian - ethnic category 2001 census         3. Other         16. Other ethnic group |
+194. |                           Arab - ethnic category 2001 census         3. Other         16. Other ethnic group |
+195. |                  North African - ethnic category 2001 census         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+196. |  Mid East (excl Israeli, Iranian & Arab) - eth cat 2001 cens         3. Other         16. Other ethnic group |
+197. |                        Israeli - ethnic category 2001 census         3. Other         16. Other ethnic group |
+198. |                        Iranian - ethnic category 2001 census         3. Other         16. Other ethnic group |
+199. |                        Kurdish - ethnic category 2001 census         3. Other         16. Other ethnic group |
+200. |                       Moroccan - ethnic category 2001 census         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+201. |                 Latin American - ethnic category 2001 census         3. Other         16. Other ethnic group |
+202. |     South and Central American - ethnic category 2001 census         3. Other         16. Other ethnic group |
+203. | Mauritian/Seychellois/Maldivian/St Helena eth cat 2001census         3. Other         16. Other ethnic group |
+204. |                Any other group - ethnic category 2001 census         3. Other         16. Other ethnic group |
+205. |  Other ethnic group: Arab - Eng+Wales ethnic cat 2011 census         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+206. |  Other ethnic: any other grp - Eng+Wales eth cat 2011 census         3. Other         16. Other ethnic group |
+207. |    Other ethnic group: Arab - NI ethnic category 2011 census         3. Other         16. Other ethnic group |
+208. | Other ethnic group: any other grp- NI ethnic cat 2011 census         3. Other         16. Other ethnic group |
+209. | Other ethnic grp: Arab/Arab Scot/Arab British- Scotland 2011         3. Other         16. Other ethnic group |
+210. | Other ethnic grp: any other ethnic grp- Scotland 2011 census         3. Other         16. Other ethnic group |
+     |--------------------------------------------------------------------------------------------------------------|
+211. |                                    Black Caribbean and White         4. Mixed   4. White and Black Caribbean |
+212. |      White and Black Caribbean - ethnic category 2001 census         4. Mixed   4. White and Black Caribbean |
+213. | Mixed: White+Black Caribbean - Eng+Wales eth cat 2011 census         4. Mixed   4. White and Black Caribbean |
+214. | Mixed: White and Black Caribbean - NI ethnic cat 2011 census         4. Mixed   4. White and Black Caribbean |
+215. |                                         RACE: Afro-caucasian         4. Mixed     5. White and Black African |
+     |--------------------------------------------------------------------------------------------------------------|
+216. |                                      Black African and White         4. Mixed     5. White and Black African |
+217. |        White and Black African - ethnic category 2001 census         4. Mixed     5. White and Black African |
+218. |   Mixed: White+Black African - Eng+Wales eth cat 2011 census         4. Mixed     5. White and Black African |
+219. |   Mixed: White and Black African - NI ethnic cat 2011 census         4. Mixed     5. White and Black African |
+220. |                               Other ethnic, Asian/White orig         4. Mixed             6. White and Asian |
+     |--------------------------------------------------------------------------------------------------------------|
+221. |                White and Asian - ethnic category 2001 census         4. Mixed             6. White and Asian |
+222. |   Mixed: White+Asian - Eng+Wales ethnic category 2011 census         4. Mixed             6. White and Asian |
+223. |      Mixed: White and Asian - NI ethnic category 2011 census         4. Mixed             6. White and Asian |
+224. |                               Other Black - Black/White orig         4. Mixed                 7. Other Mixed |
+225. |                               Other Black - Black/Asian orig         4. Mixed                 7. Other Mixed |
+     |--------------------------------------------------------------------------------------------------------------|
+226. |                                   Other ethnic, mixed origin         4. Mixed                 7. Other Mixed |
+227. |                               Other ethnic, Black/White orig         4. Mixed                 7. Other Mixed |
+228. |                               Other ethnic, mixed white orig         4. Mixed                 7. Other Mixed |
+229. |                               Other ethnic, other mixed orig         4. Mixed                 7. Other Mixed |
+230. |         Other Mixed background - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+     |--------------------------------------------------------------------------------------------------------------|
+231. |                Black and Asian - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+232. |              Black and Chinese - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+233. |                Black and White - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+234. |              Chinese and White - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+235. |              Asian and Chinese - ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+     |--------------------------------------------------------------------------------------------------------------|
+236. | Other Mixed or Mixed unspecified ethnic category 2001 census         4. Mixed                 7. Other Mixed |
+237. |  Mixed: other Mixed/multiple backgrd - Eng+Wales 2011 census         4. Mixed                 7. Other Mixed |
+238. |  Mixed: other Mixed/multiple ethnic backgrd - NI 2011 census         4. Mixed                 7. Other Mixed |
+239. | Mixed/multiple ethnic grps: any- Scot ethnic cat 2011 census         4. Mixed                 7. Other Mixed |
+240. |                                           O/E - ethnic group    5. Not Stated                 17. Not Stated |
+     |--------------------------------------------------------------------------------------------------------------|
+241. |                                          O/E - ethnic origin    5. Not Stated                 17. Not Stated |
+242. |                                       O/E - ethnic group NOS    5. Not Stated                 17. Not Stated |
+243. |                                       Ethnic groups (census)    5. Not Stated                 17. Not Stated |
+244. |                                    Ethnic group not recorded    5. Not Stated                 17. Not Stated |
+245. |                                   Ethnic groups (census) NOS    5. Not Stated                 17. Not Stated |
+     |--------------------------------------------------------------------------------------------------------------|
+246. |                 Ethnicity and other related nationality data    5. Not Stated                 17. Not Stated |
+247. |                                    New Zealand ethnic groups    5. Not Stated                 17. Not Stated |
+248. |                                Ethnic category - 2001 census    5. Not Stated                 17. Not Stated |
+249. |                     Ethnic category not stated - 2001 census    5. Not Stated                 17. Not Stated |
+250. |                                Ethnic category - 2011 census    5. Not Stated                 17. Not Stated |
+     |--------------------------------------------------------------------------------------------------------------|
+251. |              Ethnic category - 2011 census England and Wales    5. Not Stated                 17. Not Stated |
+252. |               Ethnic category - 2011 census Northern Ireland    5. Not Stated                 17. Not Stated |
+253. |                       Ethnic category - 2011 census Scotland    5. Not Stated                 17. Not Stated |
+     +--------------------------------------------------------------------------------------------------------------+
+
+
+~~~~
+## SAVE CODE LISTS
+~~~~
+
+
+
+Contains data from J:\EHR Share\3 Database guidelines and info\GPRD_Gold\Code browsers\2022_05 Browsers\medical.dta
+ Observations:           253                  
+    Variables:            11                  4 Aug 2022 16:21
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+medcode         long    %12.0g                2022_06
+readcode        str7    %9s                   20220625
+clinevents      long    %12.0g                clinical events
+imevents        long    %12.0g                immunisation events
+refevents       long    %12.0g                referral events
+testevents      long    %12.0g                test events
+term            str66   %66s                  
+firstbuild      str14   %14s                  
+observations    float   %9.0g                 
+eth16           float   %28.0g     eth16      
+eth5            float   %14.0g     eth5       RECODE of eth16
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: eth5  eth16  readcode
+     Note: Dataset has changed since last saved.
+
+
+     RECODE of |
+         eth16 |      Freq.     Percent        Cum.
+---------------+-----------------------------------
+      0. White |         69       27.27       27.27
+1. South Asian |         45       17.79       45.06
+      2. Black |         47       18.58       63.64
+      3. Other |         49       19.37       83.00
+      4. Mixed |         29       11.46       94.47
+ 5. Not Stated |         14        5.53      100.00
+---------------+-----------------------------------
+         Total |        253      100.00
+
+
+                       eth16 |      Freq.     Percent        Cum.
+-----------------------------+-----------------------------------
+                  1. British |         17        6.72        6.72
+                    2. Irish |          6        2.37        9.09
+              3. Other White |         46       18.18       27.27
+4. White and Black Caribbean |          4        1.58       28.85
+  5. White and Black African |          5        1.98       30.83
+          6. White and Asian |          4        1.58       32.41
+              7. Other Mixed |         16        6.32       38.74
+                   8. Indian |          7        2.77       41.50
+                9. Pakistani |          6        2.37       43.87
+             10. Bangladeshi |          6        2.37       46.25
+             11. Other Asian |         26       10.28       56.52
+               12. Caribbean |          5        1.98       58.50
+                 13. African |         11        4.35       62.85
+             14. Other Black |         31       12.25       75.10
+                 15. Chinese |          6        2.37       77.47
+      16. Other ethnic group |         43       17.00       94.47
+              17. Not Stated |         14        5.53      100.00
+-----------------------------+-----------------------------------
+                       Total |        253      100.00
+
+
+
+
+Contains data from J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\stata\codelist_ethnicity_gold.dta
+ Observations:           253                  
+    Variables:             6                  29 Jun 2023 10:26
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+medcode         long    %12.0g                2022_06
+readcode        str7    %9s                   20220625
+term            str66   %66s                  
+observations    float   %9.0g                 
+eth16           float   %28.0g     eth16      
+eth5            float   %14.0g     eth5       RECODE of eth16
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sorted by: eth5  eth16  readcode
+
+successfully converted "J:/EHR-Working/HelenS/22_001887_sleep-chronology/codelists/metadata/codelist_ethnicity_derivation_gold.html"
+
+. 
+. *add project specific medcodeid
+. use "$datadir_stata/codelist_ethnicity_aurum", clear
+
+. merge 1:1 medcodeid using "$datadir_stata/medcodeid_projectmedcode_lookup.dta"
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                       220,281
+        from master                         0  (_merge==1)
+        from using                    220,281  (_merge==2)
+
+    Matched                               280  (_merge==3)
+    -----------------------------------------
+
+. save "$datadir_stata/codelist_ethnicity_aurum", replace
+file J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\stata/codelist_ethnicity_aurum.dta saved
+
+. 
+. 
+. capture log close

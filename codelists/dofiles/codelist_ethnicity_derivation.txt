@@ -1,0 +1,374 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of how the ethnicity code lists were created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_ethnicity.do.
+~~~~
+
+<<dd_do:quietly>>
+pause on
+use "`2'", clear
+
+/*The following commands create common variables for the three datasets.
+Variables preceded by underscore are temporary and are deleted at the
+end of the script. The commands and outputs do not appear in the
+HTML file because the attribute "quietly" is used above.*/
+
+if "`1'" == "aurum" {
+	destring observations, replace
+	rename cleansedreadcode readcode
+	}
+if "`1'" == "gold" {
+	egen observations = rowtotal(clinevents refevents testevents imevents)
+	rename readterm term
+	}
+if "`1'" == "hesapc" {
+	gen observations = .
+	rename description term
+	rename code ICD /*ICD matches HES APC data dictionary*/
+	}
+
+/*Start with the latest version of the code list*/
+local source = "`1'"
+merge 1:1 `3' using "$olddir\cr_codelist_ethnicity_`source'", keepusing(eth16 eth5)
+
+*drop codes that aren't in this dictionary version
+drop if _merge==2
+gen _inlist = 0
+replace _inlist=1 if _merge==3
+label variable _inlist "in previous codelist"
+drop _merge
+
+drop if term == "" /*missing terms can't be categorised*/
+/*add terms below. check that they only exclude irrelevant codes and then copy
+to the excterms local if happy*/
+<</dd_do>>
+
+~~~~
+## SEARCH TO IDENTIFY NEW CODES
+~~~~
+
+<<dd_do:quietly>>
+gen _term_lower = lower(term)
+assert !strmatch(_term_lower, "*##*")
+replace _term_lower = subinstr(_term_lower, " " , "##", .) /*replace spaces with ## to make it easier
+to search for multi word terms*/
+
+generate _readmarker=0
+label variable _readmarker "Term search"
+generate _termmarker=0
+label variable _readmarker "Read chaper search"
+generate _excmarker=0
+label variable _excmarker "Exclusion search"
+/*these inclusion and exclusion terms are displayed and searched for below. 
+Changes should be made here.*/
+
+#delimit ;
+local interms "ethn british english welsh scottish irish asian indian pakistani 
+bangladeshi african caribbean"
+;
+#delimit cr
+
+local inchaps "9S 9i 9t 9T"
+/*9S (ethnic groups - census)
+9i (Ethnic category - 2001 census)
+9t (Ethnic category - 2011 census)
+9T (Ethnicity and other related nationality)*/
+
+
+#delimit ;
+local excterms "adverse eye flower urine blood blackout adenoma adore cell 
+country head adverse syndrome veno sigvaris fruit trypanosomiasis poison kit
+altiven sick religion algi juzo jobst haddenham gloria read language ovcc exam
+vari porphyria assoc carer speak test encep trust contracept interpret health
+operation body church obscure joint patient refer activity episco type child 
+member fever skin virus father mother gfr myocard sis risk society orthodox
+tick buddhis benign born lewis traga citizen cattle africanum diet counties stew
+hindu jewish muslim sikh"
+;
+#delimit cr
+local exchaps ""
+<</dd_do>>
+
+The following search Read chapters and term strings are applied to all codes in the
+current dictionary. Each chapter or term string is searched for individually
+and flagged (strings may appear in any position in the text. 
+The terms should cover all synonyms for ethnicity (see strategy in code list
+description). Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read.
+
+<<dd_do: nocommands>>
+display "Inclusion terms: `interms'"
+display "Inclusion chapters: `inchaps'"
+display "Exclusion terms: `excterms'"
+<</dd_do>>
+
+
+<<dd_do:quietly>>
+foreach chap of local inchaps {
+	replace _readmarker = 1 if strmatch(readcode, "`chap'*")
+	}
+	
+foreach word of local interms {
+	replace _termmarker = 1 if strmatch(_term_lower, "*`word'*")
+	}
+
+keep if _readmarker == 1 | _termmarker == 1 | _inlist == 1
+
+foreach word of local excterms {
+	replace _excmarker = 1 if strmatch(_term_lower, "*`word'*")
+	}
+
+<</dd_do>> 
+
+~~~~
+## COMPARE WITH PREVIOUS VERSION
+~~~~
+
+<<dd_do: quietly>>
+gen _match = 0
+label variable _match "Code list comparison"
+label define _matchlab 1 "Previous code list and search" 2 "Previous list only" 3 "New search only"
+replace _match = 1 if  _inlist == 1 & (_termmarker == 1 | _readmarker == 1)
+replace _match = 2 if _inlist == 1 & _termmarker == 0 & _readmarker == 0
+replace _match = 3 if _inlist == 0 & (_termmarker == 1 | _readmarker == 1)
+assert _match !=0
+label values _match _matchlab
+/*note for next command - twoway tabulations are not clearly displayed 
+in the HTML document. I've therefore run a simple count instead of tabulating
+this variable*/
+<</dd_do>>
+
+
+<<dd_do: nocommands>>
+di "Codes from previous code list that are included (and not excluded) in current search that"
+count if _match == 1 & _excmarker == 0
+<</dd_do>>
+
+~~~~ 
+## UPDATE EXCLUSION TERMS
+~~~~
+
+<<dd_do: quietly>>
+local exctermsupdated = 1 /*set local to 0 until you have updated the code
+list. set local to 1 for the final run through.*/
+
+if `exctermsupdated' == 0 {
+	
+	noisily {
+	
+	*Review codes that have been added to the code list and not excluded.
+
+	sort readcode
+	list term if _match == 3 & _excmarker == 0, table
+	
+	/*test new exclusion terms. When you have identified all updated terms, 
+	COPY (not cut) and paste them to the full excterms local.*/
+	#delimit ;
+	local addexcterms "cattle africanum diet counties stew admin##chapter
+	british##ability lupus vocabulary"
+	;
+	#delimit cr
+	*note "cattle africanum diet counties stew" were added in v2
+
+	foreach word of local addexcterms {
+		pause on
+		di "`word'"
+		list term _match if strmatch(_term_lower, "*`word'*") & _excmarker == 0, table
+		pause
+		}
+	pause off
+	
+	} /*end noisily*/
+
+}
+<</dd_do>>
+
+The following exclusion terms were checked and added to the main search in this
+version of the code list. 
+
+<<dd_do: nocommands>>
+display "Additional exclusion terms: `addexcterms'"
+<</dd_do>>
+
+~~~~
+## CHECK CODES FROM PREVIOUS CODELIST THAT ARE FLAGGED IN THE EXCLUSION SEARCH
+~~~~
+
+<<dd_do: nocommands>>
+qui count if _inlist == 1 & _excmarker == 1
+if `r(N)' > 0 {
+	
+	di "The following codes have been identified in the exclusion search" 
+	di "but were included in the previous code list."
+	list term observations _readmarker _termmarker eth5 if _inlist == 1 & _excmarker == 1, table
+	di "Religion codes from census categories were removed in this version"
+	di "Refusal to provide information about ethnic group removed in this version"
+	qui replace _excmarker = 0 if _inlist == 1 & _excmarker == 1 & strmatch(_term_lower, "*black*")
+}
+else {
+	di "The search has not excluded any terms that were included in the previous codelist"
+}
+<</dd_do>>
+
+
+Check codes that are not in Read Chapters identifying ONS ethnicity groups and
+ HAVE been excluded.
+
+<<dd_do: nocommands>>
+list term _match if _readmarker == 0 & _termmarker == 1 & _excmarker == 1, table
+drop if _excmarker == 1
+<</dd_do>>
+
+
+~~~~
+## CATEGORISE NEW CODES
+~~~~
+
+<<dd_do: quietly>>
+gen _newcat = 0 if _match == 3
+label variable _newcat "Newly categorised code"
+
+capture program drop ethnicitycats
+program define ethnicitycats
+	args word eth5 eth16
+	replace eth5 = `eth5' if strmatch(_term_lower, "*`word'*") & _match == 3
+	replace eth16 = `eth16' if strmatch(_term_lower, "*`word'*") & _match == 3
+	recode _newcat 0 = 1 if strmatch(_term_lower, "*`word'*") & _match == 3
+end
+
+/*NOTE - the terms below are specific to this update. Additional or modified
+codes may be needed in the next update to match the new dictionary terms*/
+
+*Not specified
+#delimit ;
+local terms "ethnicity ethnic##background ethnicity##/##related#nationality
+ethnicity#not#stated ethnic##group"
+;
+#delimit cr
+
+foreach word of local terms {
+	ethnicitycats "`word'" 5 17
+	}
+
+*Other
+#delimit ;
+local terms "maori samoan tongan niuean tokelauan fijian yemeni"
+;
+#delimit cr
+
+foreach word of local terms {
+	ethnicitycats "`word'" 3 16
+	}
+
+*White other
+#delimit ;
+local terms "new##zealand##european european*new##zealand pakeha irish##traveller
+romanian bulgarian czech portuguese slovak"
+;
+#delimit cr
+
+foreach word of local terms {
+	ethnicitycats "`word'" 0 3
+	}
+
+
+*Other South Asian
+ethnicitycats "nepali" 1 11
+
+*Chinese
+ethnicitycats "chinese" 3 15
+
+*Other black
+local terms "black##or##afri black##scott"
+
+foreach word of local terms {
+	ethnicitycats "`word'" 2 14
+	}
+	
+
+*other mixed 
+ethnicitycats "mixed##or##multiple" 4 7
+<</dd_do>>
+
+The following new ethnicity codes were categorised in this version:
+
+<<dd_do: nocommands>>
+list term eth5 eth16 if _newcat == 1, table
+<</dd_do>>
+
+
+~~~~
+## EXCLUDE ADDITIONAL CODES THAT DON'T MATCH THE CODELIST CONCEPT
+~~~~
+
+The following codes are excluded. Check that they do not match the code list
+concept. Do not add them to the full exclusion terms list unless you want ALL
+terms with the string to be excluded.
+
+<<dd_do: nocommands>>
+list term readcode if _newcat == 0 & _excmarker == 0, table
+<</dd_do>>
+
+<<dd_do: quietly>>
+recode _excmarker 0 = 1 if _newcat == 0
+drop if _excmarker == 1 & _inlist == 0
+<</dd_do>>
+
+~~~~
+## CATEGORY CHANGES FROM PREVIOUS CODELIST
+~~~~
+
+The following codes were recategorised as Black African as they were
+categorised as Black Other in the previous code list.
+
+<<dd_do: quietly>>
+/*NOTE - the terms below are specific to this update.*/
+gen _checkcat = 1 if strmatch(_term_lower, "*somali*") | strmatch(_term_lower, "*nigeria*")
+*list term eth5 eth16 if _checkcat == 1, table
+<</dd_do>>
+
+<<dd_do: nocommands>>
+replace eth16 = 13 if _checkcat == 1
+list term eth5 eth16 observations if _checkcat == 1, table
+<</dd_do>>
+
+~~~~
+## LIST ALL INCLUDED TERMS
+~~~~
+
+<<dd_do: nocommands>>
+qui sort eth5 eth16 readcode
+list term eth5 eth16, table
+<</dd_do>>
+
+~~~~
+## SAVE CODE LISTS
+~~~~
+
+<<dd_do: quietly>>
+drop _*
+export delimited using "$datadir_text\codelist_ethnicity_`1'.txt", replace delimiter(tab)
+<</dd_do>>
+
+<<dd_do: nocommands>>
+describe
+tab eth5, m
+tab eth16, m
+<</dd_do>>
+
+<<dd_do: quietly>>
+keep `3' `4' term observations eth5 eth16
+save "$datadir_stata\codelist_ethnicity_`1'.dta", replace
+<</dd_do>>
+
+<<dd_do: nocommands>>
+describe
+<</dd_do>>

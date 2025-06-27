@@ -1,0 +1,259 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of codelist_sleep_apnoea code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to use the 
+sleep apnoea code lists to define Obstructive Sleep Apnoea (OSA)
+and to cite the authors. 
+Researchers, refer to codelist_sleep_apnoea.do for instructions
+about modifying this file.
+~~~~
+
+# COVER SHEET
+
+## 0. Metadata
+
+### a. Codelist name: 
+
+Sleep apnoea
+
+### b. Author(s): 
+
+Helen Strongman (created original codes list and strategy, Epidemiologist, LSHTM)
+Tim Quinnell (Consultant respiratory and sleep disorders physician, Royal
+Papworth Hospital NHS Foundation Trust)
+Sofia Eriksson (Consultant neurologist and Honorary Associate Professor at 
+National Hospital for Neurology and Neurosurgery and UCLH and the UCL/Institute 
+of Neurology)
+
+### c. Date finalised:
+04/08/2022
+
+### d. Target data source(s)
+Clinical Practice Research Datalink GOLD (up to 05_2022)
+Clinical Practice Research Datalink Aurum (up to 05_2022)
+Hospital Episode Statistics APC for CPRD GOLD (up to 05_2022)
+Hospital Episode Statistics APC for CPRD Aurum (up to 05_2022)
+
+### e. Terminology(s)
+Read Version 2 (GOLD)
+SNOMED-CT (and EMIS codes) (Aurum)
+ICD-10 (HES)
+
+
+## 1. Define a clinical concept
+
+### a. Concept
+
+Sleep apnoea with categorisation recorded in primary care or hospital espisode data.
+Phenotype: disease or syndrome
+Group: respiratory
+
+
+### b. Timeframe: 
+???
+
+
+### c. Accuracy:
+The accuracy of the codelists was assessed by casenote review.
+
+
+### d. Setting: 
+Sleep apnoea should be diagnosed by sleep specialists following an overnight test at 
+home or at the sleep centre. Sleep specialists inform the general practice of the 
+diagnosis. GP pratice staff may add a coded record of the diagnosis at this time to 
+support ongoing care. In some cases, GPs diagnose patients with sleep apnoea without 
+a specialist input. Our validation study demonstrates that Obstructive Sleep Apnoea.... ADD
+
+Sleep apnoea may be recorded in hospital episode statistics when a
+patient is admitted to hospital for a condition related to sleep apnoea or if
+sleep apnoea affected their care.
+
+
+## 2. Search existing codelists
+	
+### a. Sources searched
+Existing codelists:
+- googled "sleep apnoea codelist cprd"
+
+ 
+### b. Existing codelists found
+- Res178: Asthma, COPD and sleep apnoea - Code list (University of Manchester)
+- HDR UK Phenotype Library: Sleep apnoea PH309 / 618 (Kuan at el. 2021)
+
+ 
+
+## 3. Evaluate existing code lists
+
+### a. Verified by others.
+???
+
+
+### b. Verified by researcher.
+???
+
+
+## 4. Existing code lists used
+???
+
+
+## 5. Prepare
+NB would need to use HDRUK naming convention to submit
+	- codelist_sleep_apnoea_gold.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_gold.txt
+	- codelist_sleep_apnoea_aurum.txt
+	- codelist_sleep_apnoea_aurum.txt
+
+### a. Synonyms
+Sleep apnoea is a well defined-condition. 
+The terms should cover all synonyms for sleep apnoea.
+
+
+## b. Exceptions
+???
+
+
+## 6. Create
+
+### a. Method used
+
+A Stata script (do file) was used to create the codelist. This exports a dyndoc
+file that describes the process and decisions made (See derivation HTML file)
+
+### b. Search terms
+he following search terms are used to generate the initial code lists. Each 
+term is searched for individually and included or excluded if 
+it appears in any position in the text. Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read.
+
+Inclusion terms:
+1 "Obstructive Sleep Apnoea" ///
+This category includes terms including the strings "obstructive" or "mixed" but not "syndrome"
+
+2"Obstructive sleep apnoea syndrome" ///
+This category includes terms including "obstructive" or "mixed" and "syndrome"
+
+3 "Sleep apnoea NOS" ///
+This category includes terms that have not been classified
+
+4 "Sleep apnoea syndrome NOS" ///
+This category includes terms that have not been classified and include the string "syndrome"
+
+5 "Central sleep apnoea" ///
+This category includes terms including the string "central"
+
+6 "Primary sleep apnoea"
+This category includes terms including the string "primary"
+
+Exclusion terms: 
+Terms without both "sleep" and either "apnoea" or "apnea" were excluded.
+Care pathway codes were excluded.
+
+
+### c. Hierarchy used to extend the search
+ADD
+
+
+### d. Decisions made while iterating
+Separate category for central and primary sleep apnoea was created. 
+Care pathway codes were excluded.
+
+### e. Categories
+Codes for sleep apnoea are categorised as follows using the category variable:
+
+Categories (category variable):
+1 "Obstructive Sleep Apnoea (OSA)"
+2 "Obstructive sleep apnoea syndrome (OSAS)"
+3 "Sleep apnoea NOS"
+4 "Sleep apnoea syndrome NOS"
+5 "Central sleep apnoea only"
+6 "Primary sleep apnoea only" 
+
+Here are recommendations to use these categories to identify an Obstructive
+Sleep Apnoea diagnosis and for censoring follow-up when other types of sleep 
+apnoea are diagnosed. 
+
+(1) First ever record of OSA (codes 1 to 4). 
+OSA/OSAS are the most commonly diagnosed form of sleep apnoea and GPs often use 
+nonspecific codes. Specialists do differentiate between OSA
+and OSAS but it will not be possible to do this using primary care data. 
+Mixed sleep apnoea codes are included in codes 1 to 4 because OSA is likely to
+be the dominant or at least co-dominant condition. 
+(2) Exclude if prior record of central sleep apnoea or primary sleep apnoea
+(codes 5 & 6). These are distinct from OSA with different co-morbidities and 
+health implications.
+(3) Censor follow up if central sleep apnoea or primary sleep apnoea are recorded
+after diagnosis with OSA.
+
+sex:
+	- Female
+	- Male
+
+The categories are defined using the following criteria. They are not in
+numeric order because the categories that are defined later use information
+used to create earlier categories. These are provided so that the search can
+be replicated using different software.
+
+
+
+## 7. Review
+
+### a. Reviewers
+
+Dr Sofia Erikkson (Consultant neurologist and Honorary Associate Professor at 
+National Hospital for Neurology and Neurosurgery and UCLH and the UCL/Institute 
+of Neurology)
+
+Dr Tim Quinnell (Consultant respiratory and sleep disorders physician, Royal
+Papworth Hospital NHS Foundation Trust)
+
+
+### b. Scope of review
+
+The final codelists were checked.
+
+
+### c. Evidence of review
+
+The process is documented in this HTML file.
+
+
+## 8. Publish
+
+### a. Codelist published
+I will add a link to my fellowship protocol when I've decided which site to
+upload it to.
+
+
+### b. Resources published
+
+The full process is described in the derivation HTML document.
+Stata scripts (do and dyndoc) will be available in the XX repository.
+
+
+
+~~~~
+
+# Version control (more detail)
+
+
+Date created: 15/03/2022
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors: Sofia Erikkson, Tim Quinnell
+
+
+Date updated: 04/08/2022 (*in the original description file is stated 02/08/2022
+but modified date stated 04/08/2022 therefore went with 04/08/2022) 
+Author: Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors: not needed
+Changes: separate category for central and primary sleep apnoea, care pathway
+		codes excluded 
+~~~~
+
+

@@ -1,0 +1,248 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of ethnicity code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to use the 
+ethnicity code lists to define ethnicity
+and to cite the authors. 
+Researchers, refer to codelist_ethnicity.do for instructions
+about modifying this file.
+~~~~
+
+## COVER SHEET
+# 0. Metadata
+
+### a. Codelist name: 
+Ethnicity 
+
+### b. Author(s): 
+Rohini Mathur (created original codes list and strategy)
+
+
+### c. Date finalised:
+09/06/2023
+
+
+### d. Target data source(s)
+Clinical Practice Research Datalink GOLD (up to March 2023)
+Clinical Practice Research Datalink Aurum (up to March 2023)
+*Note CPRD provide categorised ethnicity data for HES
+
+
+### e. Terminology(s)
+Read Version 2 (GOLD)
+SNOMED-CT (and EMIS codes) (Aurum)
+
+
+## 1. Define a clinical concept
+
+### a. Concept
+Ethnicity. The search identifies all codes indicating an individual's
+	ethnicity as conceptualised and defined by the Office of National Statistics.
+
+Codes with the following concepts in the read term are included:
+	- codes that specify they refer to ethnicity/ethnic groups or categories
+	-mixed and non-mixed ethnicity codes
+	- codes including terms such as white, black, caucasian, aisian
+	- codes in ethnicity Read chapters that are synonomous with, or represent
+	countries with a largely homogonous ethnic population (e.g. Japanese, Indian)
+	
+Codes that describe other countries or regions, nationalities or religions 
+are not included (e.g. England, Europe, British, Christian).
+	
+The conceptualisation of ethnicity evolves over time and this will need to
+be reevaluated periodically.
+	
+
+### b. Timeframe: 
+	
+??
+	
+### c. Accuracy:
+??
+
+
+### d. Setting: 
+The Office of National Statistics (ONS) has highlighted that there is no true consensus 
+on what defines an ethnic group, as identification to these is self-defined and subjectively 
+meaningful to the individual.
+
+Ethnicity is often associated with race and relates to the population group a person 
+belongs to, identifies with or is identified by, considering cultural factors including 
+language, diet, religion, ancestry and physical features. However, it is generally 
+accepted that ethnicity includes all of these aspects, and others, in combination. 
+
+
+
+## 2. Search existing codelists
+	
+### a. Sources searched
+??
+
+### b. Existing codelists found
+??
+
+
+## 3. Evaluate existing code lists
+
+### a. Verified by others.
+??
+
+
+### b. Verified by researcher.
+??
+
+
+## 4. Existing code lists used
+CPRD have validated an ethnicity code list and algorithm.
+
+
+# 5. Prepare
+
+### a. Synonyms
+Ethnicity is not a well-defined concept because the conceptualisation of ethnicity evolves over time 
+and this will need to be reevaluated periodically.
+*Note CPRD have validated an ethnicity code list and algorithm.
+
+
+## b. Exceptions
+??
+The search has not excluded any terms that were included in the previous codelist.
+
+
+
+## 6. Create
+
+### a. Method used
+
+The following search Read chapters and term strings are applied to all codes in the
+current dictionary. Each chapter or term string is searched for individually
+and flagged (strings may appear in any position in the text. 
+The terms should cover all synonyms for ethnicity (see strategy in code list
+description). Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read.
+
+
+A Stata script (do file) was used to create the codelist. This exports a dyndoc
+file that describes the process and decisions made (See derivation HTML file)
+
+Files created:
+	- codelist_ethnicity_gold.dta
+	- codelist_ethnicity_aurum.dta
+	- codelist_ethnicity_gold.txt
+	- codelist_ethnicity_aurum.txt
+
+*Check codes that are not in Read Chapters identifying ONS ethnicity groups and
+ HAVE been excluded.
+
+
+
+### b. Search terms
+Inclusion terms: ??
+
+Exclusion terms: Codes that describe other countries or regions, nationalities 
+or religions are not included (e.g. England, Europe, British, Christian).
+Religion codes from census categories were removed in this version.
+Refusal to provide information about ethnic group removed in this version.
+
+
+### c. Hierarchy used to extend the search
+??
+The search has not excluded any terms that were included in the previous codelist.
+
+### d. Decisions made while iterating
+Codes that were categorised as Black Other in the previous code list were
+recategorised as Black African in the new code list.
+
+
+### e. Categories
+Ethnicity codes are grouped as follows using the eth5 and eth16 variables:
+
+eth5:
+0 0. White
+1 1. South Asian
+2 2. Black
+3 3. Other
+4 4. Mixed
+5 5. Not Stated
+		   
+eth16:
+1 1. British
+2 2. Irish
+3 3. Other White
+4 4. White and Black Caribbean
+5 5. White and Black African
+6 6. White and Asian
+7 7. Other Mixed
+8 8. Indian
+9 9. Pakistani
+10 10. Bangladeshi
+11 11. Other Asian
+12 12. Caribbean
+13 13. African
+14 14. Other Black
+15 15. Chinese
+16 16. Other ethnic group
+17 17. Not Stated
+88 88. Unknown
+
+Recommendations to generate ethnicity ?????
+OR refer to another do file.
+
+
+## 7. Review
+
+### a. Reviewers
+??
+
+### b. Scope of review
+??
+
+
+### c. Evidence of review
+
+The process is documented in this HTML file.
+
+
+## 8. Publish
+
+### a. Codelist published
+Rohini Mathur (created original codes list and strategy)
+modified date: 2023-06-09
+version: 1 (first published version on EHR Github page)
+
+
+### b. Resources published
+https://pubmed.ncbi.nlm.nih.gov/24323951/ - ORIGINAL STUDY
+https://researchonline.lshtm.ac.uk/id/eprint/2478832/ - ROHINI'S STUDY CHAPTER 5,
+FLOW DIAGRAM P74 = HOW TO GENERATE ETHNICITY VARIABLE FROM DATA
+
+Note CPRD have validated an ethnicity code list and algorithm.
+The code lists are available in the supplementary appendix but they are not 
+matched to categories.
+Shiekh, S.I., Harley, M., Ghosh, R.E. et al. Completeness, agreement, and 
+representativeness of ethnicity recording in the United Kingdom's Clinical
+Practice Research Datalink (CPRD) and linked Hospital Episode Statistics (HES). 
+Popul Health Metrics 21, 3 (2023). https://doi.org/10.1186/s12963-023-00302-0
+
+
+# Version control (more detail)
+Date created: 2012
+Author:	Rohini Mathur (Epidemiologist, LSHTM)
+Clinical advisors:
+Liam Smeeth, CPRD team
+
+Data updated: multiple updates including adaptation to Aurum and new
+categorisations of the 2011 and 2021 census
+Author:	Rohini Mathur (Epidemiologist, LSHTM)
+
+
+Date updated: 05/06/2023
+Updated by: Helen Strongman (Epidemiologist, LSHTM)
+(Clinical) advisors: Rohini Mathur
+Changes: created do files to update the original code list with cover sheet
+

@@ -1,0 +1,7 @@
+medcodeid	observations	originalreadcode	readcode	term	snomedctconceptid	snomedctdescriptionid	release	emiscodecategoryid	category
+100304016	20000	F271	F271.00	Narcolepsy	60380001	100304016		32	Narcolepsy
+297357017	5000	F27	F27..00	Cataplexy and narcolepsy	193042000	297357017		32	Narcolepsy
+297358010	400	F27z	F27z.00	Cataplexy or narcolepsy NOS	60380001	100304016		32	Narcolepsy
+3515159019	3	^ESCT1165854		Narcolepsy type 1	735676003	3515159019		31	Narcolepsy
+3480591000006112	3	^ESCTNA348059		Narcoleptic syndrome	60380001	1232079018		32	Narcolepsy
+77147016	2000	F270	F270.00	Cataplexy	46263000	77147016		32	Cataplexy only

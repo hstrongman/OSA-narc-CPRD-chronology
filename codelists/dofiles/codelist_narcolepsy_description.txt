@@ -1,0 +1,196 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of narcolepsy code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to use the 
+narcolepsy code list to define narcolepsy and to cite the authors.
+Researchers, refer to codelist_narcolepsy.do for instructions
+about modifying this file.
+~~~~
+
+# COVER SHEET
+
+
+## 0. Metadata
+
+### a. Codelist name: 
+
+Narcolepsy
+
+### b. Author(s): 
+
+Helen Strongman (created original codes list and strategy)
+
+### c. Date finalised:
+
+2022-08-05
+
+### d. Target data source(s)
+Clinical Practice Research Datalink GOLD (up to March 2023)
+Clinical Practice Research Datalink Aurum (up to March 2023)
+linked Hospital Episode Statistics Admitted Patient Care Data (HES APC)
+
+### e. Terminology(s)
+SNOMED-CT (and EMIS codes) (Aurum)
+Read Version 2 (GOLD)
+ICD-10 (HES APC)
+  
+## 1. Define a clinical concept
+
+### a. Concept
+
+Narcolepsy diagnoses recorded in primary care or hospital admissions data
+	
+### b. Timeframe: 
+	
+Classify all codes recorded at any time
+	
+### c. Accuracy:
+
+The accuracy of the codelists were assessed in a validation study.
+
+XX comment on the PPV
+
+Specificity is therefore ...
+
+We have not assessed the sensitivity of the code list. 
+
+### d. Setting: 
+
+Narcolepsy is diagnosed by sleep specialists following an overnight hospital
+visit. Sleep specialists inform the general practice of the diagnosis. GP
+pratice staff may add a coded record of the diagnosis at this time to support
+ongoing care; our validation study demonstrates that narcolepsy codes may also
+be recorded when the GP suspects a narcolepsy diagnosis. 
+
+Narcolepsy may be recorded in hospital episode statistics when a
+patient is admitted to hospital for a condition related to narcolepsy or if
+narcolepsy affected their care.
+	
+## 2. Search existing codelists
+	
+### a. Sources searched
+
+- googled "narcolepsy codelist cprd"
+
+### b. Existing codelists found
+
+- None
+	
+## 3. Evaluate existing code lists
+
+### a. Verified by others.
+
+N/A
+
+### b. Verified by researcher.
+
+N/A
+
+
+## 4. Existing code lists used
+
+N/A
+
+
+## 5. Prepare
+
+### a. Synonyms
+
+Narcolepsy is a well defined condition with no synonyms. People with narcolepsy
+are sometimes described as narcoleptic and cataplexy is a distinctive symptom
+of the condition.
+
+## b. Exceptions
+
+All codes were classified as indicative of "Narcolepsy" or "Cataplexy only"
+
+## 6. Create
+
+### a. Method used
+
+A Stata script (do file) was used to create the codelist. This exports a dyndoc
+file that describes the process and decisions made (See derivation HTML file)
+
+### b. Search terms
+
+Inclusion terms: "narcolep" or "cataplexy" at any position in the descriptive code associated
+with each term.
+
+Exclusion terms: none
+
+### c. Hierarchy used to extend the search
+
+We searched Read chapter F27 (Cataplexy and narcolepsy) for the GOLD and Aurum
+code lists. Read codes are mapped to some of the Snomed codes in the Aurum data
+dictionary.
+
+### d. Decisions made while iterating
+
+Chapter F27 added to the search
+
+### e. Categories
+
+All codes for narcolepsy/cataplexy were categorised as follows using the 
+category variable:
+
+Categories (category variable):
+1 "Narcolepsy"
+2 "Cataplexy only"
+
+Codes for narcolepsy are not separated by type because most codes are 
+non-specific and chapter headings for "narcolepsy and cataplexy" may be used
+as a default by general practice staff.
+
+## 7. Review
+
+### a. Reviewers
+
+Dr Sofia Erikkson (Consultant neurologist and Honorary Associate Professor at 
+National Hospital for Neurology and Neurosurgery and UCLH and the UCL/Institute 
+of Neurology)
+
+Dr Tim Quinnell (Consultant respiratory and sleep disorders physician, Royal
+Papworth Hospital NHS Foundation Trust)
+
+### b. Scope of review
+
+The final codelists were checked.
+
+### c. Evidence of review
+
+The process is documented in this HTML file.
+
+## 8. Publish
+
+### a. Codelist published
+
+The codelist will be published on LSHTM data compass and in the Github
+repository for this project, prior to publication of the resulting paper.
+(and in the LSHTM code list Github repository if we can get funding/time to build this)
+
+
+### b. Resources published
+
+The full process is described in the derivation HTML document.
+Stata scripts (do and dyndoc) will be available in the Github repository.
+
+
+~~~~
+
+# Version control (more detail)
+
+
+Date created: 09/04/2024
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors: Sofia Erikkson, Tim Quinnell
+
+
+Date updated: 
+Author:
+
+~~~~
+

@@ -1,0 +1,101 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-codelist-sleep-apnoea-code-lists" id="description-of-codelist-sleep-apnoea-code-lists">Description of codelist_sleep_apnoea code lists</a></h1>
+<pre><code>This HTML file includes information that is needed to use the 
+sleep apnoea code lists to define Obstructive Sleep Apnoea (OSA)
+and to cite the authors. 
+Researchers, refer to codelist_sleep_apnoea.do for instructions
+about modifying this file.
+</code></pre>
+<h2><a href="#hdr-uk-phenotype-definition-file" id="hdr-uk-phenotype-definition-file">HDR UK phenotype definition file</a></h2>
+<pre><code>Temporary comment: I have used the HDR phenotype structure as an example. We need
+to decide whether to upload code lists to HDR UK, data compass or
+another repository.
+
+title: Sleep apnoea
+name: Sleep apnoea with categorisation
+phenotype_id: N/A
+type: Disease or syndrome
+group: Respiratory
+data_sources:
+    - Clinical Practice Research Datalink GOLD
+    - Clinical Practice Research Datalink Aurum
+    - Hospital Episode Statistics APC for CPRD GOLD
+    - Hospital Episode Statistics APC for CPRD Aurum
+clinical_terminologies:
+    - Read Version 2
+    - SNOMED-CT (and EMIS codes)
+    - ICD-10
+validation:
+	- casenote review planned
+codelists:
+NB would need to use HDRUK naming convention to submit
+	- codelist_sleep_apnoea_gold.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_gold.txt
+	- codelist_sleep_apnoea_aurum.txt
+	- codelist_sleep_apnoea_aurum.txt
+valid_event_data_range: up to 05_2022
+sex:
+	- Female
+	- Male
+author:
+	- Helen Strongman, Tim Quinnell, Sofia Eriksson
+date: 2022-03-15
+modified date: 2022-08-04
+version: 1 (first published version)
+
+</code></pre>
+<h2><a href="#version-control-more-detail" id="version-control-more-detail">Version control (more detail)</a></h2>
+<pre><code>Date created: 15/03/2022
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors:
+Dr Tim Quinnell (Respiratory and sleep specialist, Royal Papworth Hospital Trust)
+Dr Sofia Eriksson (Neurologist and sleep specialist, UCL)
+
+Date updated: 02/08/2022
+Updated by: Helen Strongman
+Clinical advisors: not needed
+Changes: separate category for central and primary sleep apnoea, care pathway
+		codes excluded 
+</code></pre>
+<pre><code>## DEFINITION
+Codes for sleep apnoea are categorised as follows using the category variable:
+
+Categories (category variable):
+1 &quot;Obstructive Sleep Apnoea (OSA)&quot;
+2 &quot;Obstructive sleep apnoea syndrome (OSAS)&quot;
+3 &quot;Sleep apnoea NOS&quot;
+4 &quot;Sleep apnoea syndrome NOS&quot;
+5 &quot;Central sleep apnoea only&quot;
+6 &quot;Primary sleep apnoea only&quot; 
+
+Here are recommendations to use these categories to identify an Obstructive
+Sleep Apnoea diagnosis and for censoring follow-up when other types of sleep 
+apnoea are diagnosed. 
+
+(1) First ever record of OSA (codes 1 to 4). 
+OSA/OSAS are the most commonly diagnosed form of sleep apnoea and GPs often use 
+nonspecific codes. Specialists do differentiate between OSA
+and OSAS but it will not be possible to do this using primary care data. 
+Mixed sleep apnoea codes are included in codes 1 to 4 because OSA is likely to
+be the dominant or at least co-dominant condition. 
+(2) Exclude if prior record of central sleep apnoea or primary sleep apnoea
+(codes 5 &amp; 6). These are distinct from OSA with different co-morbidities and 
+health implications.
+(3) Censor follow up if central sleep apnoea or primary sleep apnoea are recorded
+after diagnosis with OSA.
+
+</code></pre>
+<h2><a href="#studies-and-protocols" id="studies-and-protocols">STUDIES AND PROTOCOLS</a></h2>
+<pre><code>I will add a link to my fellowship protocol when I've decided which site to
+upload it to.
+</code></pre>

@@ -1,0 +1,38 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\logfiles/prodcodeid_projectprodcode_lookup.txt
+  log type:  text
+ opened on:  29 Jun 2023, 10:21:02
+
+. 
+. use prodcodeid using "$dict_aurumprod", clear
+
+. sort prodcodeid
+
+. gen projectprodcode = _n
+
+. summ projectprodcode, d
+
+                       projectprodcode
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%          714              1
+ 5%         3566              2
+10%         7131              3       Obs              71,305
+25%        17827              4       Sum of wgt.      71,305
+
+50%        35653                      Mean              35653
+                        Largest       Std. dev.      20584.12
+75%        53479          71302
+90%        64175          71303       Variance       4.24e+08
+95%        67740          71304       Skewness       6.47e-15
+99%        70592          71305       Kurtosis            1.8
+
+. label variable projectprodcode "Numeric prodcode identifier mapped to CPRD's prodcodeid"
+
+. save "$datadir_stata/prodcodeid_projectprodcode_lookup.dta", replace
+(file J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\stata/prodcodeid_projectprodcode_lookup.dta not found)
+file J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\stata/prodcodeid_projectprodcode_lookup.dta saved
+
+. 
+. capture log close

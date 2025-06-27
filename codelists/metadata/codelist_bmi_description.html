@@ -1,0 +1,80 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-codelist-bmi-code-lists" id="description-of-codelist-bmi-code-lists">Description of codelist_bmi code lists</a></h1>
+<pre><code>This HTML file includes information that is needed to use the 
+BMI code lists to measure BMI
+and to cite the authors. 
+Researchers, refer to codelist_bmi.do for instructions
+for running and modifying this file.
+</code></pre>
+<h2><a href="#cover-sheet" id="cover-sheet">Cover sheet</a></h2>
+<pre><code>
+Codelist name: Body Mass Index 
+
+Data source(s):
+    - Clinical Practice Research Datalink GOLD (up to March 2023)
+	(Use entity types for CPRD GOLD)
+
+Terminology(s)
+    - SNOMED-CT (and EMIS codes) (Aurum)
+  
+Clinical concept:
+	Current Body Mass Index measurement.
+	Aims to identify all clinical codes that represent a current height, 
+	weight or BMI measurement in CPRD Aurum data. 
+	Excludes BMI measurement during pregnancy.
+	
+	The search strategy prioritises sensitivity over specificity unless codes
+	signal that an incorrect value might be associated with it (e.g. BMI centile
+	, ideal weight). Codes that are rarely associated with a value are not a
+	problem as these are excluded when processing the data.
+	
+	Codes are categorised using separate height, weight and BMI variables
+	
+Files created:
+	- codelist_bmi_aurum.dta
+	- codelist_bmi_aurum.txt
+	
+Author:
+	- Angel Wong
+	- modified date: 2023-05-24
+version: 1 (first published version on EHR Github page)
+
+</code></pre>
+<h2><a href="#version-control-more-detail" id="version-control-more-detail">Version control (more detail)</a></h2>
+<pre><code>
+Date created: not known
+Author:	Angel Wong
+Clinical advisors: not known
+
+Date updated: 2023-03-10
+Updated by: Angel Wong
+Clinical advisors: not known
+
+Date updated: 2023-09-06
+Updated by: Helen Strongman
+Clinical advisors: not needed
+Changes: updated and created shareable version for Github
+Version 1
+</code></pre>
+<pre><code>## USING THE CODE LIST TO MEASURE BMI EVENTS
+see pr_getbmistatus_aurum, pr_getbmistatus_gold
+
+</code></pre>
+<h2><a href="#studies-and-protocols" id="studies-and-protocols">STUDIES AND PROTOCOLS</a></h2>
+<pre><code>Bhaskaran K, Forbes HJ, Douglas I, et alRepresentativeness and optimal use of
+body mass index (BMI) in the UK Clinical Practice Research Datalink (CPRD)
+BMJ Open 2013;3:e003389. doi: 10.1136/bmjopen-2013-003389
+
+The above study compared observed BMI distributions in CPRD GOLD to HSE data.
+It directly using numerical data in the Additional file (identified
+using enttypes). This followed an analysis showing that additional Read code
+searches added minimial information.
+</code></pre>

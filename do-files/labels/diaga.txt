@@ -1,0 +1,37 @@
+Diaga	description
+01 	 Brain
+02 	 Head
+03 	 Face
+04 	 Eye
+05 	 Ear
+06 	 Nose
+07 	 Mouth,Jaw,Teeth
+08 	 Throat
+09 	 Neck
+10 	 Shoulder
+11 	 Axilla
+12 	 Upper Arm
+13 	 Elbow
+14 	 Forearm
+15 	 Wrist
+16 	 Hand
+17 	 Digit
+18 	 Cervical spine
+19 	 Thoracic
+20 	 Lumbosacral spine
+21 	 Pelvis
+22 	 Chest
+23 	 Breast
+24 	 Abdomen
+25 	 Back/buttocks
+26 	 Ano/rectal
+27 	 Genitalia
+28 	 Hip
+29 	 Groin
+30 	 Thigh
+31 	 Knee
+32 	 Lower leg
+33 	 Ankle
+34 	 Foot
+35 	 Toe
+36 	 Multiple site

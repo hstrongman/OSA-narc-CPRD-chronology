@@ -1,0 +1,26 @@
+invest2	description
+01 	 X-ray plain film
+02 	 Electrocardiogram
+03 	 Haematology
+04 	 Cross match blood/group & save serum for later cross match
+05 	 Biochemistry
+06 	 Urinalysis
+07 	 Bacteriology
+08 	 Histology
+09 	 Computerised tomography (retired 2006)
+10 	 Ultrasound
+11 	 Magnetic resonance imaging
+12 	 Computerised tomography (exc genito urinary contrast examination/tomography)
+13 	 Genito urinary contrast examination/tomography
+14 	 Clotting studies
+15 	 Immunology
+16 	 Cardiac enzymes
+17 	 Arterial/capillary blood gas
+18 	 Toxicology
+19 	 Blood culture
+20 	 Serology
+21 	 Pregnancy test
+22 	 Dental investigation
+23 	 Refraction, orthoptic tests and computerised visual fields
+24 	 None
+99 	 Other

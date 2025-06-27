@@ -1,0 +1,10 @@
+aepatgroup	description
+10 	 Road traffic accident 
+20 	 Assault 
+30 	 Deliberate self-harm 
+40 	 Sports injury 
+50 	 Firework injury 
+60 	 Other accident 
+70 	 Brought in dead 
+80 	 Other than above 
+99 	 Not known

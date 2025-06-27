@@ -1,0 +1,259 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+<<dd_do:quietly>>
+capture log close
+/*******************************************************************************
+# Stata do file:    8.an_minimum_baseline_period_figures
+#
+# Author:      Helen Strongman
+#
+# Date:        04/11/2022
+#
+# Description: 	This do file graphs incidence rates to define a 
+# minimum baseline period to a single table. 
+# 
+# Outputs:
+# 	3 Stata graphs and 3 .emf graphs (osa and narcolepsy overall, osa strata,
+#	narcolepsy strata) 
+#	
+# 	Inspired and adapted from: 
+# 	see previous do files
+*******************************************************************************/
+<</dd_do>>
+
+Description of analyses used to define the minimum baseline
+period
+===============================================================
+
+~~~~
+This HTML file includes the information needed to understand how the
+minimum baseline period was derived.
+
+~~~~
+## Background
+~~~~
+
+When using routinely collected health data, we start follow-up after a minimum
+baseline period to avoid defining prevalent cases entered into the patient record 
+after registration in the practice as incident cases. Traditionally, researchers
+have used a 12 month period. Specifying a shorter period might be equally valid, 
+and increase follow-up time in the study and the number of cases included.
+
+Leahy at al published an abstract recommending methods to estimate an appropriate
+baseline period, including inspecting a plot of incidence over time since
+registration.
+
+Reference:
+Leahy, T. P., Sammon, C., & Ramagopalan, S. (2020). 
+Identification of an appropriate time window for the exclusion of prevalent 
+cases recorded following registration with the clinical practice research 
+datalink. 
+Abstracts of the 36th International Conference on Pharmacoepidemiology & 
+Therapeutic Risk Management, Virtual, September 16–17, 29, S3, 2465. 
+https://doi.org/10.1002/PDS.5114
+
+~~~~
+## Methods
+~~~~
+
+We used CPRD GOLD and Aurum data to define populations with research quality 
+CPRD data at risk of each sleep disorder at registration in the CPRD practice
+and during the study period (January 1990 to April 2022). Incident cases were 
+measured using the first ever clinical (i.e. not test or referral) record of 
+the sleep disorder in the primary care record. Exclusion criteria for prior
+records of rare types of sleep apnoea were not applied. 
+
+We estimated incidence rates and 95% confidence intervals stratified by time 
+since diagnoses using Stata's strate command which uses the Poisson distribution
+to estimate CIs. One month time since diagnosis categories were used for the first
+5 months, and 3 month categories from 6 months to 2 years. Incidence rates
+were further stratified by calendar year groups, CPRD database and age groups.
+All incidence rates are in the following dataset. 
+
+<<dd_do: nocommands>>
+use "$estimatesdir\7.an_minimum_baseline_period_table.dta", clear
+describe
+notes
+<</dd_do>>
+
+We plotted incidence rates over time since registration using the mid-point
+ of each time since diagnosis category. 
+
+~~~~
+## Results
+~~~~
+
+<<dd_do:quietly>>
+gen monthsincereg_midpoint = monthsincereg + 0.5 if monthsincereg < 6
+replace monthsincereg_midpoint = monthsincereg + 1.5 if monthsincereg >=6
+sort monthsincereg_midpoint
+<</dd_do>>
+
+
+<<dd_do:nocommands>>
+qui {
+**overall narcolepsy OSA
+include "$dodir\inc_0.figurecolours.do"
+twoway	(rarea lci uci monthsincereg_midpoint if medcondition == "osa" & category == "Overall", sort fcolor(`myblue'%10) fintensity(inten10) lcolor(`myblue'%10)) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "osa" & category == "Overall", sort mcolor(`myblue') msize(small) msymbol(square)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition == "narcolepsy" & category == "Overall", sort fcolor(`myyellow'%10) fintensity(inten10) lcolor(`myyellow'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "narcolepsy" & category == "Overall", sort mcolor(`myyellow') msize(small) msymbol(triangle)) ///
+		, ///
+		xline(3, lp(dash) lcolor(gs6)) /// cut off?
+		title("Overall", size(small)) ///
+		xtitle("Months since registration", size(small)) ///
+		xlab(0(3)24, labsize(small)) ///
+		ytitle("Incidence rate, 95% CI" "(per 100 000 person months)", size(small)) ///
+		ylab(0(2)6, labsize(small) format(%9.0f)) ///
+		graphregion(color(white))	/// get rid of rubbish grey/blue around graph
+		legend(order(2 4) lab(2 "OSA") lab(4 "narcolepsy") size(small)) ///
+		name(overall, replace)
+
+
+graph export "$resultdir\8.an_minimum_baseline_period_figures_overall.emf", replace as(emf)
+
+**OSA calendar year
+include "$dodir\inc_0.figurecolours.do"
+twoway	(rarea lci uci monthsincereg_midpoint if medcondition == "osa" & category == "1990 to 1999", sort fcolor(`myblue'%10) fintensity(inten10) lcolor(`myblue'%10)) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "osa" & category == "1990 to 1999", sort mcolor(`myblue') msize(small) msymbol(square)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "osa" & category == "2000 to 2009", sort fcolor(`mypurple'%10) fintensity(inten10) lcolor(`mypurple'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "osa" & category == "2000 to 2009", sort mcolor(`mypurple') msize(small) msymbol(triangle)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "osa" & category == "2010 to 2022", sort fcolor(`myyellow'%10) fintensity(inten10) lcolor(`myyellow'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "osa" & category == "2010 to 2022", sort mcolor(`myyellow') msize(small) msymbol(circle)) ///
+		, ///
+		xline(3, lp(dash) lcolor(gs6)) /// cut off?
+		title("Year of registration in the practice", size(small)) ///
+		xtitle("Months since registration", size(small)) ///
+		xlab(0(1)6, labsize(small)) ///
+		ytitle("Incidence rate, 95% CI" "(per 100 000 person months)", size(small)) ///
+		ylab(0(2)14, labsize(small) format(%9.0f)) ///
+		graphregion(color(white))	/// get rid of rubbish grey/blue around graph
+		legend(order(2 4 6) lab(2 "1990 to 1999") lab(4 "2000 to 2009") lab(6 "2010 to 2022") size(small) rows(1)) ///
+		name(osa_years, replace)
+		
+**OSA database
+include "$dodir\inc_0.figurecolours.do"
+twoway	(rarea lci uci monthsincereg_midpoint if medcondition == "osa" & category == "Aurum", sort fcolor(`myblue'%10) fintensity(inten10) lcolor(`myblue'%10)) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "osa" & category == "Aurum", sort mcolor(`myblue') msize(small) msymbol(square)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "osa" & category == "GOLD", sort fcolor(`myyellow'%10) fintensity(inten10) lcolor(`myyellow'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "osa" & category == "GOLD", sort mcolor(`myyellow') msize(small) msymbol(triangle)) ///
+		, ///
+		xline(3, lp(dash) lcolor(gs6)) /// cut off?
+		title("CPRD database", size(small)) ///
+		xtitle("Months since registration", size(small)) ///
+		xlab(0(1)6, labsize(small)) ///
+		ytitle("Incidence rate, 95% CI" "(per 100 000 person months)", size(small)) ///
+		ylab(0(2)14, labsize(small) format(%9.0f)) ///
+		graphregion(color(white))	/// get rid of rubbish grey/blue around graph
+		legend(order(2 4) lab(2 "Aurum") lab(4 "GOLD") size(small) rows(1)) ///
+		name(osa_database, replace)
+		
+		
+**OSA age group
+include "$dodir\inc_0.figurecolours.do"
+twoway	(rarea lci uci monthsincereg_midpoint if medcondition == "osa" & category == "under 40", sort fcolor(`myblue'%10) fintensity(inten10) lcolor(`myblue'%10)) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "osa" & category == "under 40", sort mcolor(`myblue') msize(small) msymbol(square)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "osa" & category == "40 plus", sort fcolor(`myyellow'%10) fintensity(inten10) lcolor(`myyellow'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "osa" & category == "40 plus", sort mcolor(`myyellow') msize(small) msymbol(triangle)) ///
+		, ///
+		xline(3, lp(dash) lcolor(gs6)) /// cut off?
+		title("Age group at registration", size(small)) ///
+		xtitle("Months since registration", size(small)) ///
+		xlab(0(1)6, labsize(small)) ///
+		ytitle("Incidence rate, 95% CI" "(per 100 000 person months)", size(small)) ///
+		ylab(0(2)14, labsize(small) format(%9.0f)) ///
+		graphregion(color(white))	/// get rid of rubbish grey/blue around graph
+		legend(order(2 4) lab(2 "under 40") lab(4 "40 plus") size(small) rows(1)) ///
+		name(osa_agegp, replace)	
+		
+**narcolepsy calendar year
+include "$dodir\inc_0.figurecolours.do"
+twoway	(rarea lci uci monthsincereg_midpoint if medcondition == "narcolepsy" & category == "1990 to 1999", sort fcolor(`myblue'%10) fintensity(inten10) lcolor(`myblue'%10)) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "narcolepsy" & category == "1990 to 1999", sort mcolor(`myblue') msize(small) msymbol(square)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "narcolepsy" & category == "2000 to 2009", sort fcolor(`mypurple'%10) fintensity(inten10) lcolor(`mypurple'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "narcolepsy" & category == "2000 to 2009", sort mcolor(`mypurple') msize(small) msymbol(triangle)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "narcolepsy" & category == "2010 to 2022", sort fcolor(`myyellow'%10) fintensity(inten10) lcolor(`myyellow'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "narcolepsy" & category == "2010 to 2022", sort mcolor(`myyellow') msize(small) msymbol(circle)) ///
+		, ///
+		xline(3, lp(dash) lcolor(gs6)) /// cut off?
+		title("Year of registration in the practice", size(small)) ///
+		xtitle("Months since registration", size(small)) ///
+		xlab(0(1)6, labsize(small)) ///
+		ytitle("Incidence rate, 95% CI" "(per 100 000 person months)", size(small)) ///
+		ylab(0.0(0.2)1.0, labsize(small) format(%9.1f)) ///
+		graphregion(color(white))	/// get rid of rubbish grey/blue around graph
+		legend(order(2 4 6) lab(2 "1990 to 1999") lab(4 "2000 to 2009") lab(6 "2010 to 2022") size(small) rows(1)) ///
+		name(narcolepsy_years, replace)
+		
+**narcolepsy database
+include "$dodir\inc_0.figurecolours.do"
+twoway	(rarea lci uci monthsincereg_midpoint if medcondition == "narcolepsy" & category == "Aurum", sort fcolor(`myblue'%10) fintensity(inten10) lcolor(`myblue'%10)) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "narcolepsy" & category == "Aurum", sort mcolor(`myblue') msize(small) msymbol(square)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "narcolepsy" & category == "GOLD", sort fcolor(`myyellow'%10) fintensity(inten10) lcolor(`myyellow'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "narcolepsy" & category == "GOLD", sort mcolor(`myyellow') msize(small) msymbol(triangle)) ///
+		, ///
+		xline(3, lp(dash) lcolor(gs6)) /// cut off?
+		title("CPRD database", size(small)) ///
+		xtitle("Months since registration", size(small)) ///
+		xlab(0(1)6, labsize(small)) ///
+		ytitle("Incidence rate, 95% CI" "(per 100 000 person months)", size(small)) ///
+		ylab(0.0(0.2)1.0, labsize(small) format(%9.1f)) ///
+		graphregion(color(white))	/// get rid of rubbish grey/blue around graph
+		legend(order(2 4) lab(2 "Aurum") lab(4 "GOLD") size(small) rows(1)) ///
+		name(narcolepsy_database, replace)
+		
+		
+**narcolepsy age group
+include "$dodir\inc_0.figurecolours.do"
+twoway	(rarea lci uci monthsincereg_midpoint if medcondition == "narcolepsy" & category == "under 18", sort fcolor(`myblue'%10) fintensity(inten10) lcolor(`myblue'%10)) ///
+		(scatter ir monthsincereg_midpoint if medcondition == "narcolepsy" & category == "under 18", sort mcolor(`myblue') msize(small) msymbol(square)) ///
+		(rarea lci uci monthsincereg_midpoint if medcondition== "narcolepsy" & category == "18 plus", sort fcolor(`myyellow'%10) fintensity(inten10) lcolor(`myyellow'%10) ) ///
+		(scatter ir monthsincereg_midpoint if medcondition== "narcolepsy" & category == "18 plus", sort mcolor(`myyellow') msize(small) msymbol(triangle)) ///
+		, ///
+		xline(3, lp(dash) lcolor(gs6)) /// cut off?
+		title("Age group at registration", size(small)) ///
+		xtitle("Months since registration", size(small)) ///
+		xlab(0(1)6, labsize(small)) ///
+		ytitle("Incidence rate, 95% CI" "(per 100 000 person months)", size(small)) ///
+		ylab(0.0(0.2)1.0, labsize(small) format(%9.1f)) ///
+		graphregion(color(white))	/// get rid of rubbish grey/blue around graph
+		legend(order(2 4) lab(2 "under 18") lab(4 "18 plus") size(small) rows(1)) ///
+		name(narcolepsy_agegp, replace)	
+		
+
+graph combine osa_years osa_database osa_agegp, name("strata_osa", replace) iscale(*.7)
+graph export "$resultdir\\8.an_minimum_baseline_period_figures_strata_osa.emf", replace as(emf)
+
+graph combine narcolepsy_years narcolepsy_database narcolepsy_agegp, name("strata_narcolepsy", replace) iscale(*.7)
+graph export "$resultdir\\8.an_minimum_baseline_period_figures_strata_narcolepsy.emf", replace as(emf)
+}
+<</dd_do>>
+
+Incidence rates of OSA and narcolepsy by time since registration
+<<dd_graph: saving("8.an_minimum_baseline_period_figures_overall") graphname(overall) replace png markdown>>
+
+Incidence rates of OSA by time since registration
+<<dd_graph: saving("8.an_minimum_baseline_period_figures_strata_osa") graphname(strata_osa) replace png markdown>>
+
+Incidence rates of narcolepsy by time since registration
+<<dd_graph: saving("8.an_minimum_baseline_period_figures_strata_narcolepsy") graphname(strata_narcolepsy) replace png markdown>>
+
+All figures show that recorded incidence of narcolepsy and OSA is higher in the
+first month after diagnosis but stable from the second month.
+
+~~~~
+## Conclusions
+~~~~
+
+Setting the minimum baseline period to 2 months would avoid including prevalent
+cases of narcolepsy and OSA recorded at registration as incident cases. This is
+slightly shorter than the 3 month baseline period suggested by Leahy et al based
+on analyses of incident non-valvular atrial fibrillation. We will use a 3 month
+minimum baseline period for our study.
+
+<<dd_do:nocommands>>
+graph drop _all
+<</dd_do>>
+
+

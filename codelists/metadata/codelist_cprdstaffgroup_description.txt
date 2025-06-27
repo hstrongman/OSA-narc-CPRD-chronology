@@ -1,0 +1,178 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of codelist_staffgroup code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to define primary care 
+consultations in CPRD data and to cite the authors. 
+Researchers, refer to codelist_cprdconsultations.do for instructions
+about modifying this file.
+~~~~
+
+# COVER SHEET
+
+
+## 0. Metadata
+
+### a. Codelist name 
+
+Staff group (staffgroup)
+
+### b. Author(s)
+
+Health Foundation Improvement Analytics Unit (IAU)
+and Helen Strongman (LSHTM)
+
+### c. Date finalised: 11/04/2024
+
+### d. Target data source(s)
+
+- Clinical Practice Research Datalink GOLD (up to March 2023)
+- Clinical Practice Research Datalink Aurum (up to March 2023)
+
+### e. Terminology(s)
+- jobcat lookup (Aurum)
+- ROL lookup (GOLD)
+  
+## 1. Define a clinical concept
+
+### a. Concept
+
+This do file classifies data from the staff file in CPRD GOLD and Aurum to: 
+1	Admin (non-clinical admin and management)
+2	Healthcare assistant (Students, trainees and assistant clinical positions)
+3	Healthcare professional	(wide range of allied health professionals and other healthcare roles)
+4	Medical	(qualified doctors)
+5	Nursing	(qualified nurses)
+6	Locum (locum/deputising service NOS)
+
+	
+### b. Timeframe: 
+	
+N/A
+	
+### c. Accuracy:
+
+Classification is generally clear with the exception of "Locum NOS" codes which could
+refer to medical or nursing staff.
+
+### d. Setting: 
+
+Primary care. 
+
+## 2. Search existing codelists
+	
+### a. Sources searched
+
+emailed colleagues at the Health Foundation and LSHTM
+
+### b. Existing codelists found
+
+Health Foundation codelists (Aurum only) created by the IAU
+(improvement analytics unit)
+	
+## 3. Evaluate existing code lists
+
+### a. Verified by others.
+
+No information was provided about codelist validation.
+
+### b. Verified by researcher.
+
+Categorisation seems clear and accurate.
+
+## 4. Existing code lists used
+
+### a. as above
+
+
+## 5. Prepare
+
+### a. Synonyms
+
+N/A
+
+## b. Exceptions
+
+All codes found in the consultation codes for the current project were
+classified.
+
+## 6. Create
+
+### a. Method used
+
+The existing CPRD Aurum code list was translated to GOLD by manually applying
+the same logic to each code.
+
+### b. Search terms
+
+N/A
+
+### c. Hierachy used to extend the search
+
+N/A
+
+### d. Decisions made while iterating
+
+"Locum" was classified using a new "Locum NOS" category as this may refer
+to nursing or medical staff.
+
+### e. Categories
+
+See concept
+
+## 7. Review
+
+### a. Reviewers
+
+need to find a GP. Ask the Health Foundation
+
+### b. Scope of review
+
+The GOLD codelist was reviewed. 
+
+### c. Evidence of review
+
+The process is documented in this HTML file.
+
+## 8. Publish
+
+### a. Codelist published
+
+The codelist will be published on LSHTM data compass and in the Github
+repository for this project, prior to publication of the resulting paper.
+(and in the LSHTM code list Github repository if we can get funding/time to build this)
+
+	
+Files include:
+- codelist_cprdstaffgroup_aurum.txt
+- codelist_cprdstaffgroup_aurum.dta
+
+- codelist_cprdstaffgroup_gold.txt
+- codelist_cprdstaffgroup_gold.dta
+
+### b. Resources published
+
+Codelist files only
+
+
+~~~~
+
+# Version control (more detail)
+
+
+Date created: 11/04/2024
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors:
+
+
+Date updated: 
+Author:
+
+~~~~
+
+
+
+

@@ -1,0 +1,3 @@
+ICD	alt_code	usage	usage_uk	term	modifier_4	modifier_5	qualifiers	gender_mask	min_age	max_age	tree_description	category
+G47.3	G473	DEFAULT	3	Sleep apnoea								Sleep apnoea NOS
+P28.3	P283	DEFAULT	3	Primary sleep apnoea of newborn						1		Primary sleep apnoea

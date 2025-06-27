@@ -1,0 +1,8 @@
+attended	description
+2	Appointment cancelled by patient
+3	DNA no advance warning
+4	Appointment cancelled or postponed by HCP
+5	Seen
+6	Arrived late but was seen
+7	DNA arrived late and could not be seen
+9	Not known

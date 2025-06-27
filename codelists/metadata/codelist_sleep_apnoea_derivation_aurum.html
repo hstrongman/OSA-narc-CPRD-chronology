@@ -1,0 +1,358 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-how-the-sleep-apnoea-code-lists-were-created" id="description-of-how-the-sleep-apnoea-code-lists-were-created">Description of how the sleep apnoea code lists were created</a></h1>
+<pre><code>This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_sleep_apnoea.do.
+
+</code></pre>
+<h2><a href="#basic-search" id="basic-search">BASIC SEARCH</a></h2>
+<pre><code>
+
+The following search terms are used to generate the initial code lists. Each 
+term is searched for individually and included or excluded if 
+it appears in any position in the text. The terms should cover all synonyms
+for sleep apnoea. Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read.
+
+Inclusion terms: apnoea apnea OSA
+
+Inclusion chapters: H5B R005 Fy03
+
+Exclusion terms: mosaic mask questionnaire clinic appliance treatment monitoring recording assessment operation
+
+Exclusion chapters: 
+
+
+Note: Care pathway terms are excluded in the new code list because they are 
+rarely used and mostly indicate testing for sleep apnoea
+
+
+</code></pre>
+<h2><a href="#code-list-specific-search-algorithm" id="code-list-specific-search-algorithm">CODE LIST SPECIFIC SEARCH ALGORITHM</a></h2>
+<pre><code>
+Terms without both &quot;sleep&quot; and either &quot;apnoea&quot; or &quot;apnea&quot; are
+excluded.
+
+
+</code></pre>
+<h2><a href="#check-excluded-codes" id="check-excluded-codes">CHECK EXCLUDED CODES</a></h2>
+<pre><code>
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+
+  +------------------------------------------------------------------------------------------------------+
+  |         medcodeid   snomedctconcep~d                                                            term |
+  |------------------------------------------------------------------------------------------------------|
+  |         316906012           13094009                                      [X]Other apnoea of newborn |
+  |         317031015           44186003                                               Sleep disturbance |
+  |         317032010           44186003                               [D]Sleep disturbance, unspecified |
+  |         317035012          193462001                                                 [D]Insomnia NOS |
+  |         317048011           77692006                                                     Hypersomnia |
+  |------------------------------------------------------------------------------------------------------|
+  |         317049015          192008004                                       [D]Sleep rhythm inversion |
+  |         317050015          271793004                                    Irregular sleep-wake pattern |
+  |         317051016          230496009                                    Non-24 hour sleep-wake cycle |
+  |         317052011          441877007                  Sleep dysfunction with sleep stage disturbance |
+  |         317053018          442176004                      Sleep dysfunction with arousal disturbance |
+  |------------------------------------------------------------------------------------------------------|
+  |         317054012           39898005                                        [D]Sleep dysfunction NOS |
+  |         317387017            1023001                                                          Apnoea |
+  |         475011015           13094009                                               Apnoea of newborn |
+  |         505278011           82808001                                         Apnoea alarm monitoring |
+  |        1222473015            3745000                                        [D]Sleep rhythm problems |
+  |------------------------------------------------------------------------------------------------------|
+  |        1222474014          193462001                                           [D]Insomnia - symptom |
+  |   156071000006118           54602006                                                  Scoline apnoea |
+  |   899931000006112          274214008                                              Anaesthetic apnoea |
+  |  1148851000000113          445483007                           Berlin questionnaire for sleep apnoea |
+  |  1708831000006113   1708831000006109                               Berlin sleep apnoea questionnaire |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773411000006116   1773411000006100                                                    MOSAIC trial |
+  |  1773421000006112   1773421000006108                                   MOSAIC trial screen activated |
+  |  1773431000006110   1773431000006106                                     MOSAIC trial - pain grading |
+  |  1773441000006117   1773441000006101                                MOSAIC trial - functional impact |
+  |  1773451000006115   1773451000006104                                  MOSAIC trial - paracetamol use |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773461000006118   1773461000006102                                MOSAIC trial - topical NSAID use |
+  |  1773471000006113   1773471000006109                                   MOSAIC trial - OA Information |
+  |  1773481000006111   1773481000006107                                    MOSAIC trial - weight advice |
+  |  1773491000006114   1773491000006105                                  MOSAIC trial - exercise advice |
+  |  1773501000006118   1773501000006102                                    MOSAIC trial - physiotherapy |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773511000006115   1773511000006104                                      Pain - none [MOSAIC trial] |
+  |  1773521000006111   1773521000006107                                      Pain - mild [MOSAIC trial] |
+  |  1773531000006114   1773531000006105                                  Pain - moderate [MOSAIC trial] |
+  |  1773541000006116   1773541000006100                                    Pain - severe [MOSAIC trial] |
+  |  1773551000006119   1773551000006103                           Function - not limited [MOSAIC trial] |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773561000006117   1773561000006101                       Function - mild limitation [MOSAIC trial] |
+  |  1773571000006112   1773571000006108                   Function - moderate limitation [MOSAIC trial] |
+  |  1773581000006110   1773581000006106                     Function - severe limitation [MOSAIC trial] |
+  |  1773591000006113   1773591000006109                    Paracetamol - tried full dose [MOSAIC trial] |
+  |  1773601000006117   1773601000006101                  Paracetamol - advised full dose [MOSAIC trial] |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773611000006119   1773611000006103                 Paracetamol - declined full dose [MOSAIC trial] |
+  |  1773621000006110   1773621000006106                    Paracetamol - not appropriate [MOSAIC trial] |
+  |  1773631000006113   1773631000006109                            Paracetamol - unknown [MOSAIC trial] |
+  |  1773641000006115   1773641000006104                  Topical NSAID - tried full dose [MOSAIC trial] |
+  |  1773651000006118   1773651000006102                Topical NSAID - advised full dose [MOSAIC trial] |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773661000006116   1773661000006100               Topical NSAID - declined full dose [MOSAIC trial] |
+  |  1773671000006111   1773671000006107                  Topical NSAID - not appropriate [MOSAIC trial] |
+  |  1773681000006114   1773681000006105                          Topical NSAID - unknown [MOSAIC trial] |
+  |  1773691000006112   1773691000006108                          OA information - verbal [MOSAIC trial] |
+  |  1773701000006112   1773701000006108                OA information - verbal &amp; written [MOSAIC trial] |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773711000006110   1773711000006106                   OA information - not this time [MOSAIC trial] |
+  |  1773721000006119   1773721000006103                 OA information - not appropriate [MOSAIC trial] |
+  |  1773731000006116   1773731000006100                           Weight advice - verbal [MOSAIC trial] |
+  |  1773741000006114   1773741000006105                 Weight advice - verbal &amp; written [MOSAIC trial] |
+  |  1773751000006111   1773751000006107                    Weight advice - not this time [MOSAIC trial] |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773761000006113   1773761000006109                  Weight advice - not appropriate [MOSAIC trial] |
+  |  1773771000006118   1773771000006102                         Exercise advice - verbal [MOSAIC trial] |
+  |  1773781000006115   1773781000006104               Exercise advice - verbal &amp; written [MOSAIC trial] |
+  |  1773791000006117   1773791000006101                 Exercise advice - not necessary  [MOSAIC trial] |
+  |  1773801000006116   1773801000006100                  Exercise advice - not this time [MOSAIC trial] |
+  |------------------------------------------------------------------------------------------------------|
+  |  1773811000006118   1773811000006102                Exercise advice - not appropriate [MOSAIC trial] |
+  |  1773821000006114   1773821000006105                 Physiotherapy - offered referral [MOSAIC trial] |
+  |  1773831000006112   1773831000006108                   Physiotherapy - not necessary  [MOSAIC trial] |
+  |  1773841000006119   1773841000006103                    Physiotherapy - not this time [MOSAIC trial] |
+  |  1773851000006117   1773851000006101                  Physiotherapy - not appropriate [MOSAIC trial] |
+  |------------------------------------------------------------------------------------------------------|
+  |  1822601000006113   1822601000006109                 MOSAIC trial - consent to further contact given |
+  |  1964911000006114   1964911000006105                Equipment in use - sleep apnoea treatment system |
+  |  2707691000006110           13094009                                           Apnoea in the newborn |
+  |  2707751000006114           13094009                                                 Neonatal apnoea |
+  |  2732581000000111   1090851000000106                                      AHI - Apnea Hypopnea Index |
+  |------------------------------------------------------------------------------------------------------|
+  |  2736941000000113   1090851000000106                                    AHI - Apnoea Hypopnoea Index |
+  |  3386171000006112           54602006                                            Suxamethonium apnoea |
+  |  3460531000006110           59127000                                                    Apnoea alarm |
+  |  3847211000006119           82808001                              Sleep apnoea monitoring with alarm |
+  |  3974051000006111           90701007                                                 Secondary apnea |
+  |------------------------------------------------------------------------------------------------------|
+  |  4096341000006116          103750000                                         Sleep apnoea assessment |
+  |  4096351000006119          103750000                                          Sleep apnea assessment |
+  |  4216921000006118          113026004                                          Sleep apnoea recording |
+  |  5037661000006112          232531007   Pharyngeal operation for obstructive sleep apnoea and snoring |
+  |  5535841000006118          272265001                                      Appliance for sleep apnoea |
+  |------------------------------------------------------------------------------------------------------|
+  |  5586821000006111          276544005                                           Apnoea of prematurity |
+  |  5586861000006117          276546007                                     Prolonged apnoea of newborn |
+  |  5589671000006116          276725001                                     Recurrent apnoea of newborn |
+  |  5598031000006115          277356002                                               Mivacurium apnoea |
+  |  6349081000006118          371101003                      Gastroesophageal reflux disease with apnea |
+  |------------------------------------------------------------------------------------------------------|
+  |  6899711000006118          416945002                                                Recurrent apnoea |
+  |  7280381000006112          443621004                                             Sleep apnoea clinic |
+  |  7280391000006110          443621004                                              Sleep apnea clinic |
+  |  7308841000006119          445483007                            Berlin questionnaire for sleep apnea |
+  |  7509901000006117          698560000                                 Referral to sleep apnoea clinic |
+  |------------------------------------------------------------------------------------------------------|
+  |  7509911000006119          698560000                                  Referral to sleep apnea clinic |
+  |  7606701000006118          706225001                                               Sleep apnoea mask |
+  |  7743851000006116          716202005                                          Apnoea Hypopnoea Index |
+  |  7743861000006119          716202005                                            Apnea Hypopnea Index |
+  | 11905291000006112            1023001                                                           Apnea |
+  |------------------------------------------------------------------------------------------------------|
+  | 13530561000006117          774099003                                            Apnea Hypopnea Index |
+  +------------------------------------------------------------------------------------------------------+
+
+
+</code></pre>
+<h2><a href="#create-categories" id="create-categories">CREATE CATEGORIES</a></h2>
+<pre><code>
+
+The categories are defined using the following criteria. They are not in
+numeric order because the categories that are defined later use information
+used to create earlier categories. These are provided so that the search can
+be replicated using different software.
+
+1: Obstructive Sleep Apnoea
+This category includes terms including the strings &quot;obstructive&quot; or &quot;mixed&quot; but not &quot;syndrome&quot;
+
+
+2: Obstructive Sleep Apnoea Syndrome
+This category includes terms including &quot;obstructive&quot; or &quot;mixed&quot; and &quot;syndrome&quot;
+
+
+5. Central sleep apnoea
+This category includes terms including the string &quot;central&quot;
+
+
+6. Primary sleep apnoea
+This category includes terms including the string &quot;primary&quot;
+
+
+4. Sleep apnoea syndrome NOS
+This category includes terms that have not been classified and include the string &quot;syndrome&quot;
+
+
+3. sleep apnoea NOS
+This category includes terms that have not been classified
+
+</code></pre>
+<h2><a href="#check-included-codes-and-categorisation" id="check-included-codes-and-categorisation">CHECK INCLUDED CODES AND CATEGORISATION</a></h2>
+<pre><code>
+
+</code></pre>
+<h2><a href="#codes-by-categorylab" id="codes-by-categorylab">Codes by categorylab</a></h2>
+<pre><code>
+The following table includes all included terms and the assigned category.
+It is provided so that researchers and clinicians can check whether all codes
+are relevant and categorised correctly.
+
+
+  +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  |         medcodeid   snomedctconceptid                            category                                                                                         term   observ~s |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |   267911000006119            78275009            Obstructive Sleep Apnoea                                                                     Obstructive sleep apnoea     200000 |
+  |   219501000000111            78275009            Obstructive Sleep Apnoea                                                                     Obstructive sleep apnoea     100000 |
+  |  3773271000006117            78275009            Obstructive Sleep Apnoea                                                               OSA - Obstructive sleep apnoea       5000 |
+  |  7967581000006116       1091000119108            Obstructive Sleep Apnoea                                                            Obstructive sleep apnoea of child        300 |
+  |  3773291000006116            78275009            Obstructive Sleep Apnoea                                                                      Obstructive sleep apnea        200 |
+  |  3773281000006119            78275009            Obstructive Sleep Apnoea                                                                OSA - Obstructive sleep apnea         70 |
+  |  7967601000006114       1101000119103            Obstructive Sleep Apnoea                                                            Obstructive sleep apnoea of adult         10 |
+  | 13530051000006113           774068004            Obstructive Sleep Apnoea   AHDC1-related intellectual disability, obstructive sleep apnoea, mild dysmorphism syndrome          7 |
+  |  9902171000006115   16275741000119100            Obstructive Sleep Apnoea                                                   Severe paediatric obstructive sleep apnoea          7 |
+  |  5008651000006115           230493001            Obstructive Sleep Apnoea                                                                           Mixed sleep apnoea          5 |
+  |  7967591000006118       1091000119108            Obstructive Sleep Apnoea                                                             Obstructive sleep apnea of child          4 |
+  |  7967611000006112       1101000119103            Obstructive Sleep Apnoea                                                             Obstructive sleep apnea of adult          2 |
+  |  9902181000006117   16275741000119100            Obstructive Sleep Apnoea                                                     Severe pediatric obstructive sleep apnea          1 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |  3773251000006110            78275009   Obstructive sleep apnoea syndrome                                                            Obstructive sleep apnoea syndrome       3000 |
+  |  3773261000006112            78275009   Obstructive sleep apnoea syndrome                                                             Obstructive sleep apnea syndrome         20 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |   136581000006114            73430006                    Sleep apnoea NOS                                                                                 Sleep apnoea     200000 |
+  |         200354014            73430006                    Sleep apnoea NOS                                                                                 Sleep apnoea      30000 |
+  |         405691012            79280005                    Sleep apnoea NOS                                                                Hypersomnia with sleep apnoea       6000 |
+  |   981761000006114     981761000006105                    Sleep apnoea NOS                                                                                  Sleep apnea       1000 |
+  |         317034011            41975002                    Sleep apnoea NOS                                                                   Insomnia with sleep apnoea       1000 |
+  |  3693961000006118            73430006                    Sleep apnoea NOS                                                                                  Sleep apnea         30 |
+  |  3176551000006111            41975002                    Sleep apnoea NOS                                                                    Insomnia with sleep apnea          1 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |         457106016     502901000000102           Sleep apnoea syndrome NOS                                                                     [D]Sleep apnoea syndrome      70000 |
+  |   303181000006112     502901000000102           Sleep apnoea syndrome NOS                                                                     [D]Syndrome sleep apnoea       2000 |
+  | 12702791000006116            73430006           Sleep apnoea syndrome NOS                                                                        Sleep apnoea syndrome         40 |
+  |  3693991000006114            73430006           Sleep apnoea syndrome NOS                                                                         Sleep apnea syndrome          1 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |  1772651000006110            27405005                Central sleep apnoea                                                                         Central sleep apnoea        400 |
+  |  2939251000006112            27405005                Central sleep apnoea                                                                Central sleep apnoea syndrome          6 |
+  |  2939301000006117            27405005                Central sleep apnoea                                                                          Central sleep apnea          1 |
+  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |         477724014           361208003                Primary sleep apnoea                                                              Primary sleep apnoea of newborn        800 |
+  +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+
+</code></pre>
+<h2><a href="#number-of-observations-per-category" id="number-of-observations-per-category">Number of observations per category</a></h2>
+<pre><code>
+The following table described the number of observations in the CPRD database
+for each category. This information can be used to sense check the proposed
+phenotype definitions in codelist_sleep_apnoea_description.html.
+
+Observations counts will be O for HES APC data because there is no equivalent
+field in the dictionary.
+
+
+
+     +----------------------------------------------+
+     |                          category   observ~s |
+     |----------------------------------------------|
+  1. |          Obstructive Sleep Apnoea     305606 |
+  2. | Obstructive sleep apnoea syndrome       3020 |
+  3. |                  Sleep apnoea NOS     238031 |
+  4. |         Sleep apnoea syndrome NOS      72041 |
+  5. |              Central sleep apnoea        407 |
+     |----------------------------------------------|
+  6. |              Primary sleep apnoea        800 |
+     +----------------------------------------------+
+
+
+
+
+</code></pre>
+<h2><a href="#compare-with-previous-version" id="compare-with-previous-version">Compare with previous version</a></h2>
+<pre><code>
+
+The following information compares the new code list with the previous version.
+
+
+ Comparison |
+ of old and |
+    updated |
+  code list |      Freq.     Percent        Cum.
+------------+-----------------------------------
+   New only |          1        2.27        2.27
+   Old only |         14       31.82       34.09
+       Both |         29       65.91      100.00
+------------+-----------------------------------
+      Total |         44      100.00
+
+
+
+The following codes are in the new code list but are not in the old code list:
+
+
+  +------------------------------------------------------------------------+
+  |                 term                _categorynew   _categ~d   observ~s |
+  |------------------------------------------------------------------------|
+  | Sleep apnea syndrome   Sleep apnoea syndrome NOS          .          1 |
+  +------------------------------------------------------------------------+
+
+
+
+The following codes are in the old code list but are not in the new code list:
+
+
+  +----------------------------------------------------------------------------------------------------+
+  |                                                          term   _categ~w   _categoryold   observ~s |
+  |----------------------------------------------------------------------------------------------------|
+  |                         Berlin questionnaire for sleep apnoea          .   Care pathway       1000 |
+  |                             Berlin sleep apnoea questionnaire          .   Care pathway        300 |
+  |              Equipment in use - sleep apnoea treatment system          .   Care pathway         30 |
+  |                            Sleep apnoea monitoring with alarm          .   Care pathway         30 |
+  |                               Referral to sleep apnoea clinic          .   Care pathway         10 |
+  |----------------------------------------------------------------------------------------------------|
+  |                                            Sleep apnea clinic          .   Care pathway          7 |
+  |                                           Sleep apnoea clinic          .   Care pathway          7 |
+  |                                             Sleep apnoea mask          .   Care pathway          4 |
+  |                                        Sleep apnea assessment          .   Care pathway          4 |
+  |                          Berlin questionnaire for sleep apnea          .   Care pathway          2 |
+  |----------------------------------------------------------------------------------------------------|
+  |                                    Appliance for sleep apnoea          .   Care pathway          1 |
+  |                                        Sleep apnoea recording          .   Care pathway          1 |
+  |                                Referral to sleep apnea clinic          .   Care pathway          1 |
+  | Pharyngeal operation for obstructive sleep apnoea and snoring          .   Care pathway          1 |
+  +----------------------------------------------------------------------------------------------------+
+
+
+
+The following codes are in both code lists but in a different category:
+
+
+  +----------------------------------------------------------------------------------------------------+
+  |                            term           _categorynew                     _categoryold   observ~s |
+  |----------------------------------------------------------------------------------------------------|
+  | Primary sleep apnoea of newborn   Primary sleep apnoea   Sleep apnoea (other specified)        800 |
+  +----------------------------------------------------------------------------------------------------+
+
+
+
+
+
+</code></pre>

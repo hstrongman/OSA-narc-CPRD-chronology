@@ -1,0 +1,460 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-how-the-ethnicity-code-lists-were-created" id="description-of-how-the-ethnicity-code-lists-were-created">Description of how the ethnicity code lists were created</a></h1>
+<pre><code>This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_ethnicity.do.
+</code></pre>
+<pre><code>## SEARCH TO IDENTIFY NEW CODES
+</code></pre>
+<p>The following search Read chapters and term strings are applied to all codes in the current dictionary. Each chapter or term string is searched for individually and flagged (strings may appear in any position in the text. The terms should cover all synonyms for ethnicity (see strategy in code list description). Chapter searches only apply to code lists that include Read codes; these include CPRD Aurum code lists as a large proportion of Snomed codes are matched to Read.</p>
+<p>Inclusion terms: ethn british english welsh scottish irish asian indian pakistani  bangladeshi african caribbean</p>
+<p>Inclusion chapters: 9S 9i 9t 9T</p>
+<p>Exclusion terms: adverse eye flower urine blood blackout adenoma adore cell  country head adverse syndrome veno sigvaris fruit trypanosomiasis poison kit altiven sick religion algi juzo jobst haddenham</p>
+<blockquote>
+<p>gloria read language ovcc exam vari porphyria assoc carer speak test encep trust contracept interpret health operation body church obscure joint patient refer activity episco type child  member feve r skin virus father mother gfr myocard sis risk society orthodox tick buddhis benign born lewis traga citizen cattle africanum diet counties stew hindu jewish muslim sikh</p>
+</blockquote>
+<pre><code>## COMPARE WITH PREVIOUS VERSION
+</code></pre>
+<p>Codes from previous code list that are included (and not excluded) in current search that</p>
+<p>233</p>
+<pre><code>## UPDATE EXCLUSION TERMS
+</code></pre>
+<p>The following exclusion terms were checked and added to the main search in this version of the code list.</p>
+<p>Additional exclusion terms:</p>
+<pre><code>## CHECK CODES FROM PREVIOUS CODELIST THAT ARE FLAGGED IN THE EXCLUSION SEARCH
+</code></pre>
+<p>The following codes have been identified in the exclusion search but were included in the previous code list.</p>
+<pre><code> +-------------------------------------------------------------------------------------------+
+ |                                     term   observ~s   _readm~r   _termm~r            eth5 |
+ |-------------------------------------------------------------------------------------------|
+</code></pre>
+<ol>
+<li>| Ethnic group not given - patient refused      71048          1          1   5. Not Stated |</li>
+<li>|            Black - other African country       1149          1          1        2. Black |</li>
+<li>|     Jewish - ethnic category 2001 census        754          1          1        3. Other |</li>
+<li>|     Muslim - ethnic category 2001 census       1941          1          1        3. Other |</li>
+<li>|       Sikh - ethnic category 2001 census        642          1          1        3. Other | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-|</li>
+<li>|      Hindu - ethnic category 2001 census       1155          1          1        3. Other |</li>
+<li>|   Buddhist - ethnic category 2001 census         91          1          1        3. Other | +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-+ Religion codes from census categories were removed in this version Refusal to provide information about ethnic group removed in this version</li>
+</ol>
+<p>Check codes that are not in Read Chapters identifying ONS ethnicity groups and HAVE been excluded.</p>
+<pre><code> +--------------------------------------------------------------------------------+
+ |                                                         term            _match |
+ |--------------------------------------------------------------------------------|
+</code></pre>
+<ol>
+<li>|                                        Speaks English poorly   New search only |</li>
+<li>|                                     Country of birth (Asian)   New search only |</li>
+<li>|                                           African tick virus   New search only |</li>
+<li>|                                 English as a second language   New search only |</li>
+<li>|                                          Speaks English well   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                 Main spoken language English   New search only |</li>
+<li>|                                  Using British sign language   New search only |</li>
+<li>| GFR calculated abbreviated MDRD adj for African Americ orign   New search only |</li>
+<li>|                                   Country of birth (African)   New search only |</li>
+<li>|                                       Born in British Guyana   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                              Country of birth (Australasian)   New search only |</li>
+<li>|                   Joint British Societies cardiac risk score   New search only |</li>
+<li>|                         Asian desert cutaneous leishmaniasis   New search only |</li>
+<li>|                                                Reads English   New search only |</li>
+<li>|                                   Main spoken language Welsh   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                   Indian childhood cirrhosis   New search only |</li>
+<li>|                                 English as a second language   New search only |</li>
+<li>|                               Obscure African cardiomyopathy   New search only |</li>
+<li>|                       EPVT - English picture vocabulary test   New search only |</li>
+<li>|                   Interpreter needed - British Sign Language   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                       BPVT - British picture vocabulary test   New search only |</li>
+<li>|                         British ability scales spelling test   New search only |</li>
+<li>|                                    Patient ethnicity unknown   New search only |</li>
+<li>|                                   Welsh as a second language   New search only |</li>
+<li>|                                   Main spoken language Irish   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                           Born in British overseas territory   New search only |</li>
+<li>|                                          Indian head massage   New search only |</li>
+<li>|                                           Ethnicity of carer   New search only |</li>
+<li>|                         Scottish Gaelic as a second language   New search only |</li>
+<li>|                             Born in Central African Republic   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|     Preferred method of communication: British Sign Language   New search only |</li>
+<li>|                                        Scottish Episcopalian   New search only |</li>
+<li>|                       Uses British Sign Language interpreter   New search only |</li>
+<li>|                       African religion, follower of religion   New search only |</li>
+<li>|                            Irish Gaelic as a second language   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>| NHS Sick Cell Thalassaemia Screen Prog African family origin   New search only |</li>
+<li>|                    BAS - British ability scales reading test   New search only |</li>
+<li>|                  Participant in Scottish Family Health Study   New search only |</li>
+<li>|        Sick Cell Thalas Scr Prog fam orig South Asia (Asian)   New search only |</li>
+<li>| NHS Sick Cell Thal Scr Prog fam orig South East Asia (Asian)   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                   Interpreter needed - Welsh   New search only |</li>
+<li>|                        Trypanosomal (African) antibody level   New search only |</li>
+<li>|    Joint British Societies cardiovascular disease risk score   New search only |</li>
+<li>|  Sick Cell Thalas Scr Prog fam orig African or African-Carib   New search only |</li>
+<li>| Referr to British Lung Foundation breathe easy support group   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|   Dependant of former serving member of British Armed Forces   New search only |</li>
+<li>|             Participant in Scottish health research register   New search only |</li>
+<li>| SPARRA (Scottish pt at risk readmission admission) algorithm   New search only |</li>
+<li>|  Dependant of current serving member of British Armed Forces   New search only |</li>
+<li>|                          British ability scales reading test   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|   Scot-PASQ - Scottish Physical Activity Screening Questions   New search only |</li>
+<li>|                                   First language not English   New search only |</li>
+<li>|                   Carer from Black and minority ethnic group   New search only |</li>
+<li>|  NHS Sick Cell Thal Scr Prog Caribbean Islands family origin   New search only |</li>
+<li>|                               Born in British Virgin Islands   New search only | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                  Reads Welsh   New search only |</li>
+<li>|                    Sign Supported English interpreter needed   New search only |</li>
+<li>|                              English picture vocabulary test   New search only |</li>
+<li>|                                      Scottish Hospital Trust   New search only |</li>
+<li>|                       Born in British Indian Ocean Territory   New search only | +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</li>
+</ol>
+<p>(66 observations deleted)</p>
+<pre><code>## CATEGORISE NEW CODES
+</code></pre>
+<p>The following new ethnicity codes were categorised in this version:</p>
+<pre><code> +-----------------------------------------------------------------------------------------------------+
+ |                                                      term             eth5                    eth16 |
+ |-----------------------------------------------------------------------------------------------------|
+</code></pre>
+<ol>
+<li>|                                                   Chinese         3. Other              15. Chinese |</li>
+<li>|                                                 Tokelauan         3. Other   16. Other ethnic group |</li>
+<li>|                                         New Zealand Maori         3. Other   16. Other ethnic group |</li>
+<li>|                                                    Niuean         3. Other   16. Other ethnic group |</li>
+<li>|                                      New Zealand European         0. White           3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                    Tongan         3. Other   16. Other ethnic group |</li>
+<li>|                                                    Fijian         3. Other   16. Other ethnic group |</li>
+<li>|                                                    Samoan         3. Other   16. Other ethnic group |</li>
+<li>|                             Other European in New Zealand         0. White           3. Other White |</li>
+<li>|                                                    Pakeha         0. White           3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                         Cook Island Maori         3. Other   16. Other ethnic group |</li>
+<li>|                                                    Yemeni         3. Other   16. Other ethnic group |</li>
+<li>|                                                 Bulgarian         0. White           3. Other White |</li>
+<li>|                                                  Romanian         0. White           3. Other White |</li>
+<li>|                                                     Czech         0. White           3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                    Nepali   1. South Asian          11. Other Asian |</li>
+<li>|                                                Portuguese         0. White           3. Other White |</li>
+<li>|                                                    Slovak         0. White           3. Other White |</li>
+<li>| Irish Traveller - Northern Ireland ethnic cat 2011 census         0. White           3. Other White | +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</li>
+</ol>
+<pre><code>## EXCLUDE ADDITIONAL CODES THAT DON'T MATCH THE CODELIST CONCEPT
+</code></pre>
+<p>The following codes are excluded. Check that they do not match the code list concept. Do not add them to the full exclusion terms list unless you want ALL terms with the string to be excluded.</p>
+<pre><code> +---------------------------------------------------------------+
+ |                                               term   readcode |
+ |---------------------------------------------------------------|
+</code></pre>
+<ol>
+<li>|                   British picture vocabulary scale    ZR2m.00 |</li>
+<li>|            BPVS - British picture vocabulary scale    ZR2m.11 |</li>
+<li>|                                  Traveller - gypsy    9T2..00 |</li>
+<li>|                             British ability scales    ZR2k.00 |</li>
+<li>| BILAG - British isles lupus assessment group score    ZR2l.11 | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|</li>
+<li>|                   British ability scales - revised    ZR2k300 |</li>
+<li>|                             Scottish admin chapter    9Z0..00 |</li>
+<li>|                       BAS - British ability scales    ZR2k.11 | +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+</li>
+</ol>
+<pre><code>## CATEGORY CHANGES FROM PREVIOUS CODELIST
+</code></pre>
+<p>The following codes were recategorised as Black African as they were categorised as Black Other in the previous code list.</p>
+<p>(2 real changes made)</p>
+<pre><code> +----------------------------------------------------------------------------+
+ |                                   term       eth5         eth16   observ~s |
+ |----------------------------------------------------------------------------|
+</code></pre>
+<ol>
+<li>|   Somali - ethnic category 2001 census   2. Black   13. African       8852 |</li>
+<li>| Nigerian - ethnic category 2001 census   2. Black   13. African       7996 | +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-+</li>
+</ol>
+<pre><code>## LIST ALL INCLUDED TERMS
+</code></pre>
+<pre><code> +--------------------------------------------------------------------------------------------------------------+
+ |                                                         term             eth5                          eth16 |
+ |--------------------------------------------------------------------------------------------------------------|
+</code></pre>
+<ol>
+<li>|                                              RACE: Caucasian         0. White                     1. British |</li>
+<li>|                                                        White         0. White                     1. British |</li>
+<li>|                                                White British         0. White                     1. British |</li>
+<li>|                                               White Scottish         0. White                     1. British |</li>
+<li>|                             Other white British ethnic group         0. White                     1. British | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|       British or mixed British - ethnic category 2001 census         0. White                     1. British |</li>
+<li>|                  White British - ethnic category 2001 census         0. White                     1. British |</li>
+<li>|                        English - ethnic category 2001 census         0. White                     1. British |</li>
+<li>|                       Scottish - ethnic category 2001 census         0. White                     1. British |</li>
+<li>|                          Welsh - ethnic category 2001 census         0. White                     1. British | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                        Cornish - ethnic category 2001 census         0. White                     1. British |</li>
+<li>|                 Northern Irish - ethnic category 2001 census         0. White                     1. British |</li>
+<li>|                   Ulster Scots - ethnic category 2001 census         0. White                     1. British |</li>
+<li>| White:Eng/Welsh/Scot/NI/Brit - England and Wales 2011 census         0. White                     1. British |</li>
+<li>|         White - Northern Ireland ethnic category 2011 census         0. White                     1. British | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|       White: Scottish - Scotland ethnic category 2011 census         0. White                     1. British |</li>
+<li>|  White: other British - Scotland ethnic category 2011 census         0. White                     1. British |</li>
+<li>|                                                  White Irish         0. White                       2. Irish |</li>
+<li>|                                                  Irish (NMO)         0. White                       2. Irish |</li>
+<li>|                          Irish - ethnic category 2001 census         0. White                       2. Irish | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                    White Irish - ethnic category 2001 census         0. White                       2. Irish |</li>
+<li>| White: Irish - England and Wales ethnic category 2011 census         0. White                       2. Irish |</li>
+<li>|          White: Irish - Scotland ethnic category 2011 census         0. White                       2. Irish |</li>
+<li>|                                     Other white ethnic group         0. White                 3. Other White |</li>
+<li>|                                    Greek/Greek Cypriot (NMO)         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                  Greek (NMO)         0. White                 3. Other White |</li>
+<li>|                                          Greek Cypriot (NMO)         0. White                 3. Other White |</li>
+<li>|                                Turkish/Turkish Cypriot (NMO)         0. White                 3. Other White |</li>
+<li>|                                                Turkish (NMO)         0. White                 3. Other White |</li>
+<li>|                                        Turkish Cypriot (NMO)         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                         Other European (NMO)         0. White                 3. Other White |</li>
+<li>|                                              Irish traveller         0. White                 3. Other White |</li>
+<li>|                                         New Zealand European         0. White                 3. Other White |</li>
+<li>|                                                       Pakeha         0. White                 3. Other White |</li>
+<li>|                                Other European in New Zealand         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                     Romanian         0. White                 3. Other White |</li>
+<li>|                                                    Bulgarian         0. White                 3. Other White |</li>
+<li>|                                                        Czech         0. White                 3. Other White |</li>
+<li>|                                                       Slovak         0. White                 3. Other White |</li>
+<li>|                                                   Portuguese         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|         Other White background - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|      Cypriot (part not stated) - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                          Greek - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                  Greek Cypriot - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                        Turkish - ethnic category 2001 census         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                Turkish Cypriot - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                        Italian - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                Irish Traveller - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                      Traveller - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                   Gypsy/Romany - ethnic category 2001 census         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                         Polish - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|  Baltic Estonian/Latvian/Lithuanian - ethn categ 2001 census         0. White                 3. Other White |</li>
+<li>| Commonwealth (Russian) Indep States - ethn categ 2001 census         0. White                 3. Other White |</li>
+<li>|                        Kosovan - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                       Albanian - ethnic category 2001 census         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                        Bosnian - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                       Croatian - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>|                        Serbian - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>| Other republics former Yugoslavia - ethnic categ 2001 census         0. White                 3. Other White |</li>
+<li>|    Mixed Irish and other White - ethnic category 2001 census         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|  Oth White European/European unsp/Mixed European 2001 census         0. White                 3. Other White |</li>
+<li>|              Other mixed White - ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>| Other White or White unspecified ethnic category 2001 census         0. White                 3. Other White |</li>
+<li>| White: Gypsy/Irish Traveller - Eng+Wales eth cat 2011 census         0. White                 3. Other White |</li>
+<li>| White: other White backgrd- Eng+Wales ethnic cat 2011 census         0. White                 3. Other White | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|    Irish Traveller - Northern Ireland ethnic cat 2011 census         0. White                 3. Other White |</li>
+<li>| White: Gypsy/Irish Traveller - Scotland ethnic cat 2011 cens         0. White                 3. Other White |</li>
+<li>|         White: Polish - Scotland ethnic category 2011 census         0. White                 3. Other White |</li>
+<li>| White: other White ethnic grp- Scotland ethnic cat 2011 cens         0. White                 3. Other White |</li>
+<li>|                                                Indian origin   1. South Asian                      8. Indian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                       Indian   1. South Asian                      8. Indian |</li>
+<li>|                                                       Indian   1. South Asian                      8. Indian |</li>
+<li>|       Indian or British Indian - ethnic category 2001 census   1. South Asian                      8. Indian |</li>
+<li>|  Asian/Asian Brit: Indian - Eng+Wales ethnic cat 2011 census   1. South Asian                      8. Indian |</li>
+<li>|   Asian or Asian British: Indian - NI ethnic cat 2011 census   1. South Asian                      8. Indian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>| Asian: Indian, Indian Scot/Indian Brit- Scotland 2011 census   1. South Asian                      8. Indian |</li>
+<li>|                                              RACE: Pakistani   1. South Asian                   9. Pakistani |</li>
+<li>|                                                    Pakistani   1. South Asian                   9. Pakistani |</li>
+<li>| Pakistani or British Pakistani - ethnic category 2001 census   1. South Asian                   9. Pakistani |</li>
+<li>| Asian/Asian British:Pakistani- Eng+Wales eth cat 2011 census   1. South Asian                   9. Pakistani | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|   Asian/Asian British: Pakistani - NI ethnic cat 2011 census   1. South Asian                   9. Pakistani |</li>
+<li>|    Asian: Pakistani/Pakistani Scot/Pakistani Brit- Scot 2011   1. South Asian                   9. Pakistani |</li>
+<li>|                                            RACE: Bangladeshi   1. South Asian                10. Bangladeshi |</li>
+<li>|                                                  Bangladeshi   1. South Asian                10. Bangladeshi |</li>
+<li>|  Bangladeshi or British Bangladeshi - ethn categ 2001 census   1. South Asian                10. Bangladeshi | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>| Asian/Asian Brit: Bangladeshi- Eng+Wales eth cat 2011 census   1. South Asian                10. Bangladeshi |</li>
+<li>| Asian/Asian British: Bangladeshi - NI ethnic cat 2011 census   1. South Asian                10. Bangladeshi |</li>
+<li>| Bangladeshi, Bangladeshi Scot or Bangladeshi Brit- Scot 2011   1. South Asian                10. Bangladeshi |</li>
+<li>|                                                 Asian origin   1. South Asian                11. Other Asian |</li>
+<li>|                                           West Indian origin   1. South Asian                11. Other Asian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                            RACE: West indian   1. South Asian                11. Other Asian |</li>
+<li>|                                           O/E - Asian origin   1. South Asian                11. Other Asian |</li>
+<li>|                               E Afric Asian/Indo-Carib (NMO)   1. South Asian                11. Other Asian |</li>
+<li>|                                     East African Asian (NMO)   1. South Asian                11. Other Asian |</li>
+<li>|                                         Indo-Caribbean (NMO)   1. South Asian                11. Other Asian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                   Indian sub-continent (NMO)   1. South Asian                11. Other Asian |</li>
+<li>|                                            Other Asian (NMO)   1. South Asian                11. Other Asian |</li>
+<li>|                                     Other Asian ethnic group   1. South Asian                11. Other Asian |</li>
+<li>|                                                  Other Asian   1. South Asian                11. Other Asian |</li>
+<li>|                                                       Nepali   1. South Asian                11. Other Asian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|         Other Asian background - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|                        Punjabi - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|                       Kashmiri - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|             East African Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|                     Sri Lankan - ethnic category 2001 census   1. South Asian                11. Other Asian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                          Tamil - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|                      Sinhalese - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|                Caribbean Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|                  British Asian - ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>|                    Mixed Asian - ethnic category 2001 census   1. South Asian                11. Other Asian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>| Other Asian or Asian unspecified ethnic category 2001 census   1. South Asian                11. Other Asian |</li>
+<li>| Asian/Asian Brit: other Asian- Eng+Wales eth cat 2011 census   1. South Asian                11. Other Asian |</li>
+<li>| Asian/Asian British: other Asian - NI ethnic cat 2011 census   1. South Asian                11. Other Asian |</li>
+<li>|   Asian: other Asian group - Scotland ethnic cat 2011 census   1. South Asian                11. Other Asian |</li>
+<li>|                                              Black Caribbean         2. Black                  12. Caribbean | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                      Caribbean - ethnic category 2001 census         2. Black                  12. Caribbean |</li>
+<li>| Black/African/Caribbn/Black Brit: Caribbean - Eng+Wales 2011         2. Black                  12. Caribbean |</li>
+<li>| Black/Afri/Carib/Black Brit: Caribbean- NI eth cat 2011 cens         2. Black                  12. Caribbean |</li>
+<li>|  Carib/Black: Caribbean/Carib Scot/Carib Brit- Scotland 2011         2. Black                  12. Caribbean |</li>
+<li>|                                               African origin         2. Black                    13. African | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                Black African         2. Black                    13. African |</li>
+<li>|                                Black - other African country         2. Black                    13. African |</li>
+<li>|                                Other African countries (NMO)         2. Black                    13. African |</li>
+<li>|                        African - ethnic category 2001 census         2. Black                    13. African |</li>
+<li>|                         Somali - ethnic category 2001 census         2. Black                    13. African | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                       Nigerian - ethnic category 2001 census         2. Black                    13. African |</li>
+<li>| Black/African/Carib/Black Brit: African- Eng+Wales 2011 cens         2. Black                    13. African |</li>
+<li>| Black/Afri/Carib/Black Brit: African- NI eth cat 2011 census         2. Black                    13. African |</li>
+<li>|   African: African/African Scot/African Brit - Scotland 2011         2. Black                    13. African |</li>
+<li>| African: any other African - Scotland ethnic cat 2011 census         2. Black                    13. African | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                         RACE: Afro-caribbean         2. Black                14. Other Black |</li>
+<li>|                               Black, other, non-mixed origin         2. Black                14. Other Black |</li>
+<li>|                                                Black British         2. Black                14. Other Black |</li>
+<li>|                                  Black Caribbean/W.I./Guyana         2. Black                14. Other Black |</li>
+<li>|                                              Black Caribbean         2. Black                14. Other Black | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                            Black West Indian         2. Black                14. Other Black |</li>
+<li>|                                                 Black Guyana         2. Black                14. Other Black |</li>
+<li>|                                 Black N African/Arab/Iranian         2. Black                14. Other Black |</li>
+<li>|                                          Black North African         2. Black                14. Other Black |</li>
+<li>|                                                   Black Arab         2. Black                14. Other Black | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                Black Iranian         2. Black                14. Other Black |</li>
+<li>|                               Black E Afric Asia/Indo-Caribb         2. Black                14. Other Black |</li>
+<li>|                                     Black East African Asian         2. Black                14. Other Black |</li>
+<li>|                                         Black Indo-Caribbean         2. Black                14. Other Black |</li>
+<li>|                                   Black Indian sub-continent         2. Black                14. Other Black | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                          Black - other Asian         2. Black                14. Other Black |</li>
+<li>|                                          Black Black - other         2. Black                14. Other Black |</li>
+<li>|                                         Black - other, mixed         2. Black                14. Other Black |</li>
+<li>|                               Caribbean I./W.I./Guyana (NMO)         2. Black                14. Other Black |</li>
+<li>|                                       Caribbean Island (NMO)         2. Black                14. Other Black | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                            West Indian (NMO)         2. Black                14. Other Black |</li>
+<li>|                                                 Guyana (NMO)         2. Black                14. Other Black |</li>
+<li>|                                     Other black ethnic group         2. Black                14. Other Black |</li>
+<li>|         Other Black background - ethnic category 2001 census         2. Black                14. Other Black |</li>
+<li>|                  Black British - ethnic category 2001 census         2. Black                14. Other Black | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                    Mixed Black - ethnic category 2001 census         2. Black                14. Other Black |</li>
+<li>| Other Black or Black unspecified ethnic category 2001 census         2. Black                14. Other Black |</li>
+<li>| Black/Afr/Carib/Black Brit: other Black- Eng+Wales 2011 cens         2. Black                14. Other Black |</li>
+<li>|  Black/Afri/Carib/Black Brit: other - NI eth cat 2011 census         2. Black                14. Other Black |</li>
+<li>| Carib/Black: Black/Black Scot/Black Brit- Scotland 2011 cens         2. Black                14. Other Black | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|   Carib/Black: any other Black/Caribbean grp - Scotland 2011         2. Black                14. Other Black |</li>
+<li>|                                                      Chinese         3. Other                    15. Chinese |</li>
+<li>|                                                      Chinese         3. Other                    15. Chinese |</li>
+<li>|                        Chinese - ethnic category 2001 census         3. Other                    15. Chinese |</li>
+<li>| Asian/Asian Brit: Chinese - Eng+Wales ethnic cat 2011 census         3. Other                    15. Chinese | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|     Asian/Asian British: Chinese - NI ethnic cat 2011 census         3. Other                    15. Chinese |</li>
+<li>|        Asian: Chinese - Scotland ethnic category 2011 census         3. Other                    15. Chinese |</li>
+<li>|                                 Other ethnic non-mixed (NMO)         3. Other         16. Other ethnic group |</li>
+<li>|                               Brit. ethnic minor. spec.(NMO)         3. Other         16. Other ethnic group |</li>
+<li>|                               Brit. ethnic minor. unsp (NMO)         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                 N African Arab/Iranian (NMO)         3. Other         16. Other ethnic group |</li>
+<li>|                                     North African Arab (NMO)         3. Other         16. Other ethnic group |</li>
+<li>|                                                Iranian (NMO)         3. Other         16. Other ethnic group |</li>
+<li>|                                       Other ethnic NEC (NMO)         3. Other         16. Other ethnic group |</li>
+<li>|                                                   Vietnamese         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                           Other ethnic group         3. Other         16. Other ethnic group |</li>
+<li>|                                            New Zealand Maori         3. Other         16. Other ethnic group |</li>
+<li>|                                                       Samoan         3. Other         16. Other ethnic group |</li>
+<li>|                                            Cook Island Maori         3. Other         16. Other ethnic group |</li>
+<li>|                                                       Tongan         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                                       Niuean         3. Other         16. Other ethnic group |</li>
+<li>|                                                    Tokelauan         3. Other         16. Other ethnic group |</li>
+<li>|                                                       Fijian         3. Other         16. Other ethnic group |</li>
+<li>|                                   Other Pacific ethnic group         3. Other         16. Other ethnic group |</li>
+<li>|                                             South East Asian         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                               Other New Zealand ethnic group         3. Other         16. Other ethnic group |</li>
+<li>|                                 New Zealand ethnic group NOS         3. Other         16. Other ethnic group |</li>
+<li>|                                                       Yemeni         3. Other         16. Other ethnic group |</li>
+<li>|                          Other - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                     Vietnamese - ethnic category 2001 census         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                       Japanese - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                       Filipino - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                      Malaysian - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                           Arab - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                  North African - ethnic category 2001 census         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|  Mid East (excl Israeli, Iranian &amp; Arab) - eth cat 2001 cens         3. Other         16. Other ethnic group |</li>
+<li>|                        Israeli - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                        Iranian - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                        Kurdish - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|                       Moroccan - ethnic category 2001 census         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                 Latin American - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|     South and Central American - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>| Mauritian/Seychellois/Maldivian/St Helena eth cat 2001census         3. Other         16. Other ethnic group |</li>
+<li>|                Any other group - ethnic category 2001 census         3. Other         16. Other ethnic group |</li>
+<li>|  Other ethnic group: Arab - Eng+Wales ethnic cat 2011 census         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|  Other ethnic: any other grp - Eng+Wales eth cat 2011 census         3. Other         16. Other ethnic group |</li>
+<li>|    Other ethnic group: Arab - NI ethnic category 2011 census         3. Other         16. Other ethnic group |</li>
+<li>| Other ethnic group: any other grp- NI ethnic cat 2011 census         3. Other         16. Other ethnic group |</li>
+<li>| Other ethnic grp: Arab/Arab Scot/Arab British- Scotland 2011         3. Other         16. Other ethnic group |</li>
+<li>| Other ethnic grp: any other ethnic grp- Scotland 2011 census         3. Other         16. Other ethnic group | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                    Black Caribbean and White         4. Mixed   4. White and Black Caribbean |</li>
+<li>|      White and Black Caribbean - ethnic category 2001 census         4. Mixed   4. White and Black Caribbean |</li>
+<li>| Mixed: White+Black Caribbean - Eng+Wales eth cat 2011 census         4. Mixed   4. White and Black Caribbean |</li>
+<li>| Mixed: White and Black Caribbean - NI ethnic cat 2011 census         4. Mixed   4. White and Black Caribbean |</li>
+<li>|                                         RACE: Afro-caucasian         4. Mixed     5. White and Black African | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                      Black African and White         4. Mixed     5. White and Black African |</li>
+<li>|        White and Black African - ethnic category 2001 census         4. Mixed     5. White and Black African |</li>
+<li>|   Mixed: White+Black African - Eng+Wales eth cat 2011 census         4. Mixed     5. White and Black African |</li>
+<li>|   Mixed: White and Black African - NI ethnic cat 2011 census         4. Mixed     5. White and Black African |</li>
+<li>|                               Other ethnic, Asian/White orig         4. Mixed             6. White and Asian | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                White and Asian - ethnic category 2001 census         4. Mixed             6. White and Asian |</li>
+<li>|   Mixed: White+Asian - Eng+Wales ethnic category 2011 census         4. Mixed             6. White and Asian |</li>
+<li>|      Mixed: White and Asian - NI ethnic category 2011 census         4. Mixed             6. White and Asian |</li>
+<li>|                               Other Black - Black/White orig         4. Mixed                 7. Other Mixed |</li>
+<li>|                               Other Black - Black/Asian orig         4. Mixed                 7. Other Mixed | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                   Other ethnic, mixed origin         4. Mixed                 7. Other Mixed |</li>
+<li>|                               Other ethnic, Black/White orig         4. Mixed                 7. Other Mixed |</li>
+<li>|                               Other ethnic, mixed white orig         4. Mixed                 7. Other Mixed |</li>
+<li>|                               Other ethnic, other mixed orig         4. Mixed                 7. Other Mixed |</li>
+<li>|         Other Mixed background - ethnic category 2001 census         4. Mixed                 7. Other Mixed | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                Black and Asian - ethnic category 2001 census         4. Mixed                 7. Other Mixed |</li>
+<li>|              Black and Chinese - ethnic category 2001 census         4. Mixed                 7. Other Mixed |</li>
+<li>|                Black and White - ethnic category 2001 census         4. Mixed                 7. Other Mixed |</li>
+<li>|              Chinese and White - ethnic category 2001 census         4. Mixed                 7. Other Mixed |</li>
+<li>|              Asian and Chinese - ethnic category 2001 census         4. Mixed                 7. Other Mixed | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>| Other Mixed or Mixed unspecified ethnic category 2001 census         4. Mixed                 7. Other Mixed |</li>
+<li>|  Mixed: other Mixed/multiple backgrd - Eng+Wales 2011 census         4. Mixed                 7. Other Mixed |</li>
+<li>|  Mixed: other Mixed/multiple ethnic backgrd - NI 2011 census         4. Mixed                 7. Other Mixed |</li>
+<li>| Mixed/multiple ethnic grps: any- Scot ethnic cat 2011 census         4. Mixed                 7. Other Mixed |</li>
+<li>|                                           O/E - ethnic group    5. Not Stated                 17. Not Stated | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                                          O/E - ethnic origin    5. Not Stated                 17. Not Stated |</li>
+<li>|                                       O/E - ethnic group NOS    5. Not Stated                 17. Not Stated |</li>
+<li>|                                       Ethnic groups (census)    5. Not Stated                 17. Not Stated |</li>
+<li>|                                    Ethnic group not recorded    5. Not Stated                 17. Not Stated |</li>
+<li>|                                   Ethnic groups (census) NOS    5. Not Stated                 17. Not Stated | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|                 Ethnicity and other related nationality data    5. Not Stated                 17. Not Stated |</li>
+<li>|                                    New Zealand ethnic groups    5. Not Stated                 17. Not Stated |</li>
+<li>|                                Ethnic category - 2001 census    5. Not Stated                 17. Not Stated |</li>
+<li>|                     Ethnic category not stated - 2001 census    5. Not Stated                 17. Not Stated |</li>
+<li>|                                Ethnic category - 2011 census    5. Not Stated                 17. Not Stated | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|</li>
+<li>|              Ethnic category - 2011 census England and Wales    5. Not Stated                 17. Not Stated |</li>
+<li>|               Ethnic category - 2011 census Northern Ireland    5. Not Stated                 17. Not Stated |</li>
+<li>|                       Ethnic category - 2011 census Scotland    5. Not Stated                 17. Not Stated | +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</li>
+</ol>
+<pre><code>## SAVE CODE LISTS
+</code></pre>
+<h2><a href="#contains-data-from-jehr-share3-database-guidelines-and-infogprd-goldcode-browsers2022-05-browsersmedicaldtaobservations-253variables-11-4-aug-2022-1621" id="contains-data-from-jehr-share3-database-guidelines-and-infogprd-goldcode-browsers2022-05-browsersmedicaldtaobservations-253variables-11-4-aug-2022-1621">Contains data from J:\EHR Share\3 Database guidelines and info\GPRD_Gold\Code browsers\2022_05 Browsers\medical.dta Observations:           253<br />
+Variables:            11                  4 Aug 2022 16:21</a></h2>
+<h2><a href="#variable-storage-display-valuename-type-format-label-variable-label" id="variable-storage-display-valuename-type-format-label-variable-label">Variable      Storage   Display    Value name         type    format    label      Variable label</a></h2>
+<h2><a href="#medcode-long-120g-2022-06readcode-str7-9s-20220625clinevents-long-120g-clinical-eventsimevents-long-120g-immunisation-eventsrefevents-long-120g-referral-eventstestevents-long-120g-test-eventsterm-str66-66sfirstbuild-str14-14sobservations-float-90geth16-float-280g-eth16eth5-float-140g-eth5-recode-of-eth16" id="medcode-long-120g-2022-06readcode-str7-9s-20220625clinevents-long-120g-clinical-eventsimevents-long-120g-immunisation-eventsrefevents-long-120g-referral-eventstestevents-long-120g-test-eventsterm-str66-66sfirstbuild-str14-14sobservations-float-90geth16-float-280g-eth16eth5-float-140g-eth5-recode-of-eth16">medcode         long    %12.0g                2022_06 readcode        str7    %9s                   20220625 clinevents      long    %12.0g                clinical events imevents        long    %12.0g                immunisation events refevents       long    %12.0g                referral events testevents      long    %12.0g                test events term            str66   %66s<br />
+firstbuild      str14   %14s<br />
+observations    float   %9.0g<br />
+eth16           float   %28.0g     eth16<br />
+eth5            float   %14.0g     eth5       RECODE of eth16</a></h2>
+<p>Sorted by: eth5  eth16  readcode Note: Dataset has changed since last saved.</p>
+<pre><code> RECODE of |
+     eth16 |      Freq.     Percent        Cum.
+</code></pre>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; 0. White |         69       27.27       27.27 1. South Asian |         45       17.79       45.06 2. Black |         47       18.58       63.64 3. Other |         49       19.37       83.00 4. Mixed |         29       11.46       94.47 5. Not Stated |         14        5.53      100.00 &mdash;&mdash;&mdash;&mdash;&mdash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; Total |        253      100.00</p>
+<pre><code>                   eth16 |      Freq.     Percent        Cum.
+</code></pre>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; 1. British |         17        6.72        6.72 2. Irish |          6        2.37        9.09 3. Other White |         46       18.18       27.27 4. White and Black Caribbean |          4        1.58       28.85 5. White and Black African |          5        1.98       30.83 6. White and Asian |          4        1.58       32.41 7. Other Mixed |         16        6.32       38.74 8. Indian |          7        2.77       41.50 9. Pakistani |          6        2.37       43.87 10. Bangladeshi |          6        2.37       46.25 11. Other Asian |         26       10.28       56.52 12. Caribbean |          5        1.98       58.50 13. African |         11        4.35       62.85 14. Other Black |         31       12.25       75.10 15. Chinese |          6        2.37       77.47 16. Other ethnic group |         43       17.00       94.47 17. Not Stated |         14        5.53      100.00 &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; Total |        253      100.00</p>
+<h2><a href="#contains-data-from-jehr-workinghelens22-001887-sleep-chronologycodelistsstatacodelist-ethnicity-golddtaobservations-253variables-6-29-jun-2023-1026" id="contains-data-from-jehr-workinghelens22-001887-sleep-chronologycodelistsstatacodelist-ethnicity-golddtaobservations-253variables-6-29-jun-2023-1026">Contains data from J:\EHR-Working\HelenS\22_001887_sleep-chronology\codelists\stata\codelist_ethnicity_gold.dta Observations:           253<br />
+Variables:             6                  29 Jun 2023 10:26</a></h2>
+<h2><a href="#variable-storage-display-valuename-type-format-label-variable-label" id="variable-storage-display-valuename-type-format-label-variable-label">Variable      Storage   Display    Value name         type    format    label      Variable label</a></h2>
+<h2><a href="#medcode-long-120g-2022-06readcode-str7-9s-20220625term-str66-66sobservations-float-90geth16-float-280g-eth16eth5-float-140g-eth5-recode-of-eth16" id="medcode-long-120g-2022-06readcode-str7-9s-20220625term-str66-66sobservations-float-90geth16-float-280g-eth16eth5-float-140g-eth5-recode-of-eth16">medcode         long    %12.0g                2022_06 readcode        str7    %9s                   20220625 term            str66   %66s<br />
+observations    float   %9.0g<br />
+eth16           float   %28.0g     eth16<br />
+eth5            float   %14.0g     eth5       RECODE of eth16</a></h2>
+<p>Sorted by: eth5  eth16  readcode</p>

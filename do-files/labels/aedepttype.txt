@@ -1,0 +1,6 @@
+aedepttype	description
+01 	 Emergency departments
+02 	 Consultant-led mono specialty accident and emergency service (e.g. ophthalmology, dental)
+03 	 Other type of A&E/minor injury activity
+04 	 NHS walk-in centres
+99 	 Not known

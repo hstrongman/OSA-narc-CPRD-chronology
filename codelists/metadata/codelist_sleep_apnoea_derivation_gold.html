@@ -1,0 +1,216 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-how-the-sleep-apnoea-code-lists-were-created" id="description-of-how-the-sleep-apnoea-code-lists-were-created">Description of how the sleep apnoea code lists were created</a></h1>
+<pre><code>This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_sleep_apnoea.do.
+
+</code></pre>
+<h2><a href="#basic-search" id="basic-search">BASIC SEARCH</a></h2>
+<pre><code>
+
+The following search terms are used to generate the initial code lists. Each 
+term is searched for individually and included or excluded if 
+it appears in any position in the text. The terms should cover all synonyms
+for sleep apnoea. Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read.
+
+Inclusion terms: apnoea apnea OSA
+
+Inclusion chapters: H5B R005 Fy03
+
+Exclusion terms: mosaic mask questionnaire clinic appliance treatment monitoring recording assessment operation
+
+Exclusion chapters: 
+
+
+Note: Care pathway terms are excluded in the new code list because they are 
+rarely used and mostly indicate testing for sleep apnoea
+
+
+</code></pre>
+<h2><a href="#code-list-specific-search-algorithm" id="code-list-specific-search-algorithm">CODE LIST SPECIFIC SEARCH ALGORITHM</a></h2>
+<pre><code>
+Terms without both &quot;sleep&quot; and either &quot;apnoea&quot; or &quot;apnea&quot; are
+excluded.
+
+
+</code></pre>
+<h2><a href="#check-excluded-codes" id="check-excluded-codes">CHECK EXCLUDED CODES</a></h2>
+<pre><code>
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+
+  +------------------------------------------------------------------------+
+  | medcode   readcode                                                term |
+  |------------------------------------------------------------------------|
+  |   37667    8A43.00                             Apnoea alarm monitoring |
+  |   54458    R005800   [D]Sleep dysfunction with sleep stage disturbance |
+  |   15732    R005600                           [D]Sleep rhythm irregular |
+  |   15407    R005z00                            [D]Sleep dysfunction NOS |
+  |     982    R060400                                           [D]Apnoea |
+  |------------------------------------------------------------------------|
+  |    1244    R005000                   [D]Sleep disturbance, unspecified |
+  |   73978    Qyu3800                          [X]Other apnoea of newborn |
+  |  100177    38Da.00               Berlin questionnaire for sleep apnoea |
+  |    8084    R005.00                               [D]Sleep disturbances |
+  |     750    R005200                                     [D]Insomnia NOS |
+  |------------------------------------------------------------------------|
+  |   16447    R005500                           [D]Sleep rhythm inversion |
+  |   31236    R005.12                            [D]Sleep rhythm problems |
+  |   10349    R005.11                               [D]Insomnia - symptom |
+  |   26547    R005400                                  [D]Hypersomnia NOS |
+  |   19576    Q31y600                                   Apnoea of newborn |
+  |------------------------------------------------------------------------|
+  |   23924    SN52000                                      Scoline apnoea |
+  |   41737    R005900       [D]Sleep dysfunction with arousal disturbance |
+  |   58911    R005700              [D]Sleep-wake rhythm non-24-hour cycle |
+  +------------------------------------------------------------------------+
+
+
+</code></pre>
+<h2><a href="#create-categories" id="create-categories">CREATE CATEGORIES</a></h2>
+<pre><code>
+
+The categories are defined using the following criteria. They are not in
+numeric order because the categories that are defined later use information
+used to create earlier categories. These are provided so that the search can
+be replicated using different software.
+
+1: Obstructive Sleep Apnoea
+This category includes terms including the strings &quot;obstructive&quot; or &quot;mixed&quot; but not &quot;syndrome&quot;
+
+
+2: Obstructive Sleep Apnoea Syndrome
+This category includes terms including &quot;obstructive&quot; or &quot;mixed&quot; and &quot;syndrome&quot;
+
+
+5. Central sleep apnoea
+This category includes terms including the string &quot;central&quot;
+
+
+6. Primary sleep apnoea
+This category includes terms including the string &quot;primary&quot;
+
+
+4. Sleep apnoea syndrome NOS
+This category includes terms that have not been classified and include the string &quot;syndrome&quot;
+
+
+3. sleep apnoea NOS
+This category includes terms that have not been classified
+
+</code></pre>
+<h2><a href="#check-included-codes-and-categorisation" id="check-included-codes-and-categorisation">CHECK INCLUDED CODES AND CATEGORISATION</a></h2>
+<pre><code>
+
+</code></pre>
+<h2><a href="#codes-by-categorylab" id="codes-by-categorylab">Codes by categorylab</a></h2>
+<pre><code>
+The following table includes all included terms and the assigned category.
+It is provided so that researchers and clinicians can check whether all codes
+are relevant and categorised correctly.
+
+
+  +----------------------------------------------------------------------------------------------+
+  | medcode   readcode                    category                               term   observ~s |
+  |----------------------------------------------------------------------------------------------|
+  |    8148    Fy03.11    Obstructive Sleep Apnoea           Obstructive sleep apnoea      44931 |
+  |   20748    H5B0.00    Obstructive Sleep Apnoea           Obstructive sleep apnoea       3057 |
+  |----------------------------------------------------------------------------------------------|
+  |    7603    Fy03.00            Sleep apnoea NOS                       Sleep apnoea      29634 |
+  |   23779    H5B..00            Sleep apnoea NOS                       Sleep apnoea       7027 |
+  |   36301    R005300            Sleep apnoea NOS   [D]Hypersomnia with sleep apnoea       2250 |
+  |   48539    R005100            Sleep apnoea NOS      [D]Insomnia with sleep apnoea        154 |
+  |----------------------------------------------------------------------------------------------|
+  |    2506    R005311   Sleep apnoea syndrome NOS           [D]Sleep apnoea syndrome      61952 |
+  |   20438    R005312   Sleep apnoea syndrome NOS           [D]Syndrome sleep apnoea        439 |
+  |----------------------------------------------------------------------------------------------|
+  |   26871    Q318.00        Primary sleep apnoea    Primary sleep apnoea of newborn        474 |
+  +----------------------------------------------------------------------------------------------+
+
+
+
+</code></pre>
+<h2><a href="#number-of-observations-per-category" id="number-of-observations-per-category">Number of observations per category</a></h2>
+<pre><code>
+The following table described the number of observations in the CPRD database
+for each category. This information can be used to sense check the proposed
+phenotype definitions in codelist_sleep_apnoea_description.html.
+
+Observations counts will be O for HES APC data because there is no equivalent
+field in the dictionary.
+
+
+
+     +--------------------------------------+
+     |                  category   observ~s |
+     |--------------------------------------|
+  1. |  Obstructive Sleep Apnoea      47988 |
+  2. |          Sleep apnoea NOS      39065 |
+  3. | Sleep apnoea syndrome NOS      62391 |
+  4. |      Primary sleep apnoea        474 |
+     +--------------------------------------+
+
+
+
+
+</code></pre>
+<h2><a href="#compare-with-previous-version" id="compare-with-previous-version">Compare with previous version</a></h2>
+<pre><code>
+
+The following information compares the new code list with the previous version.
+
+
+ Comparison |
+ of old and |
+    updated |
+  code list |      Freq.     Percent        Cum.
+------------+-----------------------------------
+   Old only |          1       10.00       10.00
+       Both |          9       90.00      100.00
+------------+-----------------------------------
+      Total |         10      100.00
+
+
+
+All the codes in the new code list were in the old code list.
+
+
+
+
+The following codes are in the old code list but are not in the new code list:
+
+
+  +----------------------------------------------------------------------------+
+  |                                  term   _categ~w   _categoryold   observ~s |
+  |----------------------------------------------------------------------------|
+  | Berlin questionnaire for sleep apnoea          .   Care pathway        116 |
+  +----------------------------------------------------------------------------+
+
+
+
+The following codes are in both code lists but in a different category:
+
+
+  +----------------------------------------------------------------------------------------------------+
+  |                            term           _categorynew                     _categoryold   observ~s |
+  |----------------------------------------------------------------------------------------------------|
+  | Primary sleep apnoea of newborn   Primary sleep apnoea   Sleep apnoea (other specified)        474 |
+  +----------------------------------------------------------------------------------------------------+
+
+
+
+
+
+</code></pre>

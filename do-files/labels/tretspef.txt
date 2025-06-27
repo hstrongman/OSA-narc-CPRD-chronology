@@ -1,0 +1,179 @@
+Tretspef	description
+100	General Surgery Service
+101	Urology Service
+102	Transplant Surgery Service (From 1 April 2004)
+103	Breast Surgery Service (From 1 April 2004)
+104	Colorectal Surgery Service (From 1 April 2004)
+105	Hepatobiliary and Pancreatic Surgery Service (From 1 April 2004)
+106	Upper Gastrointestinal Surgery Service (From 1 April 2004)
+107	Vascular Surgery Service (From 1 April 2004)
+108	Spinal Surgery Service (From April 2013)
+109	Bariatric Surgery Service (From 1 April 2021)
+110	Trauma and Orthopaedic Service
+111	Orthopaedic Service (From 1 April 2021)
+113	Endocrine Surgery Service (From 1 April 2021)
+115	Trauma Surgery Service (From 1 April 2021)
+120	Ear Nose and Throat Service
+130	Ophthalmology Service
+140	Oral Surgery Service
+141	Restorative Dentistry Service
+142	Paediatric Dentistry Service (From 1999-2000)
+143	Orthodontic Service
+144	Maxillofacial Surgery Service (From 1 April 2004)
+145	Oral and Maxillofacial Surgery Service (From 1 April 2021)
+150	Neurosurgical Service
+160	Plastic Surgery Service
+161	Burns Care Service (From 1 April 2004)
+170	Cardiothoracic Surgery Service
+171	Paediatric Surgery Service
+172	Cardiac Surgery Service (From 1 April 2004)
+173	Thoracic Surgery Service (From 1 April 2004)
+174	Cardiothoracic Transplantation Service (From 1 April 2004)
+180	Emergency Medicine Service
+190	Anaesthetic Service
+191	Pain Management Service (From 1998-99)
+192	Intensive Care Medicine Service (From 1 April 2004)
+200	Aviation and Space Medicine Service (From 1 April 2021)
+211	Paediatric Urology Service (From 2006-07)
+212	Paediatric Transplantation Surgery Service (From 2006-07)
+213	Paediatric Gastrointestinal Surgery Service (From 2006-07)
+214	Paediatric Trauma and Orthopaedic Service (From 2006-07)
+215	Paediatric Ear Nose and Throat Service (From 2006-07)
+216	Paediatric Ophthalmology Service (From 2006-07)
+217	Paediatric Oral and Maxillofacial Surgery Service (From 2006-07)
+218	Paediatric Neurosurgery Service (From 2006-07)
+219	Paediatric Plastic Surgery Service (From 2006-07)
+220	Paediatric Burns Care Service (From 2006-07)
+221	Paediatric Cardiac Surgery Service (From 2006-07)
+222	Paediatric Thoracic Surgery Service (From 2006-07)
+223	Paediatric Epilepsy Service (From April 2013)
+230	Paediatric Clinical Pharmacology Service (From 1 April 2021)
+240	Paediatric Palliative Medicine Service (From 1 April 2021)
+241	Paediatric Pain Management Service (From 2006-07)
+242	Paediatric Intensive Care Service (From 2006-07)
+250	Paediatric Hepatology Service (From 1 April 2021)
+251	Paediatric Gastroenterology Service (From 2006-07)
+252	Paediatric Endocrinology Service (From 2006-07)
+253	Paediatric Clinical Haematology Service (From 2006-07)
+254	Paediatric Audio Vestibular Medicine Service (From 2006-07)
+255	Paediatric Clinical Immunology and Allergy Service (From 2006-07)
+256	Paediatric Infectious Diseases Service (From 2006-07)
+257	Paediatric Dermatology Service (From 2006-07)
+258	Paediatric Respiratory Medicine Service (From 2006-07)
+259	Paediatric Nephrology Service (From 2006-07)
+260	Paediatric Medical Oncology Service (From 2006-07)
+261	Paediatric Inherited Metabolic Medicine Service (From 2006-07)
+262	Paediatric Rheumatology Service (From 2006-07)
+263	Paediatric Diabetes Service (From 1 April 2004)
+264	Paediatric Cystic Fibrosis Service (From 1 April 2004)
+270	Paediatric Emergency Medicine Service (From 1 April 2021)
+280	Paediatric Interventional Radiology Service (From 2006-07)
+290	Community Paediatric Service (From 2006-07)
+291	Paediatric Neurodisability Service (From 2006-07)
+300	General Internal Medicine Service
+301	Gastroenterology Service
+302	Endocrinology Service
+303	Clinical Haematology Service
+304	Clinical Physiology Service (From 2008-09)
+305	Clinical Pharmacology Service
+306	Hepatology Service (From 1 April 2004)
+307	Diabetes Service (From 1 April 2004)
+308	Blood and Marrow Transplantation Service (From 1 April 2004)
+309	Haemophilia Service (From 1 April 2004)
+310	Audio Vestibular Medicine Service
+311	Clinical Genetics Service
+313	Clinical Immunology and Allergy Service (From 1991-92)
+314	Rehabilitation Medicine Service (From 1991-92)
+315	Palliative Medicine Service
+316	Clinical Immunology Service (From 1 April 2004)
+317	Allergy Service (From 1 April 2004)
+318	Intermediate Care Service (From 1 April 2004)
+319	Respite Care Service (From 1 April 2004)
+320	Cardiology Service
+321	Paediatric Cardiology Service (From 1 April 2004)
+322	Clinical Microbiology Service (From 1 April 2004)
+323	Spinal Injuries Service (From 2006-07)
+324	Anticoagulant Service (From 1 April 2004)
+325	Sport and Exercise Medicine Service (From 1 April 2004)
+326	Acute Internal Medicine Service (From 1 April 2021)
+327	Cardiac Rehabilitation Service (From 1 April 2004)
+328	Stroke Medicine Service (From 1 April 2004)
+329	Transient Ischaemic Attack Service (From 1 April 2004)
+330	Dermatology Service
+331	Congenital Heart Disease Service (From April 2013)
+333	Rare Disease Service (From 1 April 2021)
+335	Inherited Metabolic Medicine Service (From 1 April 2021)
+340	Respiratory Medicine Service
+341	Respiratory Physiology Service (From 1 April 2004)
+342	Pulmonary Rehabilitation Service (From 1 April 2004)
+343	Adult Cystic Fibrosis Service (From 1 April 2004)
+344	Complex Specialised Rehabilitation Service (From April 2013)
+345	Specialist Rehabilitation Service (From April 2013)
+346	Local Specialist Rehabilitation Service (From April 2013)
+347	Sleep Medicine Service (From 1 April 2021)
+348	Post-COVID-19 Syndrome Service (From 1 April 2021)
+350	Infectious Diseases Service
+352	Tropical Medicine Service (From 1 April 2004)
+360	Genitourinary Medicine Service
+361	Renal Medicine Service
+370	Medical Oncology Service
+371	Nuclear Medicine Service (From 2008-09)
+400	Neurology Service
+401	Clinical Neurophysiology Service (From 2008-09)
+410	Rheumatology Service
+420	Paediatric Service
+421	Paediatric Neurology Service
+422	Neonatal Critical Care Service (From 1 April 2004)
+424	Well Baby Service (From 1 April 2004)
+430	Elderly Medicine Service
+431	Orthogeriatric Medicine Service (From 1 April 2021)
+450	Dental Medicine Service (From 1990-91)
+451	Special Care Dentistry Service (From 1 April 2021)
+460	Medical Ophthalmology Service (From 1993-94)
+461	Ophthalmic and Vision Science Service (From 1 April 2021)
+501	Obstetrics Service
+502	Gynaecology Service
+503	Gynaecological Oncology Service (From 1 April 2004)
+504	Community Sexual and Reproductive Health Service (From 1 April 2021)
+505	Fetal Medicine Service (From 1 April 2021)
+560	Midwifery Service (From October 1995)
+650	Physiotherapy Service (From 2006-07)
+651	Occupational Therapy Service (From 2006-07)
+652	Speech and Language Therapy Service (From 2006-07)
+653	Podiatry Service (From 2006-07)
+654	Dietetics Service (From 2006-07)
+655	Orthoptics Service (From 2006-07)
+656	Clinical Psychology Service (From 2006-07)
+657	Prosthetics Service (From 1 April 2004)
+658	Orthotics Service (From 1 April 2004)
+659	Dramatherapy Service (From 1 April 2004)
+660	Art Therapy Service (From 1 April 2004)
+661	Music Therapy Service (From 1 April 2004)
+662	Optometry Service (From 1 April 2004)
+663	Podiatric Surgery Service (From April 2013)
+670	Urological Physiology Service (From 1 April 2021)
+673	Vascular Physiology Service (From 1 April 2021)
+675	Cardiac Physiology Service (From 1 April 2021)
+677	Gastrointestinal Physiology Service (From 1 April 2021)
+700	Learning Disability Service
+710	Adult Mental Health Service
+711	Child and Adolescent Psychiatry Service
+712	Forensic Psychiatry Service
+713	Medical Psychotherapy Service
+715	Old Age Psychiatry Service (From 1990-91)
+720	Eating Disorders Service (From 2006-07)
+721	Addiction Service (From 2006-07)
+722	Liaison Psychiatry Service (From 2006-07)
+723	Psychiatric Intensive Care Service (From 2006-07)
+724	Perinatal Mental Health Service (From 2006-07)
+725	Mental Health Recovery and Rehabilitation Service (From April 2013)
+726	Mental Health Dual Diagnosis Service (From April 2013)
+727	Dementia Assessment Service (From April 2013)
+730	Neuropsychiatry Service (From 1 April 2021)
+800	Clinical Oncology Service
+811	Interventional Radiology Service (From 1 April 2004)
+812	Diagnostic Imaging Service (From 2008-09)
+822	Chemical Pathology Service
+834	Medical Virology Service (From 1 April 2004)
+840	Audiology Service (From 2008-09)
+920	Diabetic Education Service (From April 2013)

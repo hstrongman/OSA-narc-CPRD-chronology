@@ -1,0 +1,135 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-how-the-dexamfetamine-code-list-was-created" id="description-of-how-the-dexamfetamine-code-list-was-created">Description of how the dexamfetamine code list was created</a></h1>
+<pre><code>This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_dexamfetamine.do
+
+</code></pre>
+<h2><a href="#basic-search" id="basic-search">BASIC SEARCH</a></h2>
+<pre><code>
+
+The following search terms are used to generate the initial code lists. Each 
+inclusion term is searched for individually and included or excluded if 
+it appears in any position in the text. BNF chapters are not searched as
+there is no specific chapter for modafinil.
+
+
+Inclusion terms: dexamfe dexamph amfexa dexedrine adderall durophet
+
+
+Inclusion BNF chapters: 
+
+
+Exclusion terms: lisdex elvanse
+
+
+Exclusion chapters: 
+
+
+
+
+</code></pre>
+<h2><a href="#code-list-specific-search-criteria" id="code-list-specific-search-criteria">CODE LIST SPECIFIC SEARCH CRITERIA</a></h2>
+<pre><code>
+There are no code list specific algorithms for dexamfetamine.
+
+</code></pre>
+<h2><a href="#check-excluded-codes" id="check-excluded-codes">CHECK EXCLUDED CODES</a></h2>
+<pre><code>
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+
+           _drugsubstance_lower                                  _productname_lower  
+    lisdexamfetamine dimesylate               elvanse 40mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate                      lisdexamfetamine 30mg capsules  
+    lisdexamfetamine dimesylate         elvanse adult 30mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate                      lisdexamfetamine 60mg capsules  
+    lisdexamfetamine dimesylate   elvanse 30mg capsules (shire pharmaceuticals ltd)  
+    lisdexamfetamine dimesylate               elvanse 50mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate               elvanse 30mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate         elvanse adult 70mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate                      lisdexamfetamine 20mg capsules  
+    lisdexamfetamine dimesylate               elvanse 70mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate         elvanse adult 50mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate                      lisdexamfetamine 50mg capsules  
+    lisdexamfetamine dimesylate                      lisdexamfetamine 40mg capsules  
+    lisdexamfetamine dimesylate                      lisdexamfetamine 70mg capsules  
+    lisdexamfetamine dimesylate               elvanse 60mg capsules (takeda uk ltd)  
+    lisdexamfetamine dimesylate               elvanse 20mg capsules (takeda uk ltd)  
+
+
+
+</code></pre>
+<h2><a href="#check-included-codes" id="check-included-codes">CHECK INCLUDED CODES</a></h2>
+<pre><code>
+
+    prodcode   gemscr~e                   drugsubstancename                                                              productname   drugis~s  
+       78516   36615020            Dexamfetamine/Amfetamine                     Adderall XR 20mg capsules (Imported (United States))          8  
+       31623   90729020               Dexamfetamine sulfate                      Dexedrine 15mg Spansules (Imported (United States))         12  
+       47481   96140020               Dexamfetamine sulfate                             Dexamfetamine 10mg modified-release capsules         20  
+       76609   29831020               Dexamfetamine sulfate                                  Dexamfetamine 2.5mg/5ml oral suspension          1  
+       24116   54858020   Amfetamine/Dexamfetamine Sulphate                             Durophet 12.5mg Capsule (3M Health Care Ltd)         23  
+       55495   62366020   Amfetamine/Dexamfetamine Sulphate                    Dexamfetamine with amfetamine 10mg with 10mg capsules          8  
+       26729   06142007                                                                                  DEXAMPHETAMINE SULPHATE TAB          1  
+       68699   71054021               Dexamfetamine sulfate                                               Dexamfetamine 10mg tablets       2144  
+       14512   48938020               Dexamfetamine sulfate             Dexedrine 5mg tablets (Auden McKenzie (Pharma Division) Ltd)      18317  
+       49392   36614020            Dexamfetamine/Amfetamine           Amfetamine 10mg / Dexamfetamine 10mg modified-release capsules          4  
+       62445   27141021               Dexamfetamine sulfate                           Dexamfetamine 5mg/5ml oral solution sugar free        338  
+       18713   03819007                                                                            DEXAMPHETAMINE SULPHATE 15 MG CAP         16  
+       18714   02744007                                                                            DEXAMPHETAMINE SULPHATE 10 MG CAP         15  
+       78517   36623020            Amfetamine/Dexamfetamine                     Adderall XR 10mg capsules (Imported (United States))          5  
+       76366   71055021               Dexamfetamine sulfate                                   Amfexa 10mg tablets (Flynn Pharma Ltd)         39  
+       12432   02746007                                                                            DEXAMPHETAMINE SULPHATE 15 MG SPA          1  
+       85860   30008020               Dexamfetamine sulfate                                    Dexamfetamine 5mg/5ml oral suspension         14  
+       47099   00076021   Amfetamine/Dexamfetamine Sulphate   Dexamfetamine with amfetamine 10mg with 10mg modified-release capsules          5  
+       18712   02747007                                                                DEXAMPHETAMINE SULPHATE/AMPHETAMINE 20 MG CAP          5  
+       74084   34947020               Dexamfetamine sulfate                       Dexedrine 5mg Spansules (Imported (United States))         26  
+       12362   02745007                                                                             DEXAMPHETAMINE SULPHATE 5 MG TAB       1356  
+       47679   96142020               Dexamfetamine sulfate                             Dexamfetamine 15mg modified-release capsules         17  
+       18998   54857020   Amfetamine/Dexamfetamine Sulphate                              Durophet 7.5mg Capsule (3M Health Care Ltd)          8  
+        9738   62359020               Dexamfetamine sulfate                                                Dexamfetamine 5mg tablets      72395  
+       24101   05089007                                                                                         DEXEDRINE 2.5 MG TAB          7  
+       16185   90727020              Dexamfetamine Sulphate                             Dexamfetamine 15mg modified-release capsules          9  
+       69727   36627020            Amfetamine/Dexamfetamine                     Adderall XR 15mg capsules (Imported (United States))          0  
+       26524   !1800101                                                                                                    DEXEDRINE          1  
+       66081   53991021               Dexamfetamine sulfate                                    Amfexa 5mg tablets (Flynn Pharma Ltd)        226  
+       51453   30006020               Dexamfetamine sulfate                                      Dexamfetamine 5mg/5ml oral solution         69  
+       13238   88975020              Dexamfetamine Sulphate                                         Dexamfetamine 1mg/ml oral liquid        817  
+       69024   71057021               Dexamfetamine sulfate                                   Amfexa 20mg tablets (Flynn Pharma Ltd)         39  
+       68847   71056021               Dexamfetamine sulfate                                               Dexamfetamine 20mg tablets        530  
+       47609   96138020               Dexamfetamine sulfate                              Dexamfetamine 5mg modified-release capsules         91  
+       18996   54859020   Amfetamine/Dexamfetamine Sulphate                               Durophet 20mg Capsule (3M Health Care Ltd)          4  
+
+
+|                                                              bnfchapter |      Freq. |    Percent |       Cum.|
+|-------------------------------------------------------------------------|------------|------------|-----------|
+|00000000                                                                 |          8 |      22.86 |      22.86|
+|04040000                                                                 |         27 |      77.14 |     100.00|
+|Total                                                                    |         35 |     100.00 |           |
+
+
+</code></pre>
+<h2><a href="#compare-with-previous-version" id="compare-with-previous-version">Compare with previous version</a></h2>
+<pre><code>
+There are no code lists to compare at this stage.
+
+
+
+
+
+
+
+
+
+
+</code></pre>

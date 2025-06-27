@@ -1,0 +1,31 @@
+medcodeid	observations	originalreadcode	readcode	term	snomedctconceptid	snomedctdescriptionid	release	emiscodecategoryid	category
+267911000006119	200000	Fy03-1	Fy03.11	Obstructive sleep apnoea	78275009	2966563014		32	Obstructive Sleep Apnoea
+219501000000111	100000	H5B0	H5B0.00	Obstructive sleep apnoea	78275009	2966563014		32	Obstructive Sleep Apnoea
+3773271000006117	5000	^ESCTOS377327		OSA - Obstructive sleep apnoea	78275009	1216951017		32	Obstructive Sleep Apnoea
+7967581000006116	300	^ESCTOB796758		Obstructive sleep apnoea of child	1091000119108	2916783011		32	Obstructive Sleep Apnoea
+3773291000006116	200	^ESCTOB377329		Obstructive sleep apnea	78275009	2920909013		32	Obstructive Sleep Apnoea
+3773281000006119	70	^ESCTOS377328		OSA - Obstructive sleep apnea	78275009	1218438013		32	Obstructive Sleep Apnoea
+7967601000006114	10	^ESCTOB796760		Obstructive sleep apnoea of adult	1101000119103	2916996018		31	Obstructive Sleep Apnoea
+13530051000006113	7	^ESCT1353005		AHDC1-related intellectual disability, obstructive sleep apnoea, mild dysmorphism syndrome	774068004	3727864017		32	Obstructive Sleep Apnoea
+9902171000006115	7	^ESCTSE990217		Severe paediatric obstructive sleep apnoea	16275741000119100	3447114011		31	Obstructive Sleep Apnoea
+5008651000006115	5	^ESCTMI500865		Mixed sleep apnoea	230493001	345388019		31	Obstructive Sleep Apnoea
+7967591000006118	4	^ESCTOB796759		Obstructive sleep apnea of child	1091000119108	2916785016		32	Obstructive Sleep Apnoea
+7967611000006112	2	^ESCTOB796761		Obstructive sleep apnea of adult	1101000119103	2916734012		31	Obstructive Sleep Apnoea
+9902181000006117	1	^ESCTSE990218		Severe pediatric obstructive sleep apnea	16275741000119100	3447113017		31	Obstructive Sleep Apnoea
+3773251000006110	3000	^ESCTOB377325		Obstructive sleep apnoea syndrome	78275009	200718012		32	Obstructive sleep apnoea syndrome
+3773261000006112	20	^ESCTOB377326		Obstructive sleep apnea syndrome	78275009	129889015		32	Obstructive sleep apnoea syndrome
+136581000006114	200000	Fy03	Fy03.00	Sleep apnoea	73430006	200354014		32	Sleep apnoea NOS
+200354014	30000	H5B	H5B..00	Sleep apnoea	73430006	200354014		32	Sleep apnoea NOS
+405691012	6000	R0053	R005300	Hypersomnia with sleep apnoea	79280005	200785019		32	Sleep apnoea NOS
+981761000006114	1000	EMISCSL4		Sleep apnea	981761000006105	981761000006114		27	Sleep apnoea NOS
+317034011	1000	R0051	R005100	Insomnia with sleep apnoea	41975002	197601019		32	Sleep apnoea NOS
+3693961000006118	30	^ESCTSL369396		Sleep apnea	73430006	121941010		32	Sleep apnoea NOS
+3176551000006111	1	^ESCTIN317655		Insomnia with sleep apnea	41975002	70050018		32	Sleep apnoea NOS
+457106016	70000	R0053-1	R005311	[D]Sleep apnoea syndrome	502901000000102	1112961000000111		32	Sleep apnoea syndrome NOS
+303181000006112	2000	R0053-2	R005312	[D]Syndrome sleep apnoea	502901000000102	1112961000000111		32	Sleep apnoea syndrome NOS
+12702791000006116	40	^ESCT1270279		Sleep apnoea syndrome	73430006	502434014		32	Sleep apnoea syndrome NOS
+3693991000006114	1	^ESCTSL369399		Sleep apnea syndrome	73430006	502431018		32	Sleep apnoea syndrome NOS
+1772651000006110	400	EMISNQCE14		Central sleep apnoea	27405005	1216240012		32	Central sleep apnoea
+2939251000006112	6	^ESCTCE293925		Central sleep apnoea syndrome	27405005	196594018		32	Central sleep apnoea
+2939301000006117	1	^ESCTCE293930		Central sleep apnea	27405005	1217741015		32	Central sleep apnoea
+477724014	800	Q318	Q318.00	Primary sleep apnoea of newborn	361208003	477724014		32	Primary sleep apnoea

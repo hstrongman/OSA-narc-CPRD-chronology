@@ -1,0 +1,283 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of how the BMI code lists were created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_bmi.do.
+
+<<dd_do:quietly>>
+use "`2'", clear
+
+/*The following commands create common variables for the three datasets.
+Variables preceded by underscore are temporary and are deleted at the
+end of the script. The commands and outputs do not appear in the
+HTML file because the attribute "quietly" is used above.*/
+
+if "`1'" == "aurum" {
+	destring observations, replace
+	rename cleansedreadcode readcode
+	}
+if "`1'" == "gold" {
+	egen observations = rowtotal(clinevents refevents testevents imevents)
+	rename readterm term
+	}
+if "`1'" == "hesapc" {
+	gen observations = .
+	rename description term
+	rename code ICD /*ICD matches HES APC data dictionary*/
+	}
+	
+<</dd_do>>
+~~~~
+## BASIC SEARCH
+~~~~
+
+<<dd_do:quietly>>
+gen _term_lower = lower(term)
+assert !strmatch(_term_lower, "*##*")
+replace _term_lower = subinstr(_term_lower, " " , "##", .) /*replace spaces with ## to make it easier
+to search for multi word terms*/
+generate _marker=.
+/*these inclusion and exclusion terms are displayed and searched for below. 
+Changes should be made here. These types of searches are common to most code
+lists*/
+local interms "body##mass##index bmi weight height obese"
+
+#delimit ;
+local exterms "child*mth*exam child*month*exam in*childhood obese##child
+los submit sitting advice from*height premature birth
+intervention target mid-parental##height weighted management ratio predict 
+regimen diet symptom weightless bear uter lift ideal*weight sweat fixation
+calculus sample baby work score decline concern not##done eyelid infant
+trend reference heightened knee##height heparin fall fetal has##grown perception
+not##done footwear fear growth dates injury transfer procedure bp fundal kininogen
+transfer placenta standard unsuitable furniture overestimate underestimate
+percentage velocity preoccupation appraisal dry property chart education step
+##centile reason difference discuss impaired counterweight pregnancy usual##weight
+usual##body##weight maternal kg postnatal (amount) orlistat weights abdomen
+weight##for##height
+"
+;
+#delimit cr
+
+<</dd_do>>
+ 
+
+The following search terms are used to generate the initial code lists. Each 
+term is searched for individually and included or excluded if 
+it appears in any position in the text. The terms should cover all synonyms
+for BMI.
+
+<<dd_do: nocommands>>
+display "Inclusion terms: `interms'"
+if "`1'" == "gold" | "`1'" == "aurum" display "Exclusion terms: `exterms'"
+<</dd_do>>
+
+
+<<dd_do:quietly>>
+foreach word of local interms {
+	replace _marker = 1 if strmatch(term, "*`word'*")
+	replace _marker = 1 if strmatch(_term_lower, "*`word'*")
+	}
+
+if "`1'" == "gold" | "`1'" == "aurum" {
+	foreach chap of local inchaps {
+		replace _marker = 1 if strmatch(readcode, "`chap'*")
+		}
+	}
+
+keep if _marker == 1
+
+foreach word of local exterms {
+	replace _marker = 0 if strmatch(_term_lower, "*`word'*")
+	}
+
+<</dd_do>> 
+
+
+~~~~
+## CHECK EXCLUDED CODES
+~~~~
+
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+<<dd_do: nocommands>>
+list term `3' `4' if _marker == 0, noobs table
+<</dd_do>>
+
+<<dd_do:quietly>>
+drop if _marker == 0
+<</dd_do>>
+
+~~~~
+## CREATE CATEGORIES
+~~~~
+
+<<dd_do:quietly>>	  
+gen weight = 9 if strmatch(_term_lower, "*weight*")
+gen height = 9 if strmatch(_term_lower, "*height*")          
+gen bmi=.
+loc bmiterm "body##mass##index bmi obese obesity"
+foreach word of local bmiterm {
+           replace bmi = 9 if strmatch(_term_lower, "*`word'*")
+          }	
+<</dd_do>>
+
+~~~~
+## CHECK INCLUDED CODES AND CATEGORISATION
+~~~~
+
+<<dd_do:quietly>>
+gsort -observations
+<</dd_do>>
+
+~~~~
+## Codes by categorylab
+~~~~
+
+The following table includes all included terms for each category.
+It is provided so that researchers and clinicians can check whether all codes
+are relevant and categorised correctly.
+
+Weight codes
+<<dd_do: nocommands>>
+list term observations if weight == 9, noobs
+<</dd_do>>
+
+Height codes
+<<dd_do: nocommands>>
+list term observations if height == 9, noobs
+<</dd_do>>
+
+BMI codes
+<<dd_do: nocommands>>
+list term observations if bmi == 9, noobs
+<</dd_do>>
+
+Unassigned codes
+<<dd_do: nocommands>>
+list term observations if bmi == . & weight == . & height == ., noobs
+<</dd_do>>
+
+~~~~
+## Number of observations per category
+~~~~
+
+The following table described the number of observations in the CPRD database
+for each category. This information can be used to sense check the proposed
+phenotype definitions in codelist_BMI_description.html.
+
+Observations counts will be O for HES APC data because there is no equivalent
+field in the dictionary.
+
+<<dd_do: quietly>>
+save "_temp.dta", replace /*can't use preserve/restore*/
+quietly collapse (sum) observations, by(weight height bmi)
+<</dd_do>>
+
+<<dd_do: nocommands>>
+list
+<</dd_do>>
+
+<<dd_do: quietly>>
+list
+use "_temp.dta", clear
+<</dd_do>>
+
+
+~~~~
+## Compare with previous version
+~~~~
+
+<<dd_do: quietly>>
+/*Code in this section compares the new code list with Angel Wong's version
+for her DOAC study (May 2022 build)*/
+save "_temp.dta", replace
+foreach category in bmi weight height {
+	rename `category' _`category'new
+}
+
+local source = "`1'"
+merge 1:1 `3' using "$olddir\cr_codelist_bmi_`source'"
+gen _comparison = _merge
+
+label define _comparisonlab 1 "New only" 2 "Old only" 3 "Both"
+label values _comparison _comparisonlab
+label variable _comparison "Comparison of old and updated code list"
+
+foreach category in bmi weight height {
+	rename `category' _`category'old
+}
+
+gsort _comparison -observations
+<</dd_do>>
+
+The following information compares the new code list with the previous version.
+
+<<dd_do: nocommands>>
+tab _comparison
+qui count if _comparison == 1
+<</dd_do>>
+
+<<dd_if: `r(N)' > 0>>
+The following codes are in the new code list but are not in the old code list:
+<<dd_else>>
+All the codes in the new code list were in the old code list.
+<<dd_endif>>
+
+<<dd_do: nocommands>>
+list term _weightnew _heightnew _bminew observations if _comparison == 1, noobs table
+<</dd_do>>
+
+<<dd_do: quietly>>
+count if _comparison == 2
+<</dd_do>>
+
+<<dd_if: `r(N)' > 0>>
+The following codes are in the old code list but are not in the new code list:
+<<dd_else>>
+All the codes in the old code list are in the new code list.
+<<dd_endif>>
+
+<<dd_do: nocommands>>
+list term _weightold _heightold _bmiold observations if _comparison == 2, noobs table
+<</dd_do>>
+
+<<dd_do: quietly>>
+gen _diffcat = 0
+foreach category in bmi weight height {
+	replace _diffcat = 1 if _comparison == 3 & _`category'new != _`category'old
+}
+count if _diffcat == 1
+<</dd_do>>
+
+<<dd_if: `r(N)' > 0>>
+The following codes are in both code lists but in a different category:
+<<dd_else>>
+All codes that are in both code lists are in the same category.
+<<dd_endif>>
+
+<<dd_do: nocommands>>
+list term _weightold _weightnew _heightold _heightnew _bmiold _bminew observations if _comparison == 3 & _diffcat == 1, noobs table
+<</dd_do>>
+
+
+<<dd_do: quietly>>
+use "_temp.dta", clear
+drop _*
+save "_temp.dta", replace
+if "`1'" != "aurum" drop observations
+export delimited using "$datadir_text\codelist_bmi_`1'.txt", replace delimiter(tab)
+use "_temp.dta", clear
+keep `3' `4' term observations bmi weight height
+save "$datadir_stata\codelist_bmi_`1'.dta", replace
+erase "_temp.dta"
+<</dd_do>>
+
+

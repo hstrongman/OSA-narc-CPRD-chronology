@@ -1,0 +1,65 @@
+prodcodeid	dmdid	termfromemis	productname	formulation	routeofadministration	drugsubstancename	substancestrength	bnfchapter	drugissues
+898841000033117	323353008	Methylphenidate 10mg tablets	Methylphenidate 10mg tablets	Tablet	Oral	Methylphenidate hydrochloride	10.000mg	04040000	500000
+1177041000033113	38211000001100	Ritalin 10mg tablets (Novartis Pharmaceuticals UK Ltd)	Ritalin 10mg tablets	Tablet	Oral	Methylphenidate hydrochloride	10.000mg		100000
+2097741000033111	323358004	Methylphenidate 5mg tablets	Methylphenidate 5mg tablets	Tablet	Oral	Methylphenidate hydrochloride	5.000mg	04040000	300000
+2097841000033118	323359007	Methylphenidate 20mg tablets	Methylphenidate 20mg tablets	Tablet	Oral	Methylphenidate hydrochloride	20.000mg	04040000	70000
+2098041000033112	377011000001109	Equasym 5mg tablets (Shire Pharmaceuticals Ltd)	Equasym 5mg tablets	Tablet	Oral	Methylphenidate hydrochloride	5.000mg		20000
+2098141000033111	172011000001102	Equasym 10mg tablets (Shire Pharmaceuticals Ltd)	Equasym 10mg tablets	Tablet	Oral	Methylphenidate hydrochloride	10.000mg		10000
+2098241000033116	758611000001100	Equasym 20mg tablets (Shire Pharmaceuticals Ltd)	Equasym 20mg tablets	Tablet	Oral	Methylphenidate hydrochloride	20.000mg		3000
+2656141000033112	36124011000001108	Methylphenidate 20mg modified-release capsules	Methylphenidate 20mg modified-release capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	20.000mg	04040000	50000
+2656241000033117	9098811000001104	Equasym XL 20mg capsules (Takeda UK Ltd)	Equasym XL 20mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	20.000mg		200000
+2717441000033118	8572511000001108	Ritalin-SR 20mg tablets (Imported (United States))	Ritalin-SR 20mg tablets	Modified-release tablet		Methylphenidate hydrochloride	20.000mg		3000
+2722641000033112	36123511000001103	Methylphenidate 18mg modified-release tablets	Methylphenidate 18mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	18.000mg	04040000	200000
+2722741000033115	711211000001101	Concerta XL 18mg tablets (Janssen-Cilag Ltd)	Concerta XL 18mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	18.000mg		400000
+2722841000033113	36124511000001100	Methylphenidate 36mg modified-release tablets	Methylphenidate 36mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	36.000mg	04040000	200000
+2722941000033117	615611000001106	Concerta XL 36mg tablets (Janssen-Cilag Ltd)	Concerta XL 36mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	36.000mg		600000
+2760241000033119	77611000001100	Tranquilyn 5mg tablets (Genesis Pharmaceuticals Ltd)	Tranquilyn 5mg tablets	Tablet	Oral	Methylphenidate hydrochloride	5.000mg		900
+2760341000033112	205811000001105	Tranquilyn 10mg tablets (Genesis Pharmaceuticals Ltd)	Tranquilyn 10mg tablets	Tablet	Oral	Methylphenidate hydrochloride	10.000mg		1000
+2760441000033118	410411000001103	Tranquilyn 20mg tablets (Genesis Pharmaceuticals Ltd)	Tranquilyn 20mg tablets	Tablet	Oral	Methylphenidate hydrochloride	20.000mg		400
+2926941000033112	36124111000001109	Methylphenidate 20mg modified-release tablets	Methylphenidate 20mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	20.000mg	04040000	2000
+3267841000033119	36123411000001102	Methylphenidate 10mg modified-release capsules	Methylphenidate 10mg modified-release capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	10.000mg	04040000	30000
+3267941000033110	36124311000001106	Methylphenidate 30mg modified-release capsules	Methylphenidate 30mg modified-release capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	30.000mg	04040000	40000
+3268041000033113	9098511000001102	Equasym XL 10mg capsules (Takeda UK Ltd)	Equasym XL 10mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	10.000mg		100000
+3268141000033112	9099511000001108	Equasym XL 30mg capsules (Takeda UK Ltd)	Equasym XL 30mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	30.000mg		200000
+4019941000033111	36124211000001103	Methylphenidate 27mg modified-release tablets	Methylphenidate 27mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	27.000mg	04040000	70000
+4088741000033119	11273111000001108	Medikinet 5mg tablets (Flynn Pharma Ltd)	Medikinet 5mg tablets	Tablet	Oral	Methylphenidate hydrochloride	5.000mg		30000
+4088841000033112	11273311000001105	Medikinet 10mg tablets (Flynn Pharma Ltd)	Medikinet 10mg tablets	Tablet	Oral	Methylphenidate hydrochloride	10.000mg		40000
+4088941000033116	11273511000001104	Medikinet 20mg tablets (Flynn Pharma Ltd)	Medikinet 20mg tablets	Tablet	Oral	Methylphenidate hydrochloride	20.000mg		10000
+4089041000033113	36124611000001101	Methylphenidate 40mg modified-release capsules	Methylphenidate 40mg modified-release capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	40.000mg	04040000	10000
+4089141000033112	11274111000001105	Medikinet XL 10mg capsules (Flynn Pharma Ltd)	Medikinet XL 10mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	10.000mg		80000
+4089241000033117	11273711000001109	Medikinet XL 20mg capsules (Flynn Pharma Ltd)	Medikinet XL 20mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	20.000mg		100000
+4089341000033110	11274411000001100	Medikinet XL 30mg capsules (Flynn Pharma Ltd)	Medikinet XL 30mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	30.000mg		90000
+4089441000033116	11274711000001106	Medikinet XL 40mg capsules (Flynn Pharma Ltd)	Medikinet XL 40mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	40.000mg		60000
+4118241000033118	11464911000001101	Concerta XL 27mg tablets (Janssen-Cilag Ltd)	Concerta XL 27mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	27.000mg		300000
+4575041000033116	12390711000001102	Methylphenidate 5mg/5ml oral solution	Methylphenidate 5mg/5ml oral solution	Oral solution	Oral	Methylphenidate hydrochloride	1.000mg/1.000ml	04040000	800
+6429141000033116	19448911000001107	Methylphenidate 5mg modified-release capsules	Methylphenidate 5mg modified-release capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	5.000mg	04040000	9000
+6429241000033111	19375811000001104	Medikinet XL 5mg capsules (Flynn Pharma Ltd)	Medikinet XL 5mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	5.000mg		40000
+9298941000033113	36124711000001105	Methylphenidate 50mg modified-release capsules	Methylphenidate 50mg modified-release capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	50.000mg	04040000	2000
+9299041000033116	24510311000001109	Methylphenidate 60mg modified-release capsules	Methylphenidate 60mg modified-release capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	60.000mg	04040000	1000
+9299141000033117	24501411000001108	Medikinet XL 50mg capsules (Flynn Pharma Ltd)	Medikinet XL 50mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	50.000mg		10000
+9299241000033112	24501711000001102	Medikinet XL 60mg capsules (Flynn Pharma Ltd)	Medikinet XL 60mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	60.000mg		7000
+9701641000033118	27293711000001101	Matoride XL 36mg tablets (Sandoz Ltd)	Matoride XL 36mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	36.000mg		9000
+9701741000033110	36124811000001102	Methylphenidate 54mg modified-release tablets	Methylphenidate 54mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	54.000mg	04040000	10000
+9701841000033117	27294411000001105	Matoride XL 54mg tablets (Sandoz Ltd)	Matoride XL 54mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	54.000mg		5000
+9704141000033113	27786011000001102	Xenidate XL 18mg tablets (Viatris UK Healthcare Ltd)	Xenidate XL 18mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	18.000mg		20000
+9704241000033118	27787211000001109	Xenidate XL 36mg tablets (Viatris UK Healthcare Ltd)	Xenidate XL 36mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	36.000mg		30000
+9776341000033113	28012911000001107	Methylphenidate 5mg/5ml oral suspension	Methylphenidate 5mg/5ml oral suspension	Oral suspension	Oral	Methylphenidate hydrochloride	1.000mg/1.000ml	04040000	500
+9808141000033115	28006611000001102	Matoride XL 18mg tablets (Sandoz Ltd)	Matoride XL 18mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	18.000mg		5000
+10260941000033111	28943011000001100	Concerta XL 54mg tablets (Janssen-Cilag Ltd)	Concerta XL 54mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	54.000mg		80000
+10644641000033119	30794211000001109	Xenidate XL 54mg tablets (Viatris UK Healthcare Ltd)	Xenidate XL 54mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	54.000mg		10000
+11580541000033117	32624711000001108	Xenidate XL 27mg tablets (Viatris UK Healthcare Ltd)	Xenidate XL 27mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	27.000mg		10000
+12037241000033110	34001511000001108	Delmosart 18mg modified-release tablets (Accord Healthcare Ltd)	Delmosart 18mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	18.000mg		6000
+12037341000033117	34002411000001104	Delmosart 27mg modified-release tablets (Accord Healthcare Ltd)	Delmosart 27mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	27.000mg		7000
+12037441000033111	34002611000001101	Delmosart 36mg modified-release tablets (Accord Healthcare Ltd)	Delmosart 36mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	36.000mg		10000
+12037541000033112	34002811000001102	Delmosart 54mg modified-release tablets (Accord Healthcare Ltd)	Delmosart 54mg modified-release tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	54.000mg		5000
+12291741000033114	34248111000001107	Xaggitin XL 18mg tablets (Ethypharm UK Ltd)	Xaggitin XL 18mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	18.000mg		20000
+12291841000033116	34248811000001100	Xaggitin XL 27mg tablets (Ethypharm UK Ltd)	Xaggitin XL 27mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	27.000mg		20000
+12291941000033112	34248311000001109	Xaggitin XL 36mg tablets (Ethypharm UK Ltd)	Xaggitin XL 36mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	36.000mg		30000
+12292041000033118	34248611000001104	Xaggitin XL 54mg tablets (Ethypharm UK Ltd)	Xaggitin XL 54mg tablets	Modified-release tablet	Oral	Methylphenidate hydrochloride	54.000mg		20000
+12875141000033111	12140011000001100	Methylphenidate 10mg/5ml oral solution	Methylphenidate 10mg/5ml oral solution	Oral solution	Oral	Methylphenidate hydrochloride	2.000mg/1.000ml	04040000	40
+13314241000033117	37931111000001107	Ritalin XL 10mg capsules (Sandoz Ltd)	Ritalin XL 10mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	10.000mg		100
+13314341000033110	37931511000001103	Ritalin XL 20mg capsules (Sandoz Ltd)	Ritalin XL 20mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	20.000mg		200
+13314441000033116	37931711000001108	Ritalin XL 30mg capsules (Sandoz Ltd)	Ritalin XL 30mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	30.000mg		100
+13314541000033115	37933011000001107	Ritalin XL 40mg capsules (Sandoz Ltd)	Ritalin XL 40mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	40.000mg		70
+13314641000033119	37931911000001105	Ritalin XL 60mg capsules (Sandoz Ltd)	Ritalin XL 60mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	60.000mg		1
+14022741000033112	40479111000001102	Metyrol XL 40mg capsules (Zentiva Pharma UK Ltd)	Metyrol XL 40mg capsules	Modified-release capsule	Oral	Methylphenidate hydrochloride	40.000mg		1

@@ -1,0 +1,88 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+
+Description of analyses used to define the minimum baseline
+period
+===============================================================
+
+~~~~
+This HTML file includes the information needed to understand how the
+minimum baseline period was derived.
+
+~~~~
+## BACKGROUND
+~~~~
+
+When using routinely collected health data, we start follow-up after a minimum
+baseline period to avoid defining prevalent cases entered into the patient record 
+after registration in the practice as incident cases. Traditionally, researchers
+have used a 12 month period. Specifying a shorter period might be equally valid, 
+and increase follow-up time in the study and the number of cases included.
+
+Leahy at al published an abstract recommending methods to estimate an appropriate
+baseline period, including inspecting a plot of incidence over time since
+registration.
+
+Reference:
+Leahy, T. P., Sammon, C., & Ramagopalan, S. (2020). 
+Identification of an appropriate time window for the exclusion of prevalent 
+cases recorded following registration with the clinical practice research 
+datalink. 
+Abstracts of the 36th International Conference on Pharmacoepidemiology & 
+Therapeutic Risk Management, Virtual, September 16–17, 29, S3, 2465. 
+https://doi.org/10.1002/PDS.5114
+
+~~~~
+## METHODS
+~~~~
+
+We estimated incidence (95%) confidence rates stratified by time since diagnoses 
+using Stata's strate command and saved our estimates in the following analysis
+data file. One month time since diagnosis categories were used for the first
+5 months, and 3 month categories from 6 months to 2 years. Incidence rates
+were further stratified by calendar year groups, CPRD database and age groups.
+ 
+<<dd_do:quietly>>
+use "$estimatesdir\an_minimum_baseline_period_table.dta", clear
+<</dd_do>>
+
+<<dd_do: nocommands>>
+describe
+notes
+<</dd_do>
+
+We plotted incidence rates over time using the mid-point of each time since
+diagnosis category. 
+
+~~~~
+## RESULTS
+~~~~
+
+Incidence rates of OSA and narcolepsy by time since registration
+<<dd_do: nocommands>>
+graph use "$resultdir\an_minimum_baseline_period_figures_overall"
+graph display
+<</dd_do>
+
+Incidence rates of OSA by time since registration
+<<dd_do: nocommands>>
+graph use "$resultdir\an_minimum_baseline_period_figures_strata_osa"
+graph display
+<</dd_do>
+
+Incidence rates of narcolepsy by time since registration
+<<dd_do: nocommands>>
+graph use "$resultdir\an_minimum_baseline_period_figures_strata_osa"
+graph display
+<</dd_do>
+
+~~~~
+## CONCLUSION
+~~~~
+
+We will set the minimum baseline period at x months because ... 
+
+
+
+

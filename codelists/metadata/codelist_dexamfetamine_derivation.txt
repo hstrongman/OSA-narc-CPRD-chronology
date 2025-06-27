@@ -1,0 +1,149 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+
+Description of how the dexamfetamine code list was created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_dexamfetamine.do
+
+<<dd_do:quietly>>
+use "`2'", clear
+
+/*The following commands create common variables for the three datasets.
+Variables preceded by underscore are temporary and are deleted at the
+end of the script. The commands and outputs do not appear in the
+HTML file because the attribute "quietly" is used above.*/
+
+if "`1'" == "aurum" {
+	destring drugissues, replace
+	gen _bnfchaplength = strlen(bnfchapter)
+	replace bnfchapter = "0" + bnfchapter if _bnfchaplength == 7
+	drop _bnfchaplength
+	/*bnfchapter is missing for most codes*/
+	}
+if "`1'" == "gold" {
+	rename therapyevents drugissues
+	destring drugissues, replace
+	capture destring prodcode, replace
+	rename ingredient drugsubstancename
+	rename strength substancestrength
+	}
+
+	
+<</dd_do>>
+~~~~
+## BASIC SEARCH
+~~~~
+
+<<dd_do:quietly>>
+gen _drugsubstance_lower = lower(drugsubstancename)
+gen _productname_lower = lower(productname)
+generate _marker=.
+/*these inclusion and exclusion terms are displayed and searched for below. 
+Changes should be made here. These types of searches are common to most code
+lists*/
+local interms "dexamfe dexamph amfexa dexedrine adderall durophet"
+local inchaps "" 
+local exterms "lisdex elvanse"
+local exchaps ""
+<</dd_do>>
+
+The following search terms are used to generate the initial code lists. Each 
+inclusion term is searched for individually and included or excluded if 
+it appears in any position in the text. BNF chapters are not searched as
+there is no specific chapter for modafinil.
+
+<<dd_do: nocommands>>
+display _newline "Inclusion terms: `interms'"
+display _newline "Inclusion BNF chapters: `inchaps'"
+display _newline "Exclusion terms: `exterms'"
+display _newline "Exclusion chapters: `exchaps'"
+<</dd_do>>
+
+<<dd_do: quietly>>
+
+/*use this code to check for any additional product names
+br drugsubstancename productname bnfchapter drugissues if strmatch(_drugsubstance_lower, "*modaf*") | strmatch(_productname_lower, "*modaf*")
+*/
+
+foreach word of local interms {
+	replace _marker = 1 if strmatch(_drugsubstance_lower, "*`word'*")
+	replace _marker = 1 if strmatch(_productname_lower, "*`word'*")
+	}
+
+foreach chap of local inchaps {
+	replace _marker = 1 if strmatch(bnfchapter, "`chap'")
+	}
+
+keep if _marker == 1
+
+
+foreach word of local exterms {
+	replace _marker = 0 if strmatch(_drugsubstance_lower, "*`word'*")
+	}
+<</dd_do>>
+
+
+~~~~
+## CODE LIST SPECIFIC SEARCH CRITERIA
+~~~~
+
+There are no code list specific algorithms for dexamfetamine.
+
+~~~~
+## CHECK EXCLUDED CODES
+~~~~
+
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+<<dd_do: nocommands>>
+list _drugsubstance_lower _productname_lower if _marker == 0, noobs clean
+<</dd_do>>
+
+<<dd_do:quietly>>
+drop if _marker == 0
+<</dd_do>>
+
+~~~~
+## CHECK INCLUDED CODES
+~~~~
+
+<<dd_do: nocommands>>
+list `3' `4' drugsubstancename productname drugissues, noobs clean
+tab bnfchapter, missing markdown
+<</dd_do>>
+
+~~~~
+## Compare with previous version
+~~~~
+
+There are no code lists to compare at this stage.
+
+<<dd_do: quietly>>
+drop _*
+save "_temp.dta", replace
+export delimited using "$datadir_text\codelist_dexamfetamine_`1'.txt", replace delimiter(tab)
+use "_temp.dta", clear
+keep `3' `4' formulation substancestrength
+if "`1'" == "aurum" {
+	merge 1:1 prodcode using "$datadir_stata/prodcodeid_projectprodcode_lookup.dta", keep(3) nogen noreport
+	assert projectprodcode !=.
+}
+save "$datadir_stata\codelist_dexamfetamine_`1'.dta", replace
+erase "_temp.dta"
+<</dd_do>>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\logfiles/medcodeid_projectmedcode_lookup.txt
+  log type:  text
+ opened on:  29 Jun 2023, 10:15:33
+
+. 
+. use medcodeid observations using "$dict_aurummed", clear
+
+. sort obs medcodeid
+
+. gen projectmedcode = _n
+
+. summ projectmedcode, d
+
+                       projectmedcode
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%         2206              1
+ 5%        11029              2
+10%        22057              3       Obs             220,561
+25%        55141              4       Sum of wgt.     220,561
+
+50%       110281                      Mean             110281
+                        Largest       Std. dev.      63670.62
+75%       165421         220558
+90%       198505         220559       Variance       4.05e+09
+95%       209533         220560       Skewness       2.18e-16
+99%       218356         220561       Kurtosis            1.8
+
+. keep medcodeid projectmedcode
+
+. label variable projectmedcode "Numeric medcode identifier mapped to CPRD's medcodeid"
+
+. save "$datadir_stata/medcodeid_projectmedcode_lookup.dta", replace
+(file J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\stata/medcodeid_projectmedcode_lookup.dta not found)
+file J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\stata/medcodeid_projectmedcode_lookup.dta saved
+
+. 
+. capture log close

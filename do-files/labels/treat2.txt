@@ -1,0 +1,57 @@
+treat2	description
+01 	 Dressing
+02 	 Bandage/support
+03 	 Sutures
+04 	 Wound closure (exc sutures)
+05 	 Plaster of Paris
+06 	 Splint
+08 	 Removal foreign body
+09 	 Physiotherapy
+10 	 Manipulation
+11 	 Incision and drainage
+12 	 Intravenous cannula
+13 	 Central line
+14 	 Lavage/emesis/charcoal/eye irrigation
+15 	 Intubation & Endotracheal tubes/laryngeal mask airways/rapid sequence induction
+16 	 Chest drain
+17 	 Urinary catheter/suprapubic
+18 	 Defibrillation/pacing
+19 	 Resuscitation/cardiopulmonary resuscitation
+20 	 Minor surgery
+21 	 Observation/electrocardiogram,pulse oximetry/head injury/trends
+22 	 Guidance/advice only
+23 	 Anaesthesia
+24 	 Tetanus
+25 	 Nebulise/spacer
+27 	 Other (consider alternatives)
+28 	 Parenteral thrombolysis
+29 	 Other parenteral drugs
+30 	 Recording vital signs
+31 	 Burns review
+32 	 Recall/x-ray review
+33 	 Fracture review
+34 	 Wound cleaning
+35 	 Dressing/wound review
+36 	 Sling/collar cuff/broad arm sling
+37 	 Epistaxis control
+38 	 Nasal airway
+39 	 Oral airway
+40 	 Supplemental oxygen
+41 	 Continuous positive airways pressure/nasal intermittent positive pressure ventilation/bag valve mask
+42 	 Arterial line
+43 	 Infusion fluids
+44 	 Blood product transfusion
+45 	 Pericardiocentesis
+46 	 Lumbar puncture
+47 	 Joint aspiration
+48 	 Minor plastic procedure/splint skin graft
+49 	 Active rewarming of the hypothermic patient
+50 	 Cooling - control body temperature
+51 	 Medication administered
+52 	 Occupational therapy
+53 	 Loan of walking aid (crutches)
+54 	 Social worker intervention
+55 	 Eye
+56 	 Dental treatment
+57 	 Prescription/medicines prepared to take away
+99 	 None (consider guidance/advice option)

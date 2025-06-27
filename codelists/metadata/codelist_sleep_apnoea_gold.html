@@ -1,0 +1,118 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#codelist-apnoea-gold" id="codelist-apnoea-gold">codelist_apnoea_gold</a></h1>
+<h2><a href="#hdr-uk-phenotype-definition-file" id="hdr-uk-phenotype-definition-file">HDR UK phenotype definition file</a></h2>
+<pre><code>title: Sleep apnoea
+name: Sleep apnoea with categorisation
+phenotype_id: N/A
+type: Disease or syndrome
+group: Respiratory
+data_sources:
+    - Clinical Practice Research Datalink GOLD
+    - Clinical Practice Research Datalink Aurum
+    - Hospital Episode Statistics APC for CPRD GOLD
+    - Hospital Episode Statistics APC for CPRD Aurum
+clinical_terminologies:
+    - Read Version 2
+    - SNOMED-CT (and EMIS codes)
+    - ICD-10
+validation:
+	- casenote review planned
+codelists:
+NB would need to use HDRUK naming convention to submit
+	- codelist_sleep_apnoea_gold.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_gold.txt
+	- codelist_sleep_apnoea_aurum.txt
+	- codelist_sleep_apnoea_aurum.txt
+valid_event_data_range: up to 05_2022
+sex:
+	- Female
+	- Male
+author:
+	- Helen Strongman, Tim Quinnell, Sofia Erisksson
+date: 2022-03-15
+modified date: 2022-08-04
+version: 1
+
+</code></pre>
+<h2><a href="#version-control-more-detail" id="version-control-more-detail">Version control (more detail)</a></h2>
+<pre><code>Date created: 15/03/2022
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors:
+Dr Tim Quinnell (Respiratory and sleep specialist, Royal Papworth Hospital Trust)
+Dr Sofia Eriksson (Neurologist and sleep specialist, UCL)
+
+Date updated: 02/08/2022
+Updated by: Helen Strongman
+Clinical advisors: not needed
+Changes: separate category for central and primary sleep apnoea, care pathway
+		codes excluded 
+CPRD build: 2022_02
+</code></pre>
+<pre><code>## DEFINITION
+Recommendations for identifying an Obstructive Sleep Apnoea diagnosis and 
+censoring when other types of sleep apnoea are diagnosed. 
+
+Categories (category variable):
+1 &quot;Obstructive Sleep Apnoea (OSA)&quot;
+2 &quot;Obstructive sleep apnoea syndrome (OSAS)&quot;
+3 &quot;Sleep apnoea NOS&quot;
+4 &quot;Sleep apnoea syndrome NOS&quot;
+5 &quot;Central sleep apnoea only&quot;
+6 &quot;Primary sleep apnoea only&quot; 
+
+Recommended definition of OSA diagnosis and follow-up: 
+(1) First ever record of OSA (codes 1 to 4). 
+This is because OSA/OSAS are the most commonly diagnosed form of sleep apnoea 
+and GPs often use nonspecific codes. Specialists do differentiate between OSA
+and OSAS but it will not be possible to do this using primary care data. 
+Mixed sleep apnoea is included in codes 1 to 4 because OSA is likely to be the
+dominant or at least co-dominant condition. 
+(2) Exclude if prior record of central sleep apnoea or primary sleep apnoea
+(codes 5 &amp; 6). These are distinct from OSA with different co-morbidities and 
+health implications.
+(3) Censor follow up if central sleep apnoea or primary sleep apnoea are recorded
+after diagnosis with OSA.
+
+Next steps:
+
+
+
+4a. Separate phenotype HTML file for all dictionaries from codelist creation and
+	checking file that is specific to each dictionary. See note in master do file
+6a. Think about who will read these files and what they might need
+6b. Make text and related do file clearer including noting above problems, and 
+	instructions for changing the code list, write a project conventions file 
+	(e.g. _ = temporary variable)
+
+</code></pre>
+<h2><a href="#basic-search" id="basic-search">BASIC SEARCH</a></h2>
+<pre><code>
+Inclusion terms: apnoea apnea OSA
+
+Inclusion chapters: H5B R005 Fy03
+
+Exclusion chapters: mosaic mask questionnaire clinic appliance treatment monitoring recording assessment operation
+
+
+Note: Care pathway terms excluded because they are rarely used and mostly indicate
+testing for sleep apnoea
+
+</code></pre>
+<h2><a href="#code-list-specific-search-criteria" id="code-list-specific-search-criteria">CODE LIST SPECIFIC SEARCH CRITERIA</a></h2>
+<pre><code>All terms should include &quot;sleep&quot; &amp; &quot;apnoea&quot; or &quot;apnea&quot;
+
+
+</code></pre>
+<h2><a href="#check-excluded-codes" id="check-excluded-codes">CHECK EXCLUDED CODES</a></h2>
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+ |                                              term | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;| |                           Apnoea alarm monitoring | | [D]Sleep dysfunction with sleep stage disturbance | |                         [D]Sleep rhythm irregular | |                          [D]Sleep dysfunction NOS | |                                         [D]Apnoea | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;| |                 [D]Sleep disturbance, unspecified | |                        [X]Other apnoea of newborn | |             Berlin questionnaire for sleep apnoea | |                             [D]Sleep disturbances | |                                   [D]Insomnia NOS | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;| |                         [D]Sleep rhythm inversion | |                          [D]Sleep rhythm problems | |                             [D]Insomnia - symptom | |                                [D]Hypersomnia NOS | |                                 Apnoea of newborn | |&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;| |                                    Scoline apnoea | |     [D]Sleep dysfunction with arousal disturbance | |            [D]Sleep-wake rhythm non-24-hour cycle | +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;+</p>
+<pre><code></code></pre>

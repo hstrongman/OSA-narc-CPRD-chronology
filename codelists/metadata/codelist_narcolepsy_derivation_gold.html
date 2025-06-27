@@ -1,0 +1,135 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-how-the-narcolepsy-code-lists-were-created" id="description-of-how-the-narcolepsy-code-lists-were-created">Description of how the narcolepsy code lists were created</a></h1>
+<pre><code>This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_narcolepsy.do
+
+</code></pre>
+<h2><a href="#basic-search" id="basic-search">BASIC SEARCH</a></h2>
+<pre><code>
+
+The following search terms are used to generate the initial code lists. Each 
+term is searched for individually and included or excluded if 
+it appears in any position in the text. The terms cover all synonyms
+for narcolepsy. Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read codes.
+
+Inclusion terms: narcolep cataplexy
+
+Inclusion chapters: F27
+
+Exclusion terms: 
+
+Exclusion chapters: 
+
+
+
+
+</code></pre>
+<h2><a href="#code-list-specific-search-criteria" id="code-list-specific-search-criteria">CODE LIST SPECIFIC SEARCH CRITERIA</a></h2>
+<pre><code>
+There are no code list specific algorithms for narcolepsy.
+
+</code></pre>
+<h2><a href="#check-excluded-codes" id="check-excluded-codes">CHECK EXCLUDED CODES</a></h2>
+<pre><code>
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+
+
+
+</code></pre>
+<h2><a href="#create-categories" id="create-categories">CREATE CATEGORIES</a></h2>
+<pre><code>
+
+The categories are defined using the following criteria. These are described so
+that the search can be replicated using different software.
+
+1: Narcolepsy
+This category includes terms including the strings &quot;narcolep&quot;. In the CPRD GOLD
+dictionary, there are Read codes in chapter F27 with no associated observations
+or terms. I have kept them in the codelist and categorised them here for now. 
+I will double check this when I have extracted the data.
+
+
+2: Cataplexy only
+This category includes terms including the strings &quot;cataplexy&quot; and not &quot;narcolep&quot;
+
+</code></pre>
+<h2><a href="#check-included-codes-and-categorisation" id="check-included-codes-and-categorisation">CHECK INCLUDED CODES AND CATEGORISATION</a></h2>
+<pre><code>
+
+</code></pre>
+<h2><a href="#codes-by-categorylab" id="codes-by-categorylab">Codes by categorylab</a></h2>
+<pre><code>
+The following table includes all included terms and the assigned category.
+It is provided so that clinicians and researchers can check whether all codes 
+are relevant and categorised correctly.
+
+
+  +------------------------------------------------------------------------------+
+  | medcode   readcode         category                          term   observ~s |
+  |------------------------------------------------------------------------------|
+  |   11779    F271.00       Narcolepsy                    Narcolepsy       6055 |
+  |   68497    F27..00       Narcolepsy      Cataplexy and narcolepsy        211 |
+  |   26836    F27z.00       Narcolepsy   Cataplexy or narcolepsy NOS         15 |
+  |   88740     F2730A       Narcolepsy                                        0 |
+  |   95213     F2770A       Narcolepsy                                        0 |
+  |   95197       F274       Narcolepsy                                        0 |
+  |   85110     F2790A       Narcolepsy                                        0 |
+  |   86784    F2720TG       Narcolepsy                                        0 |
+  |   85112    F279 HL       Narcolepsy                                        0 |
+  |------------------------------------------------------------------------------|
+  |   18987    F270.00   Cataplexy only                     Cataplexy        641 |
+  +------------------------------------------------------------------------------+
+
+
+
+</code></pre>
+<h2><a href="#number-of-observations-per-category" id="number-of-observations-per-category">Number of observations per category</a></h2>
+<pre><code>
+The following table describes the number of observations in the CPRD database
+for each category. This information can be used to sense check the proposed
+phenotype definitions in codelist_narcolepsy_description.html.
+
+Observations counts will be O for HES APC data because there is no equivalent
+field in the dictionary.
+
+
+
+     +---------------------------+
+     |       category   observ~s |
+     |---------------------------|
+  1. |     Narcolepsy       6281 |
+  2. | Cataplexy only        641 |
+     +---------------------------+
+
+
+
+
+</code></pre>
+<h2><a href="#compare-with-previous-version" id="compare-with-previous-version">Compare with previous version</a></h2>
+<pre><code>
+There are no code lists to compare at this stage.
+
+
+
+
+
+
+
+
+
+
+</code></pre>

@@ -1,0 +1,11 @@
+medcode	readcode	clinevents	imevents	refevents	testevents	term	firstbuild	category
+11779	F271.00	5527	0	528	0	Narcolepsy	February 2009	Narcolepsy
+68497	F27..00	211	0	0	0	Cataplexy and narcolepsy	February 2009	Narcolepsy
+26836	F27z.00	15	0	0	0	Cataplexy or narcolepsy NOS	February 2009	Narcolepsy
+88740	F2730A	0	0	0	0		February 2009	Narcolepsy
+95213	F2770A	0	0	0	0		February 2009	Narcolepsy
+95197	F274	0	0	0	0		February 2009	Narcolepsy
+85110	F2790A	0	0	0	0		February 2009	Narcolepsy
+86784	F2720TG	0	0	0	0		February 2009	Narcolepsy
+85112	F279 HL	0	0	0	0		February 2009	Narcolepsy
+18987	F270.00	608	0	33	0	Cataplexy	February 2009	Cataplexy only

@@ -1,0 +1,93 @@
+treat3	description
+011 	 Dressing minor wound/burn/eye
+012 	 Dressing major wound/burn
+02 	 Bandage/support
+031 	 Primary sutures
+032 	 Secondary/complex suture
+033 	 Removal of sutures/clips
+041 	 Wound closure - steristrips
+042 	 Wound closure - wound glue
+043 	 Wound closure - other (eg clips)
+051 	 Plaster of Paris - application
+052 	 Plaster of Paris - removal
+06 	 Splint
+08 	 Removal foreign body
+091 	 Physiotherapy - strapping, ultra sound treatment, short wave diathermy,manipulation
+092 	 Physiotherapy - gait re-education, falls prevention
+101 	 Manipulation of upper limb fracture
+102 	 Manipulation of lower limb fracture
+103 	 Manipulation of dislocation
+11 	 Incision and drainage
+12 	 Intravenous cannula
+13 	 Central line
+14 	 Lavage/emesis/charcoal/eye irrigation
+15 	 Intubation & Endotracheal tubes/laryngeal mask airways/rapid sequence induction
+16 	 Chest drain
+17 	 Urinary catheter/suprapubic
+181 	 Defibrillation
+182 	 External pacing
+19 	 Resuscitation/cardiopulmonary resuscitation
+20 	 Minor surgery
+21 	 Observation/electrocardiogram,pulse oximetry/head injury/trends
+221 	 Guidance/advice only - written
+222 	 Guidance/advice only - verbal
+231 	 Anaesthesia - general
+232 	 Anaesthesia - local
+233 	 Anaesthesia - regional block
+234 	 Anaesthesia - etonox
+235 	 Anaesthesia - sedation
+236 	 Anaesthesia - other
+241 	 Tetanus - immune
+242 	 Tetanus - tetanus toxoid course
+243 	 Tetanus - tetanus toxoid booster
+244 	 Tetanus - human immunoglobin
+245 	 Tetanus - combined tetanus/diphtheria course
+246 	 Tetanus - combined tetanus/diphtheria booster
+25 	 Nebulise/spacer
+27 	 Other (consider alternatives)
+281 	 Parenteral thrombolysis - streptokinase parenteral thrombolysis
+282 	 Parenteral thrombolysis - recombinant - plasminogen activator
+291 	 Other parenteral drugs - intravenous drug eg stat/bolus
+292 	 Other parenteral drugs - intravenous infusion
+30 	 Recording vital signs
+31 	 Burns review
+32 	 Recall/x-ray review
+33 	 Fracture review
+34 	 Wound cleaning
+35 	 Dressing/wound review
+36 	 Sling/collar cuff/broad arm sling
+37 	 Epistaxis control
+38 	 Nasal airway
+39 	 Oral airway
+40 	 Supplemental oxygen
+41 	 Continuous positive airways pressure/nasal intermittent positive pressure ventilation/bag valve mask
+42 	 Arterial line
+43 	 Infusion fluids
+44 	 Blood product transfusion
+45 	 Pericardiocentesis
+46 	 Lumbar puncture
+47 	 Joint aspiration
+48 	 Minor plastic procedure/splint skin graft
+49 	 Active rewarming of the hypothermic patient
+50 	 Cooling - control body temperature
+511 	 Medication administered - oral
+512 	 Medication administered - intra-muscular
+513 	 Medication administered - subcutaneous
+514 	 Medication administered - per rectum
+515 	 Medication administered - sublingual
+516 	 Medication administered - intra-nasal
+517 	 Medication administered - eye drops
+518 	 Medication administered - ear drops
+519 	 Medication administered - topical skin cream
+521 	 Occupational therapy functional assessments
+522 	 Occupational therapy activities of daily living equipment provision
+53 	 Loan of walking aid (crutches)
+54 	 Social worker intervention
+551 	 Eye - orthoptic exercises
+552 	 Eye - laser of retina/iris or posterior capsule
+553 	 Eye - retrobulbar injection
+554 	 Eye - epilation of lashes
+555 	 Eye - subconjunctival injection
+56 	 Dental treatment
+57 	 Prescription/medicines prepared to take away
+99 	 None (consider guidance/advice option)

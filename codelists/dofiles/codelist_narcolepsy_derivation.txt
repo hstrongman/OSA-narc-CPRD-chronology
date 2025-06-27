@@ -1,0 +1,211 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+
+Description of how the narcolepsy code lists were created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_narcolepsy.do
+
+<<dd_do:quietly>>
+use "`2'", clear
+
+/*The following commands create common variables for the three datasets.
+Variables preceded by underscore are temporary and are deleted at the
+end of the script. The commands and outputs do not appear in the
+HTML file because the attribute "quietly" is used above.*/
+
+if "`1'" == "aurum" {
+	destring observations, replace
+	rename cleansedreadcode readcode
+	}
+if "`1'" == "gold" {
+	egen observations = rowtotal(clinevents refevents testevents imevents)
+	rename readterm term
+	}
+if "`1'" == "hesapc" {
+	gen observations = .
+	rename description term
+	rename code ICD /*ICD matches HES APC data dictionary*/
+	}
+	
+<</dd_do>>
+~~~~
+## BASIC SEARCH
+~~~~
+
+<<dd_do:quietly>>
+gen _term_lower = lower(term)
+generate _marker=.
+/*these inclusion and exclusion terms are displayed and searched for below. 
+Changes should be made here. These types of searches are common to most code
+lists*/
+local interms "narcolep cataplexy"
+if "`1'" == "aurum" | "`1'" == "gold" local inchaps "F27"
+local exterms ""
+local exchaps ""
+<</dd_do>>
+
+The following search terms are used to generate the initial code lists. Each 
+term is searched for individually and included or excluded if 
+it appears in any position in the text. The terms cover all synonyms
+for narcolepsy. Chapter searches only apply to code lists that include
+Read codes; these include CPRD Aurum code lists as a large proportion of Snomed
+codes are matched to Read codes.
+
+<<dd_do: nocommands>>
+display "Inclusion terms: `interms'"
+display "Inclusion chapters: `inchaps'"
+display "Exclusion terms: `exterms'"
+display "Exclusion chapters: `exchaps'"
+<</dd_do>>
+
+<<dd_do: quietly>>
+foreach word of local interms {
+	replace _marker = 1 if strmatch(term, "*`word'*")
+	replace _marker = 1 if strmatch(_term_lower, "*`word'*")
+	}
+
+if "`1'" == "gold" | "`1'" == "aurum" {
+	foreach chap of local inchaps {
+		replace _marker = 1 if strmatch(readcode, "`chap'*")
+		}
+	}
+
+keep if _marker == 1
+
+
+foreach word of local exterms {
+	replace _marker = 0 if strmatch(_term_lower, "*`word'*")
+	}
+<</dd_do>>
+
+
+~~~~
+## CODE LIST SPECIFIC SEARCH CRITERIA
+~~~~
+
+There are no code list specific algorithms for narcolepsy.
+
+~~~~
+## CHECK EXCLUDED CODES
+~~~~
+
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+<<dd_do: nocommands>>
+list term if _marker == 0, noobs table
+<</dd_do>>
+
+
+~~~~
+## CREATE CATEGORIES
+~~~~
+
+<<dd_do:quietly>>
+drop if _marker == 0
+gen category = 0
+label define categorylab 1 "Narcolepsy" ///
+2 "Cataplexy only"
+label values category categorylab
+/*each category is defined separately below. This approach might need to be
+adapted if new codes are added to the dictionaries.*/
+<</dd_do>>
+
+The categories are defined using the following criteria. These are described so
+that the search can be replicated using different software.
+
+1: Narcolepsy
+This category includes terms including the strings "narcolep". In the CPRD GOLD
+dictionary, there are Read codes in chapter F27 with no associated observations
+or terms. I have kept them in the codelist and categorised them here for now. 
+I will double check this when I have extracted the data.
+
+<<dd_do:quietly>>
+replace category = 1 if strmatch(_term_lower, "*narcolep*")
+if "`1'" == "aurum" | "`1'" == "gold" capture replace category = 1 if strmatch(readcode, "F27*") & category == 0
+<</dd_do>>
+
+2: Cataplexy only
+This category includes terms including the strings "cataplexy" and not "narcolep"
+<<dd_do:quietly>>
+replace category = 2 if strmatch(_term_lower, "*cataplexy*") & !strmatch(_term_lower, "*narcolep*")
+<</dd_do>>
+
+~~~~
+## CHECK INCLUDED CODES AND CATEGORISATION
+~~~~
+
+<<dd_do:quietly>>
+gsort category -observations
+<</dd_do>>
+
+~~~~
+## Codes by categorylab
+~~~~
+
+The following table includes all included terms and the assigned category.
+It is provided so that clinicians and researchers can check whether all codes 
+are relevant and categorised correctly.
+
+<<dd_do: nocommands>>
+list `3' `4' category term observations, noobs sepby(category)
+<</dd_do>>
+
+
+~~~~
+## Number of observations per category
+~~~~
+
+The following table describes the number of observations in the CPRD database
+for each category. This information can be used to sense check the proposed
+phenotype definitions in codelist_narcolepsy_description.html.
+
+Observations counts will be O for HES APC data because there is no equivalent
+field in the dictionary.
+
+<<dd_do: quietly>>
+save "_temp.dta", replace /*preserve/restore commands don't work*/
+collapse (sum) observations, by(category)
+<</dd_do>>
+
+<<dd_do: nocommands>>
+list
+<</dd_do>>
+
+<<dd_do: quietly>>
+list
+use "_temp.dta", clear
+<</dd_do>>
+
+
+~~~~
+## Compare with previous version
+~~~~
+
+There are no code lists to compare at this stage.
+
+<<dd_do: quietly>>
+drop _*
+save "_temp.dta", replace
+if "`1'" != "aurum" drop observations
+export delimited using "$datadir_text\codelist_narcolepsy_`1'.txt", replace delimiter(tab)
+use "_temp.dta", clear
+keep `3' `4' term observations category
+save "$datadir_stata\codelist_narcolepsy_`1'.dta", replace
+erase "_temp.dta"
+<</dd_do>>
+
+
+
+
+
+
+
+
+

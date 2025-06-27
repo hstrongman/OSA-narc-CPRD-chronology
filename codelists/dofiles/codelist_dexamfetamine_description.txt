@@ -1,0 +1,184 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of codelist_dexamfetamine code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to define primary care 
+consultations in CPRD data and to cite the authors. 
+Researchers, refer to codelist_cprdconsultations.do for instructions
+about modifying this file.
+~~~~
+
+# COVER SHEET
+
+
+## 0. Metadata
+
+### a. Codelist name 
+
+dexamfetamine
+
+### b. Author(s)
+
+Helen Strongman
+
+### c. Date finalised: 27/11/2024
+
+### d. Target data source(s)
+
+- Clinical Practice Research Datalink GOLD (up to September 2023)
+- Clinical Practice Research Datalink Aurum (up to September 2023)
+
+### e. Terminology(s)
+CPRD Aurum Dictionary of Medicines and Devices (dm+d) mapped to 
+CPRD prodcodeid, 
+CPRD GOLD gemscriptcode mapped to CPRD prodcode
+  
+## 1. Define a clinical concept
+
+### a. Concept
+
+dexamfetamine prescriptions
+	
+### b. Timeframe: 
+	
+no restrictions
+	
+### c. Accuracy:
+
+There is no ambiguity in coding for this code list.
+
+### d. Setting: 
+
+Prescriptions written in primary care
+
+## 2. Search existing codelists
+	
+### a. Sources searched
+
+used google to search for "cprd dexamphetamine" and 
+"cprd dexamfetamine" 
+
+### b. Existing codelists found
+
+https://clinicalcodes.rss.mhs.man.ac.uk/medcodes/article/28/codelist/res28-adhd-prodcodes/
+	
+## 3. Evaluate existing code lists
+
+### a. Verified by others.
+
+no information
+
+### b. Verified by researcher.
+
+codes not split out by drug substance
+
+## 4. Existing code lists used
+
+### a. as above
+
+N/A
+
+
+## 5. Prepare
+
+### a. Synonyms
+
+dexamphetamine sulphate, dexamfetamine sulfate, amfexa, dexedrine =
+modified release (identified by searching BNF chapter "Amfetamines" including
+names in the "medicinal forms" section)
+
+Also included lisdexamfetamine (adderall, durophet) = prodrug of dexamfetamine
+
+## b. Exceptions
+
+
+
+## 6. Create
+
+### a. Method used
+
+Used lower case search terms in a script to search drug substance
+product name, and termfromemis fields - terms recorded anywhere in string. 
+Checked for additional product names to search for by listing product names
+where dexamfetamine was the drug substance
+
+### b. Search terms
+
+inclusion (dexam, amfexa, dexedrine, lisdex, adderall, durophet)
+
+
+### c. Hierachy used to extend the search
+
+None
+
+### d. Decisions made while iterating
+
+added adderall and durophet
+
+### e. Categories
+
+N/A
+
+## 7. Review
+
+### a. Reviewers
+
+Dr Sofia Eriksson (Neurologist and sleep specialist, University College London Hospitals NHS Foundation Trust and UCL)
+
+### b. Scope of review
+
+Both the draft codelist and search and exclusion terms
+were reviewed.
+
+### c. Evidence of review
+
+The process is documented in this HTML file.
+
+## 8. Publish
+
+### a. Codelist published
+
+The codelist will be published on LSHTM data compass and in the Github
+repository for this project, prior to publication of the resulting paper.
+(and in the LSHTM code list Github repository if we can get funding/time to build this)
+
+	
+Files include:
+- codelist_dexamfetamine_aurum.txt
+- codelist_dexamfetamine_aurum.dta
+
+### b. Resources published
+
+Do files and HMTL documents describing codelist and search strategy
+
+
+### Version control (more detail)
+
+## First version
+
+### Date created
+
+02/02/2024
+
+### Author
+
+Helen Strongman (Epidemiologist, LSHTM)
+
+### Clinical advisors
+
+
+## First update
+
+### Date
+
+### Author
+
+### Clinical advisor
+
+### Changes to strategy
+
+~~~~
+

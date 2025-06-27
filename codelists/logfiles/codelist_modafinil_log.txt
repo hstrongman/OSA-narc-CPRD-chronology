@@ -1,0 +1,431 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  J:\EHR-Working\\HelenS\22_001887_sleep-chronology\codelists\logfiles\codelist_modafinil_log.txt
+  log type:  text
+ opened on:  29 Apr 2024, 10:26:35
+
+. 
+. /*Notes and instructions for modifying these files: 
+> - The copy command copies the current .txt file from $dodir to $metadir. 
+> - dyndoc creates the HTML file and saves it in $metadir. 
+> - *** ALWAYS MODIFY .txt FILES IN $dodir. ***
+> - The arguments following the dyndoc command are:
+>         database name: `1'
+>         dictionary filepath `2'
+>         CPRD code variable `3'
+>         Original code variable `4'
+> - These arguments can be displayed in the HTML document using
+>         <<dd_display: `x'>> and used as a local within stata commands
+> */
+. 
+. cd "$metadir" 
+J:\EHR-Working\HelenS\22_001887_sleep-chronology\codelists\metadata
+
+. 
+. copy "$dodir\codelist_modafinil_description.txt" ., replace
+
+. 
+. dyndoc "$dodir\codelist_modafinil_description.txt", ///
+> saving("codelist_modafinil_description.html") replace
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+
+Description of codelist_modafinil code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to define primary care 
+consultations in CPRD data and to cite the authors. 
+Researchers, refer to codelist_cprdconsultations.do for instructions
+about modifying this file.
+~~~~
+
+# COVER SHEET
+
+
+## 0. Metadata
+
+### a. Codelist name 
+
+Modafinil
+
+### b. Author(s)
+
+Helen Strongman
+
+### c. Date finalised: 02 February 2024
+
+### d. Target data source(s)
+
+- Clinical Practice Research Datalink GOLD (up to March 2023)
+- Clinical Practice Research Datalink Aurum (up to March 2023)
+
+### e. Terminology(s)
+CPRD Aurum Dictionary of Medicines and Devices (dm+d) mapped to 
+CPRD prodcodeid, 
+CPRD GOLD gemscriptcode mapped to CPRD prodcode
+  
+## 1. Define a clinical concept
+
+### a. Concept
+
+modafinil prescriptions
+	
+### b. Timeframe: 
+	
+no restrictions
+	
+### c. Accuracy:
+
+There is no ambiguity in coding for this code list.
+
+### d. Setting: 
+
+Prescriptions written in primary care
+
+## 2. Search existing codelists
+	
+### a. Sources searched
+
+used google to search for "cprd modafinil" 
+
+### b. Existing codelists found
+
+None
+	
+## 3. Evaluate existing code lists
+
+### a. Verified by others.
+
+N/A
+
+### b. Verified by researcher.
+
+N/A
+
+## 4. Existing code lists used
+
+### a. as above
+
+N/A
+
+
+## 5. Prepare
+
+### a. Synonyms
+
+modafinil provigil (identified by searching BNF chapter 
+4040000 - Centrally acting sympathomimetics including product
+names in the "medicinal forms" section)
+
+## b. Exceptions
+
+None.
+
+## 6. Create
+
+### a. Method used
+
+ame fields - terms recorded anywhere in string. 
+Checked for additional product names to search for by listing product names
+where modafinil was the drug substance.
+
+### b. Search terms
+
+*modaf*, *provigil*
+
+### c. Hierachy used to extend the search
+
+checked BNF chapter 4040000
+
+### d. Decisions made while iterating
+
+no additional terms found.
+
+### e. Categories
+
+N/A
+
+## 7. Review
+
+### a. Reviewers
+
+need to find a clinician
+
+### b. Scope of review
+
+Both the draft codelist and search and exclusion terms
+were reviewed.
+
+### c. Evidence of review
+
+The process is documented in this HTML file.
+
+## 8. Publish
+
+### a. Codelist published
+
+The codelist will be published on LSHTM data compass and in the Github
+repository for this project, prior to publication of the resulting paper.
+(and in the LSHTM code list Github repository if we can get funding/time to build this)
+
+	
+Files include:
+- codelist_modafinil_aurum.txt
+- codelist_modafinil_aurum.dta
+
+### b. Resources published
+
+Do files and HMTL documents describing codelist and search strategy
+
+
+### Version control (more detail)
+
+## First version
+
+### Date created
+
+02/02/2024
+
+### Author
+
+Helen Strongman (Epidemiologist, LSHTM)
+
+### Clinical advisors
+
+
+## First update
+
+### Date
+
+### Author
+
+### Clinical advisor
+
+### Changes to strategy
+
+~~~~
+
+
+
+
+successfully converted "J:/EHR-Working/HelenS/22_001887_sleep-chronology/codelists/metadata/codelist_modafinil_description.html"
+
+. 
+. copy "$dodir\codelist_modafinil_derivation.txt" ., replace
+
+. 
+. dyndoc "$dodir\codelist_modafinil_derivation.txt" ///
+> aurum "$dict_aurumprod" prodcodeid dmdid, ///
+> saving("codelist_modafinil_derivation_aurum.html") replace
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+
+
+Description of how the modafinil code list was created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_modafinil.do
+
+~~~~
+## BASIC SEARCH
+~~~~
+
+
+The following search terms are used to generate the initial code lists. Each 
+inclusion term is searched for individually and included or excluded if 
+it appears in any position in the text. BNF chapters are not searched as
+there is no specific chapter for modafinil.
+
+Inclusion terms: modaf provigil
+
+
+Inclusion BNF chapters: 
+
+
+Exclusion terms: 
+
+
+Exclusion chapters: 
+
+
+
+
+~~~~
+## CODE LIST SPECIFIC SEARCH CRITERIA
+~~~~
+
+There are no code list specific algorithms for modafinil.
+
+~~~~
+## CHECK EXCLUDED CODES
+~~~~
+
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+
+
+
+~~~~
+## CHECK INCLUDED CODES
+~~~~
+
+
+          prodcodeid               dmdid   drugsub~e                           productname   drugis~s  
+    1657141000033113           323385006   Modafinil               Modafinil 100mg tablets     200000  
+    1670541000033115    3682211000001109   Modafinil                Provigil 100mg tablets       7000  
+    2864441000033111           407861004   Modafinil               Modafinil 200mg tablets      90000  
+    2864541000033112    4364511000001108   Modafinil                Provigil 200mg tablets       2000  
+    5287641000033112   14984211000001103   Modafinil     Modafinil 100mg/5ml oral solution        300  
+    9776241000033115   14984311000001106   Modafinil   Modafinil 100mg/5ml oral suspension         40  
+
+
+|  BNFChapter |      Freq. |    Percent |       Cum.|
+|-------------|------------|------------|-----------|
+|             |          2 |      33.33 |      33.33|
+|04040000     |          4 |      66.67 |     100.00|
+|Total        |          6 |     100.00 |           |
+
+
+~~~~
+## Compare with previous version
+~~~~
+
+There are no code lists to compare at this stage.
+
+
+
+
+
+
+
+
+
+
+successfully converted "J:/EHR-Working/HelenS/22_001887_sleep-chronology/codelists/metadata/codelist_modafinil_derivation_aurum.html"
+
+. 
+. dyndoc "$dodir\codelist_modafinil_derivation.txt" ///
+> gold "$dict_goldprod" prodcode gemscriptcode, ///
+> saving("codelist_modafinil_derivation_gold.html") replace
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+
+
+Description of how the modafinil code list was created
+===============================================================
+
+~~~~
+This HTML file includes the information needed for clinicians
+and researchers to understand how the code lists are derived.
+Researchers can update the code lists following the instructions in
+codelist_modafinil.do
+
+~~~~
+## BASIC SEARCH
+~~~~
+
+
+The following search terms are used to generate the initial code lists. Each 
+inclusion term is searched for individually and included or excluded if 
+it appears in any position in the text. BNF chapters are not searched as
+there is no specific chapter for modafinil.
+
+Inclusion terms: modaf provigil
+
+
+Inclusion BNF chapters: 
+
+
+Exclusion terms: 
+
+
+Exclusion chapters: 
+
+
+
+
+~~~~
+## CODE LIST SPECIFIC SEARCH CRITERIA
+~~~~
+
+There are no code list specific algorithms for modafinil.
+
+~~~~
+## CHECK EXCLUDED CODES
+~~~~
+
+The following list includes all codes that have been excluded from the code
+list. This should be checked carefully.
+
+
+
+
+~~~~
+## CHECK INCLUDED CODES
+~~~~
+
+
+    prodcode   gemscr~e   drugsub~e                            productname   drugis~s  
+       14814   84132020   Modafinil   Provigil 200mg tablets (Teva UK Ltd)       1002  
+       74427   35892020   Modafinil      Modafinil 100mg/5ml oral solution          5  
+       19944   86413020   Modafinil   Provigil 100mg tablets (Teva UK Ltd)       3088  
+        6326   86409020   Modafinil                Modafinil 100mg tablets      88207  
+       13175   83274020   Modafinil                Modafinil 200mg tablets      33617  
+
+
+|                                                              bnfchapter |      Freq. |    Percent |       Cum.|
+|-------------------------------------------------------------------------|------------|------------|-----------|
+|04040000                                                                 |          5 |     100.00 |     100.00|
+|Total                                                                    |          5 |     100.00 |           |
+
+
+~~~~
+## Compare with previous version
+~~~~
+
+There are no code lists to compare at this stage.
+
+
+
+
+
+
+
+
+
+
+successfully converted "J:/EHR-Working/HelenS/22_001887_sleep-chronology/codelists/metadata/codelist_modafinil_derivation_gold.html"
+
+. 
+. 
+. capture log close

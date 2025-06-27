@@ -1,0 +1,88 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="stmarkdown.css">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<h1><a href="#description-of-narcolepsy-code-lists" id="description-of-narcolepsy-code-lists">Description of narcolepsy code lists</a></h1>
+<pre><code>This HTML file includes information that is needed to use the 
+narcolepsy code lists to define narcolepsy and to cite the authors.
+Researchers, refer to codelist_narcolepsy.do for instructions
+about modifying this file.
+</code></pre>
+<h2><a href="#hdr-uk-phenotype-definition-file" id="hdr-uk-phenotype-definition-file">HDR UK phenotype definition file</a></h2>
+<pre><code>Temporary comment: I have used the HDR phenotype structure as an example. We need
+to decide whether to upload code lists to HDR UK, data compass or
+another repository.
+
+title: Narcolepsy
+name: Narcolepsy
+phenotype_id: N/A
+type: Disease or syndrome
+group: Neurology
+data_sources:
+    - Clinical Practice Research Datalink GOLD
+    - Clinical Practice Research Datalink Aurum
+    - Hospital Episode Statistics APC for CPRD GOLD
+    - Hospital Episode Statistics APC for CPRD Aurum
+clinical_terminologies:
+    - Read Version 2
+    - SNOMED-CT (and EMIS codes)
+    - ICD-10
+validation:
+	- casenote review planned
+codelists:
+NB would need to use HDRUK naming convention to submit
+	- codelist_narcolepsy_gold.dta
+	- codelist_narcolepsy_aurum.dta
+	- codelist_narcolepsy_aurum.dta
+	- codelist_narcolepsy_gold.txt
+	- codelist_narcolepsy_aurum.txt
+	- codelist_narcolepsy_aurum.txt
+valid_event_data_range: up to 05_2022
+sex:
+	- Female
+	- Male
+author:
+	- Helen Strongman, Tim Quinnell, Sofia Eriksson
+date: 2022-08-05
+version: 1
+
+</code></pre>
+<h2><a href="#version-control-more-detail" id="version-control-more-detail">Version control (more detail)</a></h2>
+<pre><code>Date created: 15/03/2022
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors:
+Dr Tim Quinnell (Respiratory and sleep specialist, Royal Papworth Hospital Trust)
+Dr Sofia Eriksson (Neurologist and sleep specialist, UCL)
+
+Code list checked (no changes needed) 05/08/2022
+</code></pre>
+<pre><code>## DEFINITION
+All codes for narcolepsy categorised as follows using the category variable:
+
+Categories (category variable):
+1 &quot;Narcolepsy&quot;
+4 &quot;Cataplexy only&quot;
+
+Codes for narcolepsy are not separated by type because most codes are 
+non-specific. When the term includes both narcolepsy and cataplexy, 
+the associated codes are chapter headings with subcodes that encompass
+both types of narcolepsy.
+
+Here are recommendations to use these categories to identify a narcolepsy
+diagnosis. 
+
+(1) First ever record of narcolepsy (codes 1). 
+(2) Plan to exclude people with cataplexy recorded before this date. 
+Check that the number of people excluded is very small and that their are very
+few people with cataplexy without narcolepsy as this is extremely rare.
+
+</code></pre>
+<h2><a href="#studies-and-protocols" id="studies-and-protocols">STUDIES AND PROTOCOLS</a></h2>
+<pre><code>I will add a link to my fellowship protocol when I've decided which site to
+upload it to.
+</code></pre>

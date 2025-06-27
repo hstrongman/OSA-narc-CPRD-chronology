@@ -1,0 +1,7 @@
+Code	description
+0	Not patient facing
+1	Face-to-face
+2	Home visit
+3	Telephone
+4	Online
+5	Unknown patient facing

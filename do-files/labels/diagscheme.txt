@@ -1,0 +1,4 @@
+Diagscheme	description
+01 	 Accident & Emergency diagnosis 
+02 	 ICD-10 
+04 	 Read coded clinical terms version 2

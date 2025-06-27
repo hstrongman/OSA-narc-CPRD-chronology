@@ -1,0 +1,41 @@
+Diag2	description
+01 	 Laceration
+02 	 Contusion/abrasion
+03 	 Soft tissue inflammation
+04 	 Head injury
+05 	 Dislocation/fracture/joint injury/amputation
+06 	 Sprain/ligament injury
+07 	 Muscle/tendon injury
+08 	 Nerve injury
+09 	 Vascular injury
+10 	 Burns and scalds
+11 	 Electric shock
+12 	 Foreign body
+13 	 Bites/stings
+14 	 Poisoning (inc overdose)
+15 	 Near drowning
+16 	 Visceral injury
+17 	 Infectious disease
+18 	 Local infection
+19 	 Septicaemia
+20 	 Cardiac conditions
+21 	 Cerebro-vascular conditions
+22 	 Other vascular conditions
+23 	 Haematological conditions
+24 	 Central nervous system conditions (exc stroke)
+25 	 Respiratory conditions
+26 	 Gastrointestinal conditions
+27 	 Urological conditions (inc cystitis)
+28 	 Obstetric conditions
+29 	 Gynaecological conditions
+30 	 Diabetes and other endocrinological conditions
+31 	 Dermatological conditions
+32 	 Allergy (inc anaphylaxis)
+33 	 Facio-maxillary conditions
+34 	 ENT conditions
+35 	 Psychiatric conditions
+36 	 Ophthalmological  conditions
+37 	 Social problems (inc chronic alcoholism and homelessness)
+38 	 Diagnosis not classifiable
+39 	 Nothing abnormal detected
+

@@ -1,0 +1,254 @@
+medcode	readcode	clinevents	imevents	refevents	testevents	term	firstbuild	observations	eth16	eth5
+12191	134B.00	29770	0	3	0	RACE: Caucasian	February 2009	29773	1. British	0. White
+22467	9S1..00	627672	0	4	0	White	February 2009	627676	1. British	0. White
+12446	9S10.00	2270053	0	21	3	White British	February 2009	2270077	1. British	0. White
+26467	9S13.00	898851	0	14	0	White Scottish	February 2009	898865	1. British	0. White
+26310	9S14.00	52806	0	0	0	Other white British ethnic group	February 2009	52806	1. British	0. White
+12351	9i0..00	2178962	0	22	4	British or mixed British - ethnic category 2001 census	February 2009	2178988	1. British	0. White
+98111	9i00.00	506957	0	9	2	White British - ethnic category 2001 census	December 2009	506968	1. British	0. White
+12352	9i20.00	265467	0	3	0	English - ethnic category 2001 census	February 2009	265470	1. British	0. White
+12436	9i21.00	109247	0	2	0	Scottish - ethnic category 2001 census	February 2009	109249	1. British	0. White
+12681	9i22.00	59739	0	1	0	Welsh - ethnic category 2001 census	February 2009	59740	1. British	0. White
+28887	9i23.00	240	0	0	0	Cornish - ethnic category 2001 census	February 2009	240	1. British	0. White
+42294	9i24.00	35598	0	31	0	Northern Irish - ethnic category 2001 census	February 2009	35629	1. British	0. White
+40102	9i25.00	109	0	0	0	Ulster Scots - ethnic category 2001 census	February 2009	109	1. British	0. White
+110420	9t00.00	15761	0	0	0	White:Eng/Welsh/Scot/NI/Brit - England and Wales 2011 census	December 2015	15761	1. British	0. White
+112899	9t10.00	1636	0	0	0	White - Northern Ireland ethnic category 2011 census	September 2018	1636	1. British	0. White
+110432	9t20.00	22043	0	0	0	White: Scottish - Scotland ethnic category 2011 census	January 2016	22043	1. British	0. White
+110694	9t21.00	108	0	0	0	White: other British - Scotland ethnic category 2011 census	March 2016	108	1. British	0. White
+24837	9S11.00	49879	0	0	0	White Irish	February 2009	49879	2. Irish	0. White
+24270	9SA9.00	2085	0	1	0	Irish (NMO)	February 2009	2086	2. Irish	0. White
+12532	9i1..00	40625	0	0	0	Irish - ethnic category 2001 census	February 2009	40625	2. Irish	0. White
+98213	9i10.00	6445	0	0	0	White Irish - ethnic category 2001 census	December 2009	6445	2. Irish	0. White
+110556	9t01.00	121	0	0	0	White: Irish - England and Wales ethnic category 2011 census	February 2016	121	2. Irish	0. White
+110687	9t22.00	19	0	0	0	White: Irish - Scotland ethnic category 2011 census	March 2016	19	2. Irish	0. White
+12444	9S12.00	249096	0	3	0	Other white ethnic group	February 2009	249099	3. Other White	0. White
+45947	9SAA.00	484	0	0	0	Greek/Greek Cypriot (NMO)	February 2009	484	3. Other White	0. White
+45955	9SAA.11	882	0	1	0	Greek (NMO)	February 2009	883	3. Other White	0. White
+47949	9SAA.12	486	0	0	0	Greek Cypriot (NMO)	February 2009	486	3. Other White	0. White
+32066	9SAB.00	922	0	0	0	Turkish/Turkish Cypriot (NMO)	February 2009	922	3. Other White	0. White
+32126	9SAB.11	2037	0	0	0	Turkish (NMO)	February 2009	2037	3. Other White	0. White
+32069	9SAB.12	443	0	0	0	Turkish Cypriot (NMO)	February 2009	443	3. Other White	0. White
+12633	9SAC.00	13444	0	0	0	Other European (NMO)	February 2009	13444	3. Other White	0. White
+47601	9SI..00	154	0	0	0	Irish traveller	February 2009	154	3. Other White	0. White
+57286	9T11.00	270	0	0	0	New Zealand European	February 2009	270	3. Other White	0. White
+85509	9T11.11	29	0	0	0	Pakeha	February 2009	29	3. Other White	0. White
+85505	9T12.00	17	0	0	0	Other European in New Zealand	February 2009	17	3. Other White	0. White
+99808	9T4..00	6080	0	0	0	Romanian	June 2010	6080	3. Other White	0. White
+99788	9T5..00	1929	0	0	0	Bulgarian	June 2010	1929	3. Other White	0. White
+100143	9T6..00	1062	0	0	0	Czech	July 2010	1062	3. Other White	0. White
+101787	9T7..00	899	0	0	0	Slovak	February 2011	899	3. Other White	0. White
+101219	9T8..00	1422	0	0	0	Portuguese	December 2010	1422	3. Other White	0. White
+12421	9i2..00	299450	0	0	0	Other White background - ethnic category 2001 census	February 2009	299450	3. Other White	0. White
+32778	9i26.00	830	0	0	0	Cypriot (part not stated) - ethnic category 2001 census	February 2009	830	3. Other White	0. White
+12355	9i27.00	3845	0	0	0	Greek - ethnic category 2001 census	February 2009	3845	3. Other White	0. White
+12769	9i28.00	2290	0	1	0	Greek Cypriot - ethnic category 2001 census	February 2009	2291	3. Other White	0. White
+12746	9i29.00	11742	0	0	0	Turkish - ethnic category 2001 census	February 2009	11742	3. Other White	0. White
+32413	9i2A.00	1879	0	0	0	Turkish Cypriot - ethnic category 2001 census	February 2009	1879	3. Other White	0. White
+12412	9i2B.00	10233	0	0	0	Italian - ethnic category 2001 census	February 2009	10233	3. Other White	0. White
+55223	9i2C.00	715	0	0	0	Irish Traveller - ethnic category 2001 census	February 2009	715	3. Other White	0. White
+55113	9i2D.00	499	0	0	0	Traveller - ethnic category 2001 census	February 2009	499	3. Other White	0. White
+42290	9i2E.00	1602	0	0	0	Gypsy/Romany - ethnic category 2001 census	February 2009	1602	3. Other White	0. White
+12467	9i2F.00	92461	0	1	0	Polish - ethnic category 2001 census	February 2009	92462	3. Other White	0. White
+12433	9i2G.00	11858	0	0	0	Baltic Estonian/Latvian/Lithuanian - ethn categ 2001 census	February 2009	11858	3. Other White	0. White
+28973	9i2H.00	2468	0	0	0	Commonwealth (Russian) Indep States - ethn categ 2001 census	February 2009	2468	3. Other White	0. White
+26341	9i2J.00	1437	0	0	0	Kosovan - ethnic category 2001 census	February 2009	1437	3. Other White	0. White
+25422	9i2K.00	2346	0	0	0	Albanian - ethnic category 2001 census	February 2009	2346	3. Other White	0. White
+46956	9i2L.00	329	0	0	0	Bosnian - ethnic category 2001 census	February 2009	329	3. Other White	0. White
+28866	9i2M.00	530	0	0	0	Croatian - ethnic category 2001 census	February 2009	530	3. Other White	0. White
+47074	9i2N.00	528	0	0	0	Serbian - ethnic category 2001 census	February 2009	528	3. Other White	0. White
+28936	9i2P.00	1738	0	0	0	Other republics former Yugoslavia - ethnic categ 2001 census	February 2009	1738	3. Other White	0. White
+26391	9i2Q.00	938	0	0	0	Mixed Irish and other White - ethnic category 2001 census	February 2009	938	3. Other White	0. White
+12402	9i2R.00	52734	0	0	0	Oth White European/European unsp/Mixed European 2001 census	February 2009	52734	3. Other White	0. White
+28900	9i2S.00	6260	0	0	0	Other mixed White - ethnic category 2001 census	February 2009	6260	3. Other White	0. White
+12591	9i2T.00	25220	0	1	0	Other White or White unspecified ethnic category 2001 census	February 2009	25221	3. Other White	0. White
+111386	9t02.00	22	0	0	0	White: Gypsy/Irish Traveller - Eng+Wales eth cat 2011 census	October 2016	22	3. Other White	0. White
+110407	9t03.00	538	0	0	0	White: other White backgrd- Eng+Wales ethnic cat 2011 census	December 2015	538	3. Other White	0. White
+115519	9t11.00	1	0	0	0	Irish Traveller - Northern Ireland ethnic cat 2011 census	April 2021	1	3. Other White	0. White
+113253	9t23.00	12	0	0	0	White: Gypsy/Irish Traveller - Scotland ethnic cat 2011 cens	February 2019	12	3. Other White	0. White
+110465	9t24.00	691	0	0	0	White: Polish - Scotland ethnic category 2011 census	January 2016	691	3. Other White	0. White
+110695	9t25.00	39	0	0	0	White: other White ethnic grp- Scotland ethnic cat 2011 cens	March 2016	39	3. Other White	0. White
+45144	1347.00	2543	0	0	0	Indian origin	February 2009	2543	8. Indian	1. South Asian
+12482	9S6..00	100245	0	0	0	Indian	February 2009	100245	8. Indian	1. South Asian
+25920	9T1D.00	3153	0	0	0	Indian	February 2009	3153	8. Indian	1. South Asian
+12414	9i7..00	128289	0	1	0	Indian or British Indian - ethnic category 2001 census	February 2009	128290	8. Indian	1. South Asian
+110477	9t08.00	587	0	0	0	Asian/Asian Brit: Indian - Eng+Wales ethnic cat 2011 census	January 2016	587	8. Indian	1. South Asian
+110422	9t16.00	67	0	0	0	Asian or Asian British: Indian - NI ethnic cat 2011 census	December 2015	67	8. Indian	1. South Asian
+111368	9t28.00	78	0	0	0	Asian: Indian, Indian Scot/Indian Brit- Scotland 2011 census	October 2016	78	8. Indian	1. South Asian
+26062	134M.00	1093	0	0	0	RACE: Pakistani	February 2009	1093	9. Pakistani	1. South Asian
+24690	9S7..00	53589	0	0	0	Pakistani	February 2009	53589	9. Pakistani	1. South Asian
+12460	9i8..00	74253	0	0	0	Pakistani or British Pakistani - ethnic category 2001 census	February 2009	74253	9. Pakistani	1. South Asian
+110464	9t09.00	229	0	0	0	Asian/Asian British:Pakistani- Eng+Wales eth cat 2011 census	January 2016	229	9. Pakistani	1. South Asian
+110538	9t17.00	35	0	0	0	Asian/Asian British: Pakistani - NI ethnic cat 2011 census	February 2016	35	9. Pakistani	1. South Asian
+110460	9t27.00	73	0	0	0	Asian: Pakistani/Pakistani Scot/Pakistani Brit- Scot 2011	January 2016	73	9. Pakistani	1. South Asian
+26348	134I.00	747	0	0	0	RACE: Bangladeshi	February 2009	747	10. Bangladeshi	1. South Asian
+24740	9S8..00	15312	0	0	0	Bangladeshi	February 2009	15312	10. Bangladeshi	1. South Asian
+28888	9i9..00	28161	0	0	0	Bangladeshi or British Bangladeshi - ethn categ 2001 census	February 2009	28161	10. Bangladeshi	1. South Asian
+110590	9t0A.00	111	0	0	0	Asian/Asian Brit: Bangladeshi- Eng+Wales eth cat 2011 census	February 2016	111	10. Bangladeshi	1. South Asian
+110720	9t18.00	28	0	0	0	Asian/Asian British: Bangladeshi - NI ethnic cat 2011 census	April 2016	28	10. Bangladeshi	1. South Asian
+112225	9t29.00	17	0	0	0	Bangladeshi, Bangladeshi Scot or Bangladeshi Brit- Scot 2011	October 2017	17	10. Bangladeshi	1. South Asian
+25801	1343.00	4538	0	1	0	Asian origin	February 2009	4539	11. Other Asian	1. South Asian
+45131	134A.00	256	0	0	0	West Indian origin	February 2009	256	11. Other Asian	1. South Asian
+32095	134K.00	136	0	0	0	RACE: West indian	February 2009	136	11. Other Asian	1. South Asian
+32132	2263.11	1486	0	0	0	O/E - Asian origin	February 2009	1486	11. Other Asian	1. South Asian
+38097	9SA6.00	147	0	0	0	E Afric Asian/Indo-Carib (NMO)	February 2009	147	11. Other Asian	1. South Asian
+46818	9SA6.11	141	0	0	0	East African Asian (NMO)	February 2009	141	11. Other Asian	1. South Asian
+99316	9SA6.12	13	0	0	0	Indo-Caribbean (NMO)	May 2010	13	11. Other Asian	1. South Asian
+39696	9SA7.00	1427	0	0	0	Indian sub-continent (NMO)	February 2009	1427	11. Other Asian	1. South Asian
+26379	9SA8.00	9581	0	0	0	Other Asian (NMO)	February 2009	9581	11. Other Asian	1. South Asian
+12668	9SH..00	39074	0	0	0	Other Asian ethnic group	February 2009	39074	11. Other Asian	1. South Asian
+32396	9T1E.00	527	0	0	0	Other Asian	February 2009	527	11. Other Asian	1. South Asian
+101162	9T9..00	2709	0	0	0	Nepali	December 2010	2709	11. Other Asian	1. South Asian
+12513	9iA..00	67512	0	0	0	Other Asian background - ethnic category 2001 census	February 2009	67512	11. Other Asian	1. South Asian
+26392	9iA1.00	3181	0	1	0	Punjabi - ethnic category 2001 census	February 2009	3182	11. Other Asian	1. South Asian
+64133	9iA2.00	150	0	0	0	Kashmiri - ethnic category 2001 census	February 2009	150	11. Other Asian	1. South Asian
+47077	9iA3.00	1030	0	0	0	East African Asian - ethnic category 2001 census	February 2009	1030	11. Other Asian	1. South Asian
+12608	9iA4.00	9239	0	0	0	Sri Lankan - ethnic category 2001 census	February 2009	9239	11. Other Asian	1. South Asian
+12760	9iA5.00	944	0	0	0	Tamil - ethnic category 2001 census	February 2009	944	11. Other Asian	1. South Asian
+12887	9iA6.00	229	0	0	0	Sinhalese - ethnic category 2001 census	February 2009	229	11. Other Asian	1. South Asian
+32399	9iA7.00	401	0	0	0	Caribbean Asian - ethnic category 2001 census	February 2009	401	11. Other Asian	1. South Asian
+12653	9iA8.00	7883	0	0	0	British Asian - ethnic category 2001 census	February 2009	7883	11. Other Asian	1. South Asian
+46056	9iA9.00	2765	0	0	0	Mixed Asian - ethnic category 2001 census	February 2009	2765	11. Other Asian	1. South Asian
+28935	9iAA.00	14007	0	0	0	Other Asian or Asian unspecified ethnic category 2001 census	February 2009	14007	11. Other Asian	1. South Asian
+111743	9t0C.00	234	0	0	0	Asian/Asian Brit: other Asian- Eng+Wales eth cat 2011 census	April 2017	234	11. Other Asian	1. South Asian
+110425	9t1A.00	91	0	0	0	Asian/Asian British: other Asian - NI ethnic cat 2011 census	January 2016	91	11. Other Asian	1. South Asian
+110855	9t2B.00	61	0	0	0	Asian: other Asian group - Scotland ethnic cat 2011 census	June 2016	61	11. Other Asian	1. South Asian
+12632	9S2..00	26266	0	1	0	Black Caribbean	February 2009	26267	12. Caribbean	2. Black
+12432	9iB..00	29744	0	0	0	Caribbean - ethnic category 2001 census	February 2009	29744	12. Caribbean	2. Black
+110436	9t0E.00	162	0	0	0	Black/African/Caribbn/Black Brit: Caribbean - Eng+Wales 2011	January 2016	162	12. Caribbean	2. Black
+110779	9t1C.00	5	0	0	0	Black/Afri/Carib/Black Brit: Caribbean- NI eth cat 2011 cens	May 2016	5	12. Caribbean	2. Black
+113671	9t2E.00	11	0	0	0	Carib/Black: Caribbean/Carib Scot/Carib Brit- Scotland 2011	May 2019	11	12. Caribbean	2. Black
+45125	1342.00	4227	0	3	0	African origin	February 2009	4230	13. African	2. Black
+12778	9S3..00	109408	0	1	2	Black African	February 2009	109411	13. African	2. Black
+35412	9S44.00	1149	0	0	0	Black - other African country	February 2009	1149	13. African	2. Black
+47969	9SA5.00	703	0	0	0	Other African countries (NMO)	February 2009	703	13. African	2. Black
+12350	9iC..00	91687	0	0	1	African - ethnic category 2001 census	February 2009	91688	13. African	2. Black
+12443	9iD0.00	8852	0	0	0	Somali - ethnic category 2001 census	February 2009	8852	13. African	2. Black
+32886	9iD1.00	7996	0	0	0	Nigerian - ethnic category 2001 census	February 2009	7996	13. African	2. Black
+110437	9t0D.00	564	0	0	0	Black/African/Carib/Black Brit: African- Eng+Wales 2011 cens	January 2016	564	13. African	2. Black
+110630	9t1B.00	45	0	0	0	Black/Afri/Carib/Black Brit: African- NI eth cat 2011 census	March 2016	45	13. African	2. Black
+111059	9t2C.00	108	0	0	0	African: African/African Scot/African Brit - Scotland 2011	July 2016	108	13. African	2. Black
+110655	9t2D.00	39	0	0	0	African: any other African - Scotland ethnic cat 2011 census	March 2016	39	13. African	2. Black
+25894	134H.00	2737	0	2	1	RACE: Afro-caribbean	February 2009	2740	14. Other Black	2. Black
+24339	9S4..00	5289	0	0	0	Black, other, non-mixed origin	February 2009	5289	14. Other Black	2. Black
+12452	9S41.00	18262	0	0	0	Black British	February 2009	18262	14. Other Black	2. Black
+57435	9S42.00	133	0	0	0	Black Caribbean/W.I./Guyana	February 2009	133	14. Other Black	2. Black
+47950	9S42.11	1329	0	0	0	Black Caribbean	February 2009	1329	14. Other Black	2. Black
+47997	9S42.12	302	0	0	0	Black West Indian	February 2009	302	14. Other Black	2. Black
+32100	9S42.13	226	0	0	0	Black Guyana	February 2009	226	14. Other Black	2. Black
+41329	9S43.00	334	0	0	0	Black N African/Arab/Iranian	February 2009	334	14. Other Black	2. Black
+46812	9S43.11	289	0	0	0	Black North African	February 2009	289	14. Other Black	2. Black
+57752	9S43.12	473	0	0	0	Black Arab	February 2009	473	14. Other Black	2. Black
+50286	9S43.13	164	0	0	0	Black Iranian	February 2009	164	14. Other Black	2. Black
+47965	9S45.00	113	0	0	0	Black E Afric Asia/Indo-Caribb	February 2009	113	14. Other Black	2. Black
+57753	9S45.11	167	0	0	0	Black East African Asian	February 2009	167	14. Other Black	2. Black
+57763	9S45.12	41	0	0	0	Black Indo-Caribbean	February 2009	41	14. Other Black	2. Black
+48005	9S46.00	346	0	0	0	Black Indian sub-continent	February 2009	346	14. Other Black	2. Black
+35350	9S47.00	1459	0	0	0	Black - other Asian	February 2009	1459	14. Other Black	2. Black
+26312	9S48.00	554	0	0	0	Black Black - other	February 2009	554	14. Other Black	2. Black
+25676	9S5..00	3614	0	0	0	Black - other, mixed	February 2009	3614	14. Other Black	2. Black
+54593	9SA3.00	168	0	0	0	Caribbean I./W.I./Guyana (NMO)	February 2009	168	14. Other Black	2. Black
+57094	9SA3.11	62	0	0	0	Caribbean Island (NMO)	February 2009	62	14. Other Black	2. Black
+57075	9SA3.12	23	0	0	0	West Indian (NMO)	February 2009	23	14. Other Black	2. Black
+93144	9SA3.13	18	0	0	0	Guyana (NMO)	February 2009	18	14. Other Black	2. Black
+32136	9SG..00	4682	0	0	0	Other black ethnic group	February 2009	4682	14. Other Black	2. Black
+32389	9iD..00	13314	0	0	2	Other Black background - ethnic category 2001 census	February 2009	13316	14. Other Black	2. Black
+40097	9iD2.00	13320	0	0	0	Black British - ethnic category 2001 census	February 2009	13320	14. Other Black	2. Black
+40096	9iD3.00	2428	0	0	0	Mixed Black - ethnic category 2001 census	February 2009	2428	14. Other Black	2. Black
+46047	9iD4.00	2643	0	0	0	Other Black or Black unspecified ethnic category 2001 census	February 2009	2643	14. Other Black	2. Black
+110540	9t0F.00	125	0	0	0	Black/Afr/Carib/Black Brit: other Black- Eng+Wales 2011 cens	February 2016	125	14. Other Black	2. Black
+111880	9t1D.00	15	0	0	0	Black/Afri/Carib/Black Brit: other - NI eth cat 2011 census	June 2017	15	14. Other Black	2. Black
+112649	9t2F.00	8	0	0	0	Carib/Black: Black/Black Scot/Black Brit- Scotland 2011 cens	April 2018	8	14. Other Black	2. Black
+112216	9t2G.00	3	0	0	0	Carib/Black: any other Black/Caribbean grp - Scotland 2011	September 2017	3	14. Other Black	2. Black
+24272	9S9..00	51347	0	0	0	Chinese	February 2009	51347	15. Chinese	3. Other
+12718	9T1C.00	2184	0	0	0	Chinese	February 2009	2184	15. Chinese	3. Other
+12468	9iE..00	44113	0	0	0	Chinese - ethnic category 2001 census	February 2009	44113	15. Chinese	3. Other
+110922	9t0B.00	113	0	0	0	Asian/Asian Brit: Chinese - Eng+Wales ethnic cat 2011 census	June 2016	113	15. Chinese	3. Other
+112363	9t19.00	16	0	0	0	Asian/Asian British: Chinese - NI ethnic cat 2011 census	December 2017	16	15. Chinese	3. Other
+111064	9t2A.00	12	0	0	0	Asian: Chinese - Scotland ethnic category 2011 census	July 2016	12	15. Chinese	3. Other
+30280	9SA..00	8982	0	0	0	Other ethnic non-mixed (NMO)	February 2009	8982	16. Other ethnic group	3. Other
+32110	9SA1.00	807	0	0	0	Brit. ethnic minor. spec.(NMO)	February 2009	807	16. Other ethnic group	3. Other
+57764	9SA2.00	159	0	0	0	Brit. ethnic minor. unsp (NMO)	February 2009	159	16. Other ethnic group	3. Other
+24962	9SA4.00	1202	0	0	0	N African Arab/Iranian (NMO)	February 2009	1202	16. Other ethnic group	3. Other
+47285	9SA4.11	201	0	0	0	North African Arab (NMO)	February 2009	201	16. Other ethnic group	3. Other
+25082	9SA4.12	470	0	0	0	Iranian (NMO)	February 2009	470	16. Other ethnic group	3. Other
+41214	9SAD.00	4927	0	0	0	Other ethnic NEC (NMO)	February 2009	4927	16. Other ethnic group	3. Other
+25411	9SC..00	1255	0	0	0	Vietnamese	February 2009	1255	16. Other ethnic group	3. Other
+12757	9SJ..00	71611	0	1	0	Other ethnic group	February 2009	71612	16. Other ethnic group	3. Other
+32479	9T13.00	40	0	0	0	New Zealand Maori	February 2009	40	16. Other ethnic group	3. Other
+64610	9T14.00	16	0	0	0	Samoan	February 2009	16	16. Other ethnic group	3. Other
+89910	9T15.00	5	0	0	0	Cook Island Maori	February 2009	5	16. Other ethnic group	3. Other
+60837	9T16.00	9	0	0	0	Tongan	February 2009	9	16. Other ethnic group	3. Other
+55584	9T17.00	1	0	0	0	Niuean	February 2009	1	16. Other ethnic group	3. Other
+25434	9T18.00	1	0	0	0	Tokelauan	February 2009	1	16. Other ethnic group	3. Other
+64609	9T19.00	124	0	0	0	Fijian	February 2009	124	16. Other ethnic group	3. Other
+46752	9T1A.00	40	0	0	0	Other Pacific ethnic group	February 2009	40	16. Other ethnic group	3. Other
+46649	9T1B.00	472	0	0	0	South East Asian	February 2009	472	16. Other ethnic group	3. Other
+96789	9T1Y.00	21	0	0	0	Other New Zealand ethnic group	April 2009	21	16. Other ethnic group	3. Other
+71425	9T1Z.00	59	0	0	0	New Zealand ethnic group NOS	February 2009	59	16. Other ethnic group	3. Other
+94487	9T3..00	230	0	0	0	Yemeni	February 2009	230	16. Other ethnic group	3. Other
+12434	9iF..00	38248	0	0	0	Other - ethnic category 2001 census	February 2009	38248	16. Other ethnic group	3. Other
+12719	9iF0.00	1976	0	0	0	Vietnamese - ethnic category 2001 census	February 2009	1976	16. Other ethnic group	3. Other
+12473	9iF1.00	3491	0	0	0	Japanese - ethnic category 2001 census	February 2009	3491	16. Other ethnic group	3. Other
+12420	9iF2.00	7366	0	0	0	Filipino - ethnic category 2001 census	February 2009	7366	16. Other ethnic group	3. Other
+12730	9iF3.00	1842	0	0	0	Malaysian - ethnic category 2001 census	February 2009	1842	16. Other ethnic group	3. Other
+46059	9iF9.00	11510	0	0	0	Arab - ethnic category 2001 census	February 2009	11510	16. Other ethnic group	3. Other
+47028	9iFA.00	2323	0	0	0	North African - ethnic category 2001 census	February 2009	2323	16. Other ethnic group	3. Other
+28909	9iFB.00	4596	0	0	0	Mid East (excl Israeli, Iranian & Arab) - eth cat 2001 cens	February 2009	4596	16. Other ethnic group	3. Other
+46964	9iFC.00	320	0	0	0	Israeli - ethnic category 2001 census	February 2009	320	16. Other ethnic group	3. Other
+25937	9iFD.00	6259	0	0	0	Iranian - ethnic category 2001 census	February 2009	6259	16. Other ethnic group	3. Other
+45964	9iFE.00	2672	0	0	0	Kurdish - ethnic category 2001 census	February 2009	2672	16. Other ethnic group	3. Other
+25451	9iFF.00	895	0	0	0	Moroccan - ethnic category 2001 census	February 2009	895	16. Other ethnic group	3. Other
+26246	9iFG.00	2588	0	0	0	Latin American - ethnic category 2001 census	February 2009	2588	16. Other ethnic group	3. Other
+12756	9iFH.00	4720	0	0	0	South and Central American - ethnic category 2001 census	February 2009	4720	16. Other ethnic group	3. Other
+32382	9iFJ.00	1301	0	0	0	Mauritian/Seychellois/Maldivian/St Helena eth cat 2001census	February 2009	1301	16. Other ethnic group	3. Other
+26455	9iFK.00	5955	0	0	0	Any other group - ethnic category 2001 census	February 2009	5955	16. Other ethnic group	3. Other
+110555	9t0G.00	29	0	0	0	Other ethnic group: Arab - Eng+Wales ethnic cat 2011 census	February 2016	29	16. Other ethnic group	3. Other
+110742	9t0H.00	191	0	0	0	Other ethnic: any other grp - Eng+Wales eth cat 2011 census	April 2016	191	16. Other ethnic group	3. Other
+110780	9t1E.00	16	0	0	0	Other ethnic group: Arab - NI ethnic category 2011 census	May 2016	16	16. Other ethnic group	3. Other
+110646	9t1F.00	43	0	0	0	Other ethnic group: any other grp- NI ethnic cat 2011 census	March 2016	43	16. Other ethnic group	3. Other
+112245	9t2H.00	28	0	0	0	Other ethnic grp: Arab/Arab Scot/Arab British- Scotland 2011	October 2017	28	16. Other ethnic group	3. Other
+111806	9t2J.00	64	0	0	0	Other ethnic grp: any other ethnic grp- Scotland 2011 census	May 2017	64	16. Other ethnic group	3. Other
+32425	9SB5.00	5297	0	0	0	Black Caribbean and White	February 2009	5297	4. White and Black Caribbean	4. Mixed
+12742	9i3..00	20676	0	0	0	White and Black Caribbean - ethnic category 2001 census	February 2009	20676	4. White and Black Caribbean	4. Mixed
+110445	9t04.00	209	0	0	0	Mixed: White+Black Caribbean - Eng+Wales eth cat 2011 census	January 2016	209	4. White and Black Caribbean	4. Mixed
+110661	9t12.00	37	0	0	0	Mixed: White and Black Caribbean - NI ethnic cat 2011 census	March 2016	37	4. White and Black Caribbean	4. Mixed
+45167	134L.00	90	0	0	0	RACE: Afro-caucasian	February 2009	90	5. White and Black African	4. Mixed
+32443	9SB6.00	3988	0	0	0	Black African and White	February 2009	3988	5. White and Black African	4. Mixed
+12437	9i4..00	21170	0	0	0	White and Black African - ethnic category 2001 census	February 2009	21170	5. White and Black African	4. Mixed
+110421	9t05.00	115	0	0	0	Mixed: White+Black African - Eng+Wales eth cat 2011 census	December 2015	115	5. White and Black African	4. Mixed
+110651	9t13.00	23	0	0	0	Mixed: White and Black African - NI ethnic cat 2011 census	March 2016	23	5. White and Black African	4. Mixed
+32401	9SB2.00	7279	0	1	0	Other ethnic, Asian/White orig	February 2009	7280	6. White and Asian	4. Mixed
+12638	9i5..00	18695	0	0	0	White and Asian - ethnic category 2001 census	February 2009	18695	6. White and Asian	4. Mixed
+110652	9t06.00	117	0	0	0	Mixed: White+Asian - Eng+Wales ethnic category 2011 census	March 2016	117	6. White and Asian	4. Mixed
+110471	9t14.00	58	0	0	0	Mixed: White and Asian - NI ethnic category 2011 census	January 2016	58	6. White and Asian	4. Mixed
+25623	9S51.00	2206	0	0	0	Other Black - Black/White orig	February 2009	2206	7. Other Mixed	4. Mixed
+32165	9S52.00	436	0	0	0	Other Black - Black/Asian orig	February 2009	436	7. Other Mixed	4. Mixed
+12696	9SB..00	17935	0	0	0	Other ethnic, mixed origin	February 2009	17935	7. Other Mixed	4. Mixed
+47401	9SB1.00	1066	0	0	0	Other ethnic, Black/White orig	February 2009	1066	7. Other Mixed	4. Mixed
+35459	9SB3.00	932	0	0	0	Other ethnic, mixed white orig	February 2009	932	7. Other Mixed	4. Mixed
+32420	9SB4.00	5701	0	0	0	Other ethnic, other mixed orig	February 2009	5701	7. Other Mixed	4. Mixed
+12873	9i6..00	27126	0	2	0	Other Mixed background - ethnic category 2001 census	February 2009	27128	7. Other Mixed	4. Mixed
+12795	9i60.00	1209	0	0	0	Black and Asian - ethnic category 2001 census	February 2009	1209	7. Other Mixed	4. Mixed
+49940	9i61.00	337	0	0	0	Black and Chinese - ethnic category 2001 census	February 2009	337	7. Other Mixed	4. Mixed
+40110	9i62.00	1955	0	0	0	Black and White - ethnic category 2001 census	February 2009	1955	7. Other Mixed	4. Mixed
+12706	9i63.00	2872	0	0	0	Chinese and White - ethnic category 2001 census	February 2009	2872	7. Other Mixed	4. Mixed
+47005	9i64.00	2909	0	1	0	Asian and Chinese - ethnic category 2001 census	February 2009	2910	7. Other Mixed	4. Mixed
+32408	9i65.00	4062	0	0	0	Other Mixed or Mixed unspecified ethnic category 2001 census	February 2009	4062	7. Other Mixed	4. Mixed
+110654	9t07.00	75	0	0	0	Mixed: other Mixed/multiple backgrd - Eng+Wales 2011 census	March 2016	75	7. Other Mixed	4. Mixed
+110536	9t15.00	25	0	0	0	Mixed: other Mixed/multiple ethnic backgrd - NI 2011 census	February 2016	25	7. Other Mixed	4. Mixed
+110696	9t26.00	45	0	0	0	Mixed/multiple ethnic grps: any- Scot ethnic cat 2011 census	March 2016	45	7. Other Mixed	4. Mixed
+25969	226..00	58212	0	10	15	O/E - ethnic group	February 2009	58237	17. Not Stated	5. Not Stated
+12332	226..11	8676	0	0	9	O/E - ethnic origin	February 2009	8685	17. Not Stated	5. Not Stated
+60284	226Z.00	151	0	0	0	O/E - ethnic group NOS	February 2009	151	17. Not Stated	5. Not Stated
+10196	9S...00	70883	0	0	155	Ethnic groups (census)	February 2009	71038	17. Not Stated	5. Not Stated
+24340	9SE..00	110776	0	1	0	Ethnic group not recorded	February 2009	110777	17. Not Stated	5. Not Stated
+45199	9SZ..00	8099	0	0	1	Ethnic groups (census) NOS	February 2009	8100	17. Not Stated	5. Not Stated
+23955	9T...00	43704	0	3	762	Ethnicity and other related nationality data	February 2009	44469	17. Not Stated	5. Not Stated
+45008	9T1..00	171	0	0	0	New Zealand ethnic groups	February 2009	171	17. Not Stated	5. Not Stated
+12435	9i...00	111777	0	0	468	Ethnic category - 2001 census	February 2009	112245	17. Not Stated	5. Not Stated
+12459	9iG..00	261828	0	2	0	Ethnic category not stated - 2001 census	February 2009	261830	17. Not Stated	5. Not Stated
+110472	9t...00	835	0	0	0	Ethnic category - 2011 census	January 2016	835	17. Not Stated	5. Not Stated
+110417	9t0..00	316	0	0	0	Ethnic category - 2011 census England and Wales	December 2015	316	17. Not Stated	5. Not Stated
+112302	9t1..00	952	0	0	0	Ethnic category - 2011 census Northern Ireland	November 2017	952	17. Not Stated	5. Not Stated
+110962	9t2..00	80	0	0	0	Ethnic category - 2011 census Scotland	June 2016	80	17. Not Stated	5. Not Stated

@@ -1,0 +1,133 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of codelist_ethnicity code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to use the 
+ethnicity code lists to define ethnicity
+and to cite the authors. 
+Researchers, refer to codelist_ethnicity.do for instructions
+about modifying this file.
+~~~~
+
+## COVER SHEET
+~~~~
+
+Codelist name: Ethnicity 
+
+Data source(s):
+    - Clinical Practice Research Datalink GOLD (up to March 2023)
+    - Clinical Practice Research Datalink Aurum (up to March 2023)
+	- Note CPRD provide categorised ethnicity data for HES
+
+Terminology(s)
+    - Read Version 2 (GOLD)
+    - SNOMED-CT (and EMIS codes) (Aurum)
+  
+Clinical concept:
+	Ethnicity. The search identifies all codes indicating an individual's
+	ethnicity as conceptualised and defined by the Office of National Statistics.
+	
+	Codes with the following concepts in the read term are included:
+	- codes that specify they refer to ethnicity/ethnic groups or categories
+	-mixed and non-mixed ethnicity codes
+	- codes including terms such as white, black, caucasian, aisian
+	- codes in ethnicity Read chapters that are synonomous with, or represent
+	countries with a largely homogonous ethnic population (e.g. Japanese, Indian)
+	
+	Codes that describe other countries or regions, nationalities or religions 
+	are not included (e.g. England, Europe, British, Christian).
+	
+	The conceptualisation of ethnicity evolves over time and this will need to
+	be reevaluated periodically.
+	
+Files created:
+	- codelist_ethnicity_gold.dta
+	- codelist_ethnicity_aurum.dta
+	- codelist_ethnicity_gold.txt
+	- codelist_ethnicity_aurum.txt
+	
+Author:
+	- Rohini Mathur (created original codes list and strategy)
+	- modified date: 2023-06-09
+version: 1 (first published version on EHR Github page)
+
+
+~~~~
+
+## Version control (more detail)
+
+~~~~
+Date created: 2012
+Author:	Rohini Mathur (Epidemiologist, LSHTM)
+Clinical advisors:
+Liam Smeeth, CPRD team
+
+Data updated: multiple updates including adaptation to Aurum and new
+categorisations of the 2011 and 2021 census
+Author:	Rohini Mathur (Epidemiologist, LSHTM)
+
+
+Date updated: 05/06/2023
+Updated by: Helen Strongman (Epidemiologist, LSHTM)
+(Clinical) advisors: Rohini Mathur
+Changes: created do files to update the original code list with cover sheet
+
+~~~~
+
+~~~~
+## DEFINITION
+Ethnicity codes are grouped as follows using the eth5 and eth16 variables:
+
+
+eth5:
+0 0. White
+1 1. South Asian
+2 2. Black
+3 3. Other
+4 4. Mixed
+5 5. Not Stated
+
+		   
+eth16:
+
+1 1. British
+2 2. Irish
+3 3. Other White
+4 4. White and Black Caribbean
+5 5. White and Black African
+6 6. White and Asian
+7 7. Other Mixed
+8 8. Indian
+9 9. Pakistani
+10 10. Bangladeshi
+11 11. Other Asian
+12 12. Caribbean
+13 13. African
+14 14. Other Black
+15 15. Chinese
+16 16. Other ethnic group
+17 17. Not Stated
+88 88. Unknown
+
+Recommendations to generate ethnicity ?????
+OR refer to another do file.
+
+~~~~
+## STUDIES AND PROTOCOLS
+~~~~
+https://pubmed.ncbi.nlm.nih.gov/24323951/ - ORIGINAL STUDY
+https://researchonline.lshtm.ac.uk/id/eprint/2478832/ - ROHINI'S STUDY CHAPTER 5,
+FLOW DIAGRAM P74 = HOW TO GENERATE ETHNICITY VARIABLE FROM DATA
+
+Note CPRD have validated an ethnicity code list and algorithm.
+The code lists are available in the supplementary appendix but they are not 
+matched to categories.
+Shiekh, S.I., Harley, M., Ghosh, R.E. et al. Completeness, agreement, and 
+representativeness of ethnicity recording in the United Kingdom's Clinical
+Practice Research Datalink (CPRD) and linked Hospital Episode Statistics (HES). 
+Popul Health Metrics 21, 3 (2023). https://doi.org/10.1186/s12963-023-00302-0
+
+~~~~

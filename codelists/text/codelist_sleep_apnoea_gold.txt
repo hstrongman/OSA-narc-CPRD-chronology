@@ -1,0 +1,10 @@
+medcode	readcode	clinevents	imevents	refevents	testevents	term	firstbuild	category
+8148	Fy03.11	43154	0	1777	0	Obstructive sleep apnoea	February 2009	Obstructive Sleep Apnoea
+20748	H5B0.00	3020	0	37	0	Obstructive sleep apnoea	February 2009	Obstructive Sleep Apnoea
+7603	Fy03.00	26447	0	3187	0	Sleep apnoea	February 2009	Sleep apnoea NOS
+23779	H5B..00	6519	0	508	0	Sleep apnoea	February 2009	Sleep apnoea NOS
+36301	R005300	2185	0	65	0	[D]Hypersomnia with sleep apnoea	February 2009	Sleep apnoea NOS
+48539	R005100	152	0	2	0	[D]Insomnia with sleep apnoea	February 2009	Sleep apnoea NOS
+2506	R005311	49109	0	12842	1	[D]Sleep apnoea syndrome	February 2009	Sleep apnoea syndrome NOS
+20438	R005312	374	0	65	0	[D]Syndrome sleep apnoea	February 2009	Sleep apnoea syndrome NOS
+26871	Q318.00	378	0	96	0	Primary sleep apnoea of newborn	February 2009	Primary sleep apnoea

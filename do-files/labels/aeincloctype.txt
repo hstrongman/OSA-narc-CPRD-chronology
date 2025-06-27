@@ -1,0 +1,7 @@
+Aeincloctype	description
+10 	 Home 
+40 	 Work 
+50 	 Educational establishment 
+60 	 Public place 
+91 	 Other 
+99 	 Not known

@@ -1,0 +1,272 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+<<dd_do:quietly>>
+clear all
+set more off
+cap log close
+log using "$logdir\codelist_apnoea_log.txt", replace text
+<</dd_do>>
+
+cr_codelist_apnoea.do
+===============================================================
+
+
+## Version control
+
+~~~~
+Date created: 15/03/2022
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors:
+Dr Tim Quinnell (Respiratory and sleep specialist, Royal Papworth Hospital Trust)
+Dr Sofia Eriksson (Neurologist and sleep specialist, UCL)
+
+Date updated: 02/08/2022
+Updated by: Helen Strongman
+Clinical advisors: not needed
+Changes: separate category for central and primary sleep apnoea, care pathway
+		codes excluded 
+CPRD build: 2022_02
+
+## Validation: 
+A validation study is planned as part of this study.
+
+## Phenotype/feature
+All types of sleep apnoea with recommendations for identifying an Obstructive
+Sleep Apnoea diagnosis and censoring when other types of sleep
+apnoea are diagnosed. 
+
+Categories (category variable):
+1 "Obstructive Sleep Apnoea (OSA)"
+2 "Obstructive sleep apnoea syndrome (OSAS)"
+3 "Sleep apnoea NOS"
+4 "Sleep apnoea syndrome NOS"
+5 "Central sleep apnoea only"
+6 "Primary sleep apnoea only" 
+7 "Care pathway"
+
+Recommended definition of OSA diagnosis and follow-up: 
+(1) First ever record of OSA (codes 1 to 4). 
+This is because OSA/OSAS are the 
+most commonly diagnosed form of sleep apnoea and GPs often use nonspecific codes. 
+Specialists do differentiate between OSA and OSAS but it will not be possible to
+do this using primary care data. Mixed sleep apnoea is included in codes 1 to 4 
+because OSA is likely to be the dominant or at least co-dominant condition. 
+(2) Exclude if prior record of central sleep apnoea or primary sleep apnoea
+(codes 5 & 6).
+These are distinct from OSA with different co-morbidities and health implications.
+(3) Censor follow up if central sleep apnoea or primary sleep apnoea are recorded
+after diagnosis with OSA.
+
+Next steps:
+
+2. add comparison to previous code lists
+3. Change terminology to match HDR UK? https://phenotypes.healthdatagateway.org/technical_documentation/
+4. Check against Julian's criteria
+4. Work out how to run for all dictionaries
+5. Problem spotting - using locals within basic text? stop the command being 
+displayed as well as the answer?
+6. Make text clearer and write instructions for changing the code list
+
+NEED TO RUN FOR ALL DICTIONARIES - CREATE COMMON TERMS? WHICH VARS DO WE NEED?
+code (medcode GOLD, medcodeid Aurum, ??ICD-10)
+term (description ICD-10 - can change)
+event counts (multiple GOLD, observations Aurum - only needed for log/markdown)
+
+~~~~
+
+<<dd_do:quietly>>
+use "$dict_aurummed", clear
+destring observations, replace
+gen _term_lower = lower(term)
+generate _marker=.
+
+local interms "apnoea apnea OSA"
+local inchaps "H5B R005 Fy03"
+local exterms "mosaic mask questionnaire clinic appliance treatment monitoring recording assessment operation"
+<</dd_do>>
+
+
+## BASIC SEARCH
+~~~~
+
+<<dd_do>>
+display "Inclusion terms: `interms'"
+display "Inclusion chapters: `inchaps'"
+display "Exclusion chapters: `exterms'"
+<</dd_do>>
+
+Note: Care pathway terms excluded because they are rarely used and mostly indicate
+testing for sleep apnoea
+
+~~~~
+
+<<dd_do:quietly>>
+
+foreach word of local interms {
+	replace _marker = 1 if strmatch(term, "*`word'*")
+	replace _marker = 1 if strmatch(_term_lower, "*`word'*")
+	}
+	
+foreach chap of local inchaps {
+	replace _marker = 1 if strmatch(cleansedreadcode, "`chap'*")
+	}
+
+keep if _marker == 1
+
+foreach word of local exterms {
+	replace _marker = 0 if strmatch(_term_lower, "*`word'*")
+	}
+
+<</dd_do>> 
+
+## CODE LIST SPECIFIC SEARCH CRITERIA
+
+~~~~
+All terms should include "sleep" & "apnoea" or "apnea"
+
+<<dd_do:quietly>>
+replace _marker = 0 if !strmatch(_term_lower, "*sleep*")
+replace _marker = 0 if !strmatch(_term_lower, "*apnoea*") & !strmatch(_term_lower, "*apnea*")
+<</dd_do>>
+
+~~~~
+
+## CHECK EXCLUDED CODES
+<<dd_do:>>
+list term if _marker == 0
+<</dd_do>>
+
+## CREATE CATEGORIES
+
+~~~~
+
+<<dd_do:quietly>>
+drop if _marker == 0
+gen category = 0
+label define categorylab 1 "Obstructive Sleep Apnoea" 2 "Obstructive sleep apnoea syndrome" 3 "Sleep apnoea NOS" 4 "Sleep apnoea syndrome NOS" 5 "Central sleep apnoea" 6 "Primary sleep apnoea"
+label values category categorylab
+<</dd_do>>
+
+1: Obstructive Sleep Apnoea
+This category includes terms including the strings "obstructive" or "mixed" but not "syndrome"
+
+<<dd_do:quietly>>
+replace category = 1 if strmatch(_term_lower, "*obstructive*") & !strmatch(_term_lower, "*syndrome*")
+replace category = 1 if strmatch(_term_lower, "*mixed*") & !strmatch(_term_lower, "*syndrome*")
+<</dd_do>>
+
+2: Obstructive Sleep Apnoea Syndrome
+This category includes terms including "obstructive" or "mixed" and "syndrome"
+
+<<dd_do:quietly>>
+replace category = 2 if strmatch(_term_lower, "*obstructive*") & strmatch(_term_lower, "*syndrome*")
+replace category = 2 if strmatch(_term_lower, "*mixed*") & strmatch(_term_lower, "*syndrome*")
+replace category = 1 if category == 2 & strmatch(_term_lower, "*dysmorphism syndrome*")
+<</dd_do>>
+
+5. Central sleep apnoea
+This category includes terms including the string "central"
+
+<<dd_do:quietly>>
+local specterms = "central"
+foreach word of local specterms {
+	replace category = 5 if strmatch(_term_lower, "*`word'*")
+}
+<</dd_do>>
+
+6. Primary sleep apnoea
+This category includes terms including the string "primary"
+
+<<dd_do:quietly>>
+local specterms = "primary"
+foreach word of local specterms {
+	replace category = 6 if strmatch(_term_lower, "*`word'*")
+}
+<</dd_do>>
+
+4. Sleep apnoea syndrome NOS
+This category includes terms that have not been classified and include the string "syndrome"
+
+<<dd_do:quietly>>
+replace category = 4 if category == 0 & strmatch(_term_lower, "*syndrome*")
+<</dd_do>>
+
+3. sleep apnoea NOS
+This category includes terms that have not been classified
+
+<<dd_do:quietly>>
+replace category = 3 if category == 0
+<</dd_do>>
+~~~~
+
+## CHECK INCLUDED CODES AND CATEGORISATION
+
+~~~~
+<<dd_do:quietly>>
+gsort category -observations
+<</dd_do>>
+
+## Codes by categorylab
+<<dd_do:>>
+list category term observations
+<</dd_do>>
+
+~~~~
+
+## Number of observations per category
+
+~~~~
+<<dd_do: quietly>>
+quietly preserve
+quietly collapse (sum) observations, by(category)
+<</dd_do>>
+
+<<dd_do:>>
+list
+quietly restore
+quietly drop _*
+<</dd_do>>
+
+~~~~
+
+## Compare with previous version
+
+~~~~
+
+<<dd_do:quietly>>
+preserve
+rename category _categorynew
+label variable _categorynew "Category in new codelist"
+merge 1:1 medcodeid using "$olddir\cr_codelist_apnoea_aurum", noreport
+gen _comparison = _merge
+label define _comparisonlab 1 "New only" 2 "Old only" 3 "Code and category match"
+label values _comparison _comparisonlab
+label variable _comparison "Comparison of old and updated code list"
+rename category _categoryold
+label variable _categorynew "Category in old codelist"
+sort _comparison _categorynew observations
+<</dd_do>>
+
+<<dd_do:>>
+tab _comparison
+*ONLY IN NEW CODELIST
+list term _categorynew _categoryold observations if _comparison == 1
+*ONLY IN OLD CODELIST
+list term _categorynew _categoryold observations if _comparison == 2
+<</dd_do>>
+
+
+~~~~
+
+## SAVE FILE
+
+~~~~
+
+<<dd_do:>>
+save "$datadir_stata\codelist_sleep_apnoea_aurum.dta", replace
+export delimited using "$datadir_text\codelist_apnoea_aurum.txt", replace delimiter(tab)
+<</dd_do>>
+~~~~
+
+

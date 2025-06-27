@@ -1,0 +1,59 @@
+diag3	description
+01	Laceration
+021	Contusion
+022	Abrasion
+03	Soft tissue inflammation
+041	Concussion
+042	Other head injury
+051	Dislocation
+052	Open fracture
+053	Closed fracture
+054	Joint injury
+055	Amputation
+06	Sprain/ligament injury
+07	Muscle/tendon injury
+08	Nerve injury
+09	Vascular injury
+101	Burns and scalds - electric
+102	Burns and scalds - thermal
+103	Burns and scalds - chemical
+104	Burns and scalds - radiation
+11	Electric shock
+12	Foreign body
+13	Bites/stings
+141	Poisoning (inc overdose) - prescriptive drugs
+142	Poisoning (inc overdose) - proprietary drugs
+143	Poisoning (inc overdose) - controlled drugs
+144	Poisoning (inc overdose) - other, inc alcohol
+15	Near drowning
+16	Visceral injury
+171	Infectious disease - notifiable
+172	Infectious disease - non-notifiable
+18	Local infection
+19	Septicaemia
+201	Cardiac conditions - myocardial ischaemia & infarction
+202	Cardiac conditions - other non-ischaemia
+21	Cerebro-vascular conditions
+22	Other vascular conditions
+23	Haematological conditions
+241	Central nervous system conditions - epilepsy
+242	Central nervous system conditions - other non-epilepsy
+251	Respiratory conditions - bronchial asthma
+252	Respiratory conditions - other non-asthma
+261	Gastrointestinal conditions - haemorrhage
+262	Gastrointestinal conditions - acute abdominal pain
+263	Gastrointestinal conditions - other
+27	Urological conditions (inc cystitis)
+28	Obstetric conditions
+29	Gynaecological conditions
+301	Diabetes and other endocrinological conditions - diabetic
+302	Diabetes and other endocrinological conditions - other non-diabetic
+31	Dermatological conditions
+32	Allergy (inc anaphylaxis)
+33	Facio-maxillary conditions
+34	ENT conditions
+35	Psychiatric conditions
+36	Ophthalmological  conditions
+37	Social problems (inc chronic alcoholism and homelessness)
+38	Diagnosis not classifiable
+39	Nothing abnormal detected

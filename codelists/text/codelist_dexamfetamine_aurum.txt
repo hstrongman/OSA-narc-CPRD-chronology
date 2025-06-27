@@ -1,0 +1,24 @@
+prodcodeid	dmdid	termfromemis	productname	formulation	routeofadministration	drugsubstancename	substancestrength	bnfchapter	drugissues
+429941000033117	3145411000001109	Dexedrine 5mg tablets (Auden McKenzie (Pharma Division) Ltd)	Dexedrine 5mg tablets	Tablet	Oral	Dexamfetamine sulfate	5.000mg		30000
+2973341000033115	7703311000001106	Dexedrine 15mg Spansules (Imported (United States))	Dexedrine 15mg Spansules	Modified-release capsule		Dexamfetamine sulfate	15.000mg		40
+3087941000033117	7719911000001107	Dexamfetamine 15mg modified-release capsules	Dexamfetamine 15mg modified-release capsules	Modified-release capsule	Oral	Dexamfetamine sulfate	15.000mg	04040000	100
+3088041000033119	39708411000001103	Dexamfetamine 5mg tablets	Dexamfetamine 5mg tablets	Tablet	Oral	Dexamfetamine sulfate	5.000mg	04040000	200000
+3347341000033111	11787411000001106	Dexamfetamine 5mg/5ml oral solution	Dexamfetamine 5mg/5ml oral solution	Oral solution	Oral	Dexamfetamine sulfate	1.000mg/1.000ml	04040000	1000
+5244941000033119	15852411000001101	Amfetamine 5mg / Dexamfetamine 5mg modified-release capsules	Amfetamine 5mg / Dexamfetamine 5mg modified-release capsules	Modified-release capsule	Oral	Amfetamine/ Dexamfetamine	5.000mg + 5.000mg	04040000	9
+5246941000033112	15852011000001105	Amfetamine 10mg / Dexamfetamine 10mg modified-release capsules	Amfetamine 10mg / Dexamfetamine 10mg modified-release capsules	Modified-release capsule	Oral	Amfetamine/ Dexamfetamine	10.000mg + 10.000mg	04040000	30
+5247141000033112	15852111000001106	Amfetamine 12.5mg / Dexamfetamine 12.5mg modified-release capsules	Amfetamine 12.5mg / Dexamfetamine 12.5mg modified-release capsules	Modified-release capsule	Oral	Amfetamine/ Dexamfetamine	12.500mg + 12.500mg	04040000	5
+5247241000033117	15852211000001100	Amfetamine 15mg / Dexamfetamine 15mg modified-release capsules	Amfetamine 15mg / Dexamfetamine 15mg modified-release capsules	Modified-release capsule	Oral	Amfetamine/ Dexamfetamine	15.000mg + 15.000mg	04040000	30
+5247341000033110	15852311000001108	Amfetamine 2.5mg / Dexamfetamine 2.5mg modified-release capsules	Amfetamine 2.5mg / Dexamfetamine 2.5mg modified-release capsules	Modified-release capsule	Oral	Amfetamine/ Dexamfetamine	2.500mg + 2.500mg	04040000	2
+5247441000033116	15846411000001103	Adderall XR 5mg capsules (Imported (United States))	Adderall XR 5mg capsules	Modified-release capsule		Amfetamine/ Dexamfetamine	2.500mg + 2.500mg		4
+5247541000033115	15846811000001101	Adderall XR 30mg capsules (Imported (United States))	Adderall XR 30mg capsules	Modified-release capsule		Amfetamine/ Dexamfetamine	15.000mg + 15.000mg		70
+5247741000033111	15846711000001109	Adderall XR 25mg capsules (Imported (United States))	Adderall XR 25mg capsules	Modified-release capsule		Amfetamine/ Dexamfetamine	12.500mg + 12.500mg		7
+5247841000033118	15846611000001100	Adderall XR 20mg capsules (Imported (United States))	Adderall XR 20mg capsules	Modified-release capsule		Amfetamine/ Dexamfetamine	10.000mg + 10.000mg		100
+5248041000033112	15846511000001104	Adderall XR 15mg capsules (Imported (United States))	Adderall XR 15mg capsules	Modified-release capsule		Amfetamine/ Dexamfetamine	7.500mg + 7.500mg		4
+5248241000033116	15835111000001103	Adderall XR 10mg capsules (Imported (United States))	Adderall XR 10mg capsules	Modified-release capsule		Amfetamine/ Dexamfetamine	5.000mg + 5.000mg		60
+5890641000033119	11787511000001105	Dexamfetamine 5mg/5ml oral suspension	Dexamfetamine 5mg/5ml oral suspension	Oral suspension	Oral	Dexamfetamine sulfate	1.000mg/1.000ml	04040000	40
+9300441000033111	24670011000001107	Dexamfetamine 5mg/5ml oral solution sugar free	Dexamfetamine 5mg/5ml oral solution sugar free	Oral solution	Oral	Dexamfetamine sulfate	1.000mg/1.000ml	04040000	800
+10617541000033115	30742411000001106	Amfexa 5mg tablets (Flynn Pharma Ltd)	Amfexa 5mg tablets	Tablet	Oral	Dexamfetamine sulfate	5.000mg		1000
+11788541000033116	33595811000001106	Dexamfetamine 10mg tablets	Dexamfetamine 10mg tablets	Tablet	Oral	Dexamfetamine sulfate	10.000mg	04040000	10000
+11788641000033115	33595911000001101	Dexamfetamine 20mg tablets	Dexamfetamine 20mg tablets	Tablet	Oral	Dexamfetamine sulfate	20.000mg	04040000	3000
+11788741000033112	33590111000001107	Amfexa 20mg tablets (Flynn Pharma Ltd)	Amfexa 20mg tablets	Tablet	Oral	Dexamfetamine sulfate	20.000mg		300
+11788841000033119	33589611000001109	Amfexa 10mg tablets (Flynn Pharma Ltd)	Amfexa 10mg tablets	Tablet	Oral	Dexamfetamine sulfate	10.000mg		900

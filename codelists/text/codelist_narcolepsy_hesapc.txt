@@ -1,0 +1,2 @@
+ICD	alt_code	usage	usage_uk	term	modifier_4	modifier_5	qualifiers	gender_mask	min_age	max_age	tree_description	category
+G47.4	G474	DEFAULT	3	Narcolepsy and cataplexy								Narcolepsy

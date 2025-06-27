@@ -1,0 +1,106 @@
+<<dd_version: 2>>
+<<dd_include: header.txt>>
+
+Description of codelist_sleep_apnoea code lists
+===============================================================
+
+~~~~
+This HTML file includes information that is needed to use the 
+sleep apnoea code lists to define Obstructive Sleep Apnoea (OSA)
+and to cite the authors. 
+Researchers, refer to codelist_sleep_apnoea.do for instructions
+about modifying this file.
+~~~~
+
+## HDR UK phenotype definition file
+~~~~
+Temporary comment: I have used the HDR phenotype structure as an example. We need
+to decide whether to upload code lists to HDR UK, data compass or
+another repository.
+
+title: Sleep apnoea
+name: Sleep apnoea with categorisation
+phenotype_id: N/A
+type: Disease or syndrome
+group: Respiratory
+data_sources:
+    - Clinical Practice Research Datalink GOLD
+    - Clinical Practice Research Datalink Aurum
+    - Hospital Episode Statistics APC for CPRD GOLD
+    - Hospital Episode Statistics APC for CPRD Aurum
+clinical_terminologies:
+    - Read Version 2
+    - SNOMED-CT (and EMIS codes)
+    - ICD-10
+validation:
+	- casenote review planned
+codelists:
+NB would need to use HDRUK naming convention to submit
+	- codelist_sleep_apnoea_gold.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_aurum.dta
+	- codelist_sleep_apnoea_gold.txt
+	- codelist_sleep_apnoea_aurum.txt
+	- codelist_sleep_apnoea_aurum.txt
+valid_event_data_range: up to 05_2022
+sex:
+	- Female
+	- Male
+author:
+	- Helen Strongman, Tim Quinnell, Sofia Eriksson
+date: 2022-03-15
+modified date: 2022-08-04
+version: 1 (first published version)
+
+~~~~
+
+## Version control (more detail)
+
+~~~~
+Date created: 15/03/2022
+Author:	Helen Strongman (Epidemiologist, LSHTM)
+Clinical advisors:
+Dr Tim Quinnell (Respiratory and sleep specialist, Royal Papworth Hospital Trust)
+Dr Sofia Eriksson (Neurologist and sleep specialist, UCL)
+
+Date updated: 02/08/2022
+Updated by: Helen Strongman
+Clinical advisors: not needed
+Changes: separate category for central and primary sleep apnoea, care pathway
+		codes excluded 
+~~~~
+
+~~~~
+## DEFINITION
+Codes for sleep apnoea are categorised as follows using the category variable:
+
+Categories (category variable):
+1 "Obstructive Sleep Apnoea (OSA)"
+2 "Obstructive sleep apnoea syndrome (OSAS)"
+3 "Sleep apnoea NOS"
+4 "Sleep apnoea syndrome NOS"
+5 "Central sleep apnoea only"
+6 "Primary sleep apnoea only" 
+
+Here are recommendations to use these categories to identify an Obstructive
+Sleep Apnoea diagnosis and for censoring follow-up when other types of sleep 
+apnoea are diagnosed. 
+
+(1) First ever record of OSA (codes 1 to 4). 
+OSA/OSAS are the most commonly diagnosed form of sleep apnoea and GPs often use 
+nonspecific codes. Specialists do differentiate between OSA
+and OSAS but it will not be possible to do this using primary care data. 
+Mixed sleep apnoea codes are included in codes 1 to 4 because OSA is likely to
+be the dominant or at least co-dominant condition. 
+(2) Exclude if prior record of central sleep apnoea or primary sleep apnoea
+(codes 5 & 6). These are distinct from OSA with different co-morbidities and 
+health implications.
+(3) Censor follow up if central sleep apnoea or primary sleep apnoea are recorded
+after diagnosis with OSA.
+
+~~~~
+## STUDIES AND PROTOCOLS
+~~~~
+I will add a link to my fellowship protocol when I've decided which site to
+upload it to.
+~~~~
