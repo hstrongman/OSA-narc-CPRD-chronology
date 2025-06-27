@@ -3,11 +3,13 @@
 ## Purpose
 
 Project: Chronology of healthcare resource use and comorbidities in people with obstructive sleep apnoea and narcolepsy before and after diagnosis: a descriptive study
-Protocol: The protocol for this project has been approved through CPRD's Research Data Governance process (https://github.com/user-attachments/assets/669f07ea-297a-4799-9259-7e85f6b009c6). The porocol is registered here: (https://osf.io/f5ukw)
+
+Protocol: The protocol for this project has been approved through CPRD's Research Data Governance process (https://github.com/user-attachments/assets/669f07ea-297a-4799-9259-7e85f6b009c6). The protocol is registered here: (https://osf.io/f5ukw)
+
 Funder: Helen Strongman, NIHR Advanced Fellowship NIHR301730, is funded by the National Institute for Health and Care Research (NIHR) for this research project. The views expressed in associated publications are those of the author(s) and not necessarily those of the NIHR, NHS or the UK Department of Health and Social Care (https://github.com/user-attachments/assets/b597ec50-84f4-4041-9953-d7447c5cc57f)
 (https://fundingawards.nihr.ac.uk/award/NIHR301730). 
 
-This repository will be updated as components of this protocol and completed and published as pre-prints and peer-reviewed manuscripts. DOIs will be available following peer-review.
+This repository will be updated as components of this protocol are completed and published as pre-prints and peer-reviewed manuscripts. DOIs will be available following peer-review.
 There is a separate repository for the validation study as this was completed using a different CPRD database release (hstrongman/OSA-narc-CPRD-validation).
 
 ## Untracked files
