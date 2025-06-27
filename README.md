@@ -1,8 +1,6 @@
-# Codelists, data management and analysis scripts for OSA and narcolepsy studies
+# Chronology of healthcare resource use and comorbidities in people with obstructive sleep apnoea and narcolepsy before and after diagnosis: a descriptive study
 
-## Purpose
-
-Project: Chronology of healthcare resource use and comorbidities in people with obstructive sleep apnoea and narcolepsy before and after diagnosis: a descriptive study
+## Project information
 
 Funder: Helen Strongman, NIHR Advanced Fellowship NIHR301730, is funded by the National Institute for Health and Care Research (NIHR) for this research project. The views expressed in associated publications are those of the author(s) and not necessarily those of the NIHR, NHS or the UK Department of Health and Social Care (https://fundingawards.nihr.ac.uk/award/NIHR301730). 
 
