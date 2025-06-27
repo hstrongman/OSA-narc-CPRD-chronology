@@ -9,5 +9,9 @@ Protocol: The protocol for this project has been approved through CPRD's Researc
 This repository will be updated as components of this protocol are completed and published as pre-prints and peer-reviewed manuscripts. DOIs will be available following peer-review.
 There is a separate repository for the validation study as this was completed using a different CPRD database release (hstrongman/OSA-narc-CPRD-validation).
 
-## Updates
+## Folder structure
 
+The "codelists" folder includes do files, scripts and metadata related to codelist generation.
+Codelists are also saved on LSHTM data compass with completed checklists describing how they were created: (https://datacompass.lshtm.ac.uk/id/eprint/4626/) 
+
+## Versions
