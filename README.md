@@ -1,8 +1,14 @@
-# EHR group template for Stata
+# Codelists, data management and analysis scripts for OSA and narcolepsy studies
 
 ## Purpose
 
-A template to begin a project with Stata. [Click here](https://github.com/ehr-lshtm/template-stata/generate) to use this template, then replace this text with a desription of your project.
+Project: Chronology of healthcare resource use and comorbidities in people with obstructive sleep apnoea and narcolepsy before and after diagnosis: a descriptive study
+Protocol: The protocol for this project has been approved through CPRD's Research Data Governance process (https://github.com/user-attachments/assets/669f07ea-297a-4799-9259-7e85f6b009c6). The porocol is registered here: (https://osf.io/f5ukw)
+Funder: Helen Strongman, NIHR Advanced Fellowship NIHR301730, is funded by the National Institute for Health and Care Research (NIHR) for this research project. The views expressed in associated publications are those of the author(s) and not necessarily those of the NIHR, NHS or the UK Department of Health and Social Care (https://github.com/user-attachments/assets/b597ec50-84f4-4041-9953-d7447c5cc57f)
+(https://fundingawards.nihr.ac.uk/award/NIHR301730). 
+
+This repository will be updated as components of this protocol and completed and published as pre-prints and peer-reviewed manuscripts. DOIs will be available following peer-review.
+There is a separate repository for the validation study as this was completed using a different CPRD database release (hstrongman/OSA-narc-CPRD-validation).
 
 ## Untracked files
 Repositories should only contain non-disclosive files, that is, code without file paths, and summary statistics. This template is set up so only files that are safe to upload to Github, such as code, are uploaded by default. This means all files ending in `.csv`, all Stata output, and all files in the `data/` and `paths/` folders (except README) are untracked, i.e. they will not be uploaded to GitHub. Edit the `.gitignore` file to ignore or allow (with `!`) specific files or file types. 
